@@ -54,7 +54,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(54, 3);
+            this.labelControl1.Location = new System.Drawing.Point(60, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(73, 13);
             this.labelControl1.TabIndex = 71;
@@ -62,7 +62,7 @@
             // 
             // textPlatformName
             // 
-            this.textPlatformName.Location = new System.Drawing.Point(12, 21);
+            this.textPlatformName.Location = new System.Drawing.Point(18, 21);
             this.textPlatformName.Name = "textPlatformName";
             this.textPlatformName.Size = new System.Drawing.Size(157, 28);
             this.textPlatformName.TabIndex = 0;
@@ -70,7 +70,7 @@
             // backButton
             // 
             this.backButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("backButton.ImageOptions.SvgImage")));
-            this.backButton.Location = new System.Drawing.Point(423, 182);
+            this.backButton.Location = new System.Drawing.Point(431, 181);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(100, 45);
             this.backButton.TabIndex = 8;
@@ -79,7 +79,7 @@
             // clearButton
             // 
             this.clearButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("clearButton.ImageOptions.SvgImage")));
-            this.clearButton.Location = new System.Drawing.Point(314, 182);
+            this.clearButton.Location = new System.Drawing.Point(322, 181);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(100, 45);
             this.clearButton.TabIndex = 7;
@@ -88,7 +88,7 @@
             // saveButton
             // 
             this.saveButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("saveButton.ImageOptions.SvgImage")));
-            this.saveButton.Location = new System.Drawing.Point(205, 182);
+            this.saveButton.Location = new System.Drawing.Point(213, 181);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 45);
             this.saveButton.TabIndex = 6;
@@ -96,14 +96,14 @@
             // 
             // memoNote
             // 
-            this.memoNote.Location = new System.Drawing.Point(173, 22);
+            this.memoNote.Location = new System.Drawing.Point(181, 21);
             this.memoNote.Name = "memoNote";
             this.memoNote.Size = new System.Drawing.Size(375, 144);
             this.memoNote.TabIndex = 5;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(173, 3);
+            this.labelControl5.Location = new System.Drawing.Point(181, 2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(27, 13);
             this.labelControl5.TabIndex = 65;
@@ -111,7 +111,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(65, 105);
+            this.labelControl3.Location = new System.Drawing.Point(71, 105);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(50, 13);
             this.labelControl3.TabIndex = 62;
@@ -119,14 +119,14 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(12, 123);
+            this.textPassword.Location = new System.Drawing.Point(18, 123);
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(157, 28);
             this.textPassword.TabIndex = 2;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(42, 54);
+            this.labelControl2.Location = new System.Drawing.Point(48, 54);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(96, 13);
             this.labelControl2.TabIndex = 73;
@@ -134,7 +134,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(64, 156);
+            this.labelControl4.Location = new System.Drawing.Point(70, 156);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(52, 13);
             this.labelControl4.TabIndex = 75;
@@ -142,14 +142,14 @@
             // 
             // textStudentId
             // 
-            this.textStudentId.Location = new System.Drawing.Point(12, 174);
+            this.textStudentId.Location = new System.Drawing.Point(18, 174);
             this.textStudentId.Name = "textStudentId";
             this.textStudentId.Size = new System.Drawing.Size(157, 28);
             this.textStudentId.TabIndex = 3;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(76, 207);
+            this.labelControl6.Location = new System.Drawing.Point(82, 207);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(28, 13);
             this.labelControl6.TabIndex = 81;
@@ -157,14 +157,14 @@
             // 
             // textType
             // 
-            this.textType.Location = new System.Drawing.Point(12, 225);
+            this.textType.Location = new System.Drawing.Point(18, 225);
             this.textType.Name = "textType";
             this.textType.Size = new System.Drawing.Size(157, 28);
             this.textType.TabIndex = 4;
             // 
             // textUsernameOrEmail
             // 
-            this.textUsernameOrEmail.Location = new System.Drawing.Point(12, 73);
+            this.textUsernameOrEmail.Location = new System.Drawing.Point(18, 73);
             this.textUsernameOrEmail.Name = "textUsernameOrEmail";
             this.textUsernameOrEmail.Size = new System.Drawing.Size(157, 28);
             this.textUsernameOrEmail.TabIndex = 1;

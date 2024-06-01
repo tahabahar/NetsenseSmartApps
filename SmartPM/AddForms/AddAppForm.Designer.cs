@@ -42,11 +42,13 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textType = new DevExpress.XtraEditors.TextEdit();
             this.textUsernameOrEmail = new DevExpress.XtraEditors.TextEdit();
+            this.checkLowerCase = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textAppName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUsernameOrEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkLowerCase.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textAppName
@@ -152,11 +154,20 @@
             this.textUsernameOrEmail.Size = new System.Drawing.Size(157, 28);
             this.textUsernameOrEmail.TabIndex = 1;
             // 
+            // checkLowerCase
+            // 
+            this.checkLowerCase.Location = new System.Drawing.Point(28, 216);
+            this.checkLowerCase.Name = "checkLowerCase";
+            this.checkLowerCase.Properties.Caption = "MOST IMPORTANT";
+            this.checkLowerCase.Size = new System.Drawing.Size(124, 22);
+            this.checkLowerCase.TabIndex = 80;
+            // 
             // AddAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 306);
+            this.Controls.Add(this.checkLowerCase);
             this.Controls.Add(this.textUsernameOrEmail);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.textType);
@@ -177,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUsernameOrEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkLowerCase.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +209,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit textType;
         private DevExpress.XtraEditors.TextEdit textUsernameOrEmail;
+        private DevExpress.XtraEditors.CheckEdit checkLowerCase;
     }
 }

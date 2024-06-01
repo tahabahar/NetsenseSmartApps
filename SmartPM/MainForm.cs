@@ -22,7 +22,7 @@ namespace SmartPM
             gridControl.DataSource = dataSource;
             bsiRecordsCount.Caption = "RECORDS : " + dataSource.Count;
         }
-        
-        
+
+       
     }
 }
