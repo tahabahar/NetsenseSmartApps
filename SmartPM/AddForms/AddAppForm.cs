@@ -11,11 +11,21 @@ using System.Windows.Forms;
 
 namespace SmartPM
 {
-    public partial class AddNetworkForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddAppForm : DevExpress.XtraEditors.XtraForm
     {
-        public AddNetworkForm()
+        public AddAppForm()
         {
             InitializeComponent();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            var data = new DataEntity();
+            {
+                Name = textAppName.Text;
+
+
+            }
         }
     }
 }

@@ -32,14 +32,12 @@
             this.backButton = new DevExpress.XtraEditors.SimpleButton();
             this.clearButton = new DevExpress.XtraEditors.SimpleButton();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
-            this.comboType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.memoNote = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.textPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textOwner = new DevExpress.XtraEditors.TextEdit();
+            this.textCardOwner = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.textValidThru = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -48,79 +46,64 @@
             this.textCardNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.textBankName = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboType.Properties)).BeginInit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.textType = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textOwner.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCardOwner.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCVV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCardNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBankName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // backButton
             // 
             this.backButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("backButton.ImageOptions.SvgImage")));
-            this.backButton.Location = new System.Drawing.Point(442, 201);
+            this.backButton.Location = new System.Drawing.Point(422, 179);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(100, 45);
-            this.backButton.TabIndex = 35;
+            this.backButton.TabIndex = 10;
             this.backButton.Text = "Back";
             // 
             // clearButton
             // 
             this.clearButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("clearButton.ImageOptions.SvgImage")));
-            this.clearButton.Location = new System.Drawing.Point(333, 201);
+            this.clearButton.Location = new System.Drawing.Point(313, 179);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(100, 45);
-            this.clearButton.TabIndex = 34;
+            this.clearButton.TabIndex = 9;
             this.clearButton.Text = "Clear";
             // 
             // saveButton
             // 
             this.saveButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("saveButton.ImageOptions.SvgImage")));
-            this.saveButton.Location = new System.Drawing.Point(224, 201);
+            this.saveButton.Location = new System.Drawing.Point(204, 179);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 45);
-            this.saveButton.TabIndex = 32;
+            this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Save";
-            // 
-            // comboType
-            // 
-            this.comboType.Location = new System.Drawing.Point(12, 426);
-            this.comboType.Name = "comboType";
-            this.comboType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboType.Size = new System.Drawing.Size(157, 28);
-            this.comboType.TabIndex = 29;
             // 
             // memoNote
             // 
-            this.memoNote.Location = new System.Drawing.Point(192, 41);
+            this.memoNote.Location = new System.Drawing.Point(172, 19);
             this.memoNote.Name = "memoNote";
             this.memoNote.Size = new System.Drawing.Size(375, 144);
-            this.memoNote.TabIndex = 31;
+            this.memoNote.TabIndex = 7;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(192, 22);
+            this.labelControl5.Location = new System.Drawing.Point(172, 0);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(27, 13);
             this.labelControl5.TabIndex = 37;
             this.labelControl5.Text = "Note:";
             // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(76, 401);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(28, 13);
-            this.labelControl4.TabIndex = 36;
-            this.labelControl4.Text = "Type:";
-            // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(65, 336);
+            this.labelControl3.Location = new System.Drawing.Point(62, 256);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(50, 13);
             this.labelControl3.TabIndex = 33;
@@ -128,29 +111,29 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(12, 361);
+            this.textPassword.Location = new System.Drawing.Point(9, 274);
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(157, 28);
-            this.textPassword.TabIndex = 28;
+            this.textPassword.TabIndex = 5;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(46, 76);
+            this.labelControl1.Location = new System.Drawing.Point(43, 52);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(89, 13);
             this.labelControl1.TabIndex = 27;
             this.labelControl1.Text = "Card owner name:";
             // 
-            // textOwner
+            // textCardOwner
             // 
-            this.textOwner.Location = new System.Drawing.Point(12, 101);
-            this.textOwner.Name = "textOwner";
-            this.textOwner.Size = new System.Drawing.Size(157, 28);
-            this.textOwner.TabIndex = 25;
+            this.textCardOwner.Location = new System.Drawing.Point(9, 70);
+            this.textCardOwner.Name = "textCardOwner";
+            this.textCardOwner.Size = new System.Drawing.Size(157, 28);
+            this.textCardOwner.TabIndex = 1;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(66, 206);
+            this.labelControl2.Location = new System.Drawing.Point(63, 154);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(49, 13);
             this.labelControl2.TabIndex = 39;
@@ -159,21 +142,23 @@
             // textValidThru
             // 
             this.textValidThru.EditValue = null;
-            this.textValidThru.Location = new System.Drawing.Point(12, 231);
+            this.textValidThru.Location = new System.Drawing.Point(9, 172);
             this.textValidThru.Name = "textValidThru";
             this.textValidThru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textValidThru.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textValidThru.Properties.DisplayFormat.FormatString = "";
+            this.textValidThru.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.textValidThru.Properties.EditFormat.FormatString = "";
+            this.textValidThru.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.textValidThru.Properties.MaskSettings.Set("mask", "");
             this.textValidThru.Size = new System.Drawing.Size(157, 28);
-            this.textValidThru.TabIndex = 38;
+            this.textValidThru.TabIndex = 3;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(79, 271);
+            this.labelControl6.Location = new System.Drawing.Point(76, 205);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(23, 13);
             this.labelControl6.TabIndex = 41;
@@ -181,14 +166,14 @@
             // 
             // textCVV
             // 
-            this.textCVV.Location = new System.Drawing.Point(12, 296);
+            this.textCVV.Location = new System.Drawing.Point(9, 223);
             this.textCVV.Name = "textCVV";
             this.textCVV.Size = new System.Drawing.Size(157, 28);
-            this.textCVV.TabIndex = 40;
+            this.textCVV.TabIndex = 4;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(71, 141);
+            this.labelControl7.Location = new System.Drawing.Point(66, 103);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(43, 13);
             this.labelControl7.TabIndex = 43;
@@ -196,14 +181,14 @@
             // 
             // textCardNo
             // 
-            this.textCardNo.Location = new System.Drawing.Point(12, 166);
+            this.textCardNo.Location = new System.Drawing.Point(9, 121);
             this.textCardNo.Name = "textCardNo";
             this.textCardNo.Size = new System.Drawing.Size(157, 28);
-            this.textCardNo.TabIndex = 42;
+            this.textCardNo.TabIndex = 2;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(62, 17);
+            this.labelControl8.Location = new System.Drawing.Point(59, 1);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(56, 13);
             this.labelControl8.TabIndex = 45;
@@ -211,16 +196,33 @@
             // 
             // textBankName
             // 
-            this.textBankName.Location = new System.Drawing.Point(12, 42);
+            this.textBankName.Location = new System.Drawing.Point(9, 19);
             this.textBankName.Name = "textBankName";
             this.textBankName.Size = new System.Drawing.Size(157, 28);
-            this.textBankName.TabIndex = 44;
+            this.textBankName.TabIndex = 0;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(249, 257);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(28, 13);
+            this.labelControl4.TabIndex = 81;
+            this.labelControl4.Text = "Type:";
+            // 
+            // textType
+            // 
+            this.textType.Location = new System.Drawing.Point(181, 274);
+            this.textType.Name = "textType";
+            this.textType.Size = new System.Drawing.Size(157, 28);
+            this.textType.TabIndex = 6;
             // 
             // AddCartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 553);
+            this.ClientSize = new System.Drawing.Size(568, 326);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.textType);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.textBankName);
             this.Controls.Add(this.labelControl7);
@@ -231,26 +233,24 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.comboType);
             this.Controls.Add(this.memoNote);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textOwner);
+            this.Controls.Add(this.textCardOwner);
             this.Controls.Add(this.textValidThru);
             this.Name = "AddCartForm";
             this.Text = "AddCartForm";
-            ((System.ComponentModel.ISupportInitialize)(this.comboType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textOwner.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCardOwner.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCVV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCardNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBankName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textType.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,14 +260,12 @@
         private DevExpress.XtraEditors.SimpleButton backButton;
         private DevExpress.XtraEditors.SimpleButton clearButton;
         private DevExpress.XtraEditors.SimpleButton saveButton;
-        private DevExpress.XtraEditors.ComboBoxEdit comboType;
         private DevExpress.XtraEditors.MemoEdit memoNote;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit textPassword;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textOwner;
+        private DevExpress.XtraEditors.TextEdit textCardOwner;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.DateEdit textValidThru;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -276,5 +274,7 @@
         private DevExpress.XtraEditors.TextEdit textCardNo;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit textBankName;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.TextEdit textType;
     }
 }

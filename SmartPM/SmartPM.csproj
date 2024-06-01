@@ -69,42 +69,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAppForm.cs">
+    <Compile Include="AddForms\AddAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAppForm.Designer.cs">
+    <Compile Include="AddForms\AddAppForm.Designer.cs">
       <DependentUpon>AddAppForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddBankForm.cs">
+    <Compile Include="AddForms\AddBankForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddBankForm.Designer.cs">
+    <Compile Include="AddForms\AddBankForm.Designer.cs">
       <DependentUpon>AddBankForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCartForm.cs">
+    <Compile Include="AddForms\AddCartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCartForm.Designer.cs">
+    <Compile Include="AddForms\AddCartForm.Designer.cs">
       <DependentUpon>AddCartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNetworkForm.cs">
+    <Compile Include="AddForms\AddEducationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNetworkForm.Designer.cs">
+    <Compile Include="AddForms\AddEducationForm.Designer.cs">
+      <DependentUpon>AddEducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddEmailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddEmailForm.Designer.cs">
+      <DependentUpon>AddEmailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddNetworkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddNetworkForm.Designer.cs">
       <DependentUpon>AddNetworkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPersonalForm.cs">
+    <Compile Include="AddForms\AddPersonalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPersonalForm.Designer.cs">
+    <Compile Include="AddForms\AddPersonalForm.Designer.cs">
       <DependentUpon>AddPersonalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddWebForm.cs">
+    <Compile Include="AddForms\AddSqlForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddWebForm.Designer.cs">
+    <Compile Include="AddForms\AddSqlForm.Designer.cs">
+      <DependentUpon>AddSqlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddSystemForm.Designer.cs">
+      <DependentUpon>AddSystemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddWebForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddWebForm.Designer.cs">
       <DependentUpon>AddWebForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddForms\AddWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddWorkForm.Designer.cs">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="Model\DataEntity.cs" />
+    <Compile Include="GeneratePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratePassword.Designer.cs">
+      <DependentUpon>GeneratePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MfaEnum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm.cs">
@@ -113,20 +152,42 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddAppForm.resx">
+    <Compile Include="Model\TypeEnum.cs" />
+    <EmbeddedResource Include="AddForms\AddAppForm.resx">
       <DependentUpon>AddAppForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddBankForm.resx">
+    <EmbeddedResource Include="AddForms\AddBankForm.resx">
       <DependentUpon>AddBankForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCartForm.resx">
+    <EmbeddedResource Include="AddForms\AddCartForm.resx">
       <DependentUpon>AddCartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNetworkForm.resx">
+    <EmbeddedResource Include="AddForms\AddEducationForm.resx">
+      <DependentUpon>AddEducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddEmailForm.resx">
+      <DependentUpon>AddEmailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddNetworkForm.resx">
       <DependentUpon>AddNetworkForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPersonalForm.resx">
+    <EmbeddedResource Include="AddForms\AddPersonalForm.resx">
       <DependentUpon>AddPersonalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddSqlForm.resx">
+      <DependentUpon>AddSqlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddSystemForm.resx">
+      <DependentUpon>AddSystemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddWebForm.resx">
+      <DependentUpon>AddWebForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddWorkForm.resx">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratePassword.resx">
+      <DependentUpon>GeneratePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace SmartPM
 {
-    public partial class AddAppForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddBankForm : DevExpress.XtraEditors.XtraForm
     {
-        public AddAppForm()
+        public AddBankForm()
         {
             InitializeComponent();
         }
+
+        
     }
 }
