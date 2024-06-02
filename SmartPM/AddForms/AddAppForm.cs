@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SmartPM
 {
@@ -20,12 +21,21 @@ namespace SmartPM
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            var data = new DataEntity();
-            {
-                Name = textAppName.Text;
-
-
-            }
+           
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            FormCleaner.ResetAllControls(this);
+            textAppName.Focus();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
+        
     }
 }

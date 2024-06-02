@@ -94,13 +94,13 @@ namespace SmartPM
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            textPasswordLenght.Text = "";
-            textGeneratedPassword.Text = " ";
-            checkLowerCase.Checked = false;
-            checkUpperCase.Checked = false;
-            checkNumbers.Checked = false;
-            checkSymbols.Checked = false;
+            FormCleaner.ResetAllControls(this);
             textPasswordLenght.Focus();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

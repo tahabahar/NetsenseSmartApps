@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace SmartPM
 {
-    public partial class AddPersonalForm : DevExpress.XtraEditors.XtraForm
+    public partial class AskPasswordForm : DevExpress.XtraEditors.XtraForm
     {
-        public AddPersonalForm()
+        public AskPasswordForm()
         {
             InitializeComponent();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

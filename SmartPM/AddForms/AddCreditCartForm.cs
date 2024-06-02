@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SmartPM
 {
-    public partial class AddBankForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddCreditCardForm : DevExpress.XtraEditors.XtraForm
     {
-        public AddBankForm()
+        public AddCreditCardForm()
         {
             InitializeComponent();
         }

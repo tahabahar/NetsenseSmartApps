@@ -17,5 +17,16 @@ namespace SmartPM.AddForms
         {
             InitializeComponent();
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            FormCleaner.ResetAllControls(this);
+            textWebMailServiceName.Focus();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

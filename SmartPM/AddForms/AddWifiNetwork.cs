@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SmartPM
 {
-    public partial class AddBankForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddWifiNetwork : DevExpress.XtraEditors.XtraForm
     {
-        public AddBankForm()
+        public AddWifiNetwork()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace SmartPM
         private void clearButton_Click(object sender, EventArgs e)
         {
             FormCleaner.ResetAllControls(this);
-            textBankName.Focus();
+            textNetworkName.Focus();
         }
 
         private void backButton_Click(object sender, EventArgs e)

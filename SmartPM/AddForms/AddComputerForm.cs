@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SmartPM
 {
-    public partial class AddBankForm : DevExpress.XtraEditors.XtraForm
+    public partial class AddComputerForm : DevExpress.XtraEditors.XtraForm
     {
-        public AddBankForm()
+        public AddComputerForm()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace SmartPM
         private void clearButton_Click(object sender, EventArgs e)
         {
             FormCleaner.ResetAllControls(this);
-            textBankName.Focus();
+            textDomainName.Focus();
         }
 
         private void backButton_Click(object sender, EventArgs e)
