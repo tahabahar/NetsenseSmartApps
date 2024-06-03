@@ -41,6 +41,9 @@
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.bbWebCredential = new DevExpress.XtraBars.BarButtonItem();
+            this.bbSQLCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
@@ -54,14 +57,11 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.bbWebCredential = new DevExpress.XtraBars.BarButtonItem();
-            this.bbSQLCredential = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -71,7 +71,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbonControl;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1235, 618);
+            this.gridControl1.Size = new System.Drawing.Size(1235, 581);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -191,6 +191,27 @@
             this.bbiNew.Name = "bbiNew";
             this.bbiNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiNew_ItemClick);
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.bbWebCredential);
+            this.popupMenu1.ItemLinks.Add(this.bbSQLCredential);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl;
+            // 
+            // bbWebCredential
+            // 
+            this.bbWebCredential.Caption = "Web Credential";
+            this.bbWebCredential.Id = 28;
+            this.bbWebCredential.Name = "bbWebCredential";
+            this.bbWebCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbWebCredential_ItemClick);
+            // 
+            // bbSQLCredential
+            // 
+            this.bbSQLCredential.Caption = "SQL Credential";
+            this.bbSQLCredential.Id = 29;
+            this.bbSQLCredential.Name = "bbSQLCredential";
+            this.bbSQLCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbSQLCredential_ItemClick);
+            // 
             // bbiEdit
             // 
             this.bbiEdit.Caption = "Edit";
@@ -291,34 +312,13 @@
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
             // 
-            // popupMenu1
-            // 
-            this.popupMenu1.ItemLinks.Add(this.bbWebCredential);
-            this.popupMenu1.ItemLinks.Add(this.bbSQLCredential);
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbonControl;
-            // 
-            // bbWebCredential
-            // 
-            this.bbWebCredential.Caption = "Web Credential";
-            this.bbWebCredential.Id = 28;
-            this.bbWebCredential.Name = "bbWebCredential";
-            this.bbWebCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbWebCredential_ItemClick);
-            // 
-            // bbSQLCredential
-            // 
-            this.bbSQLCredential.Caption = "SQL Credential";
-            this.bbSQLCredential.Id = 29;
-            this.bbSQLCredential.Name = "bbSQLCredential";
-            this.bbSQLCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbSQLCredential_ItemClick);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 819);
-            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.popupControlContainer1);
             this.Controls.Add(this.ribbonControl);
             this.Name = "MainForm";
@@ -329,8 +329,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

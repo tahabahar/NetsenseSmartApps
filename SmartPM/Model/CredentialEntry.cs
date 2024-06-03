@@ -18,5 +18,9 @@ namespace SmartPM
         public CredentialTypeEnum CredentialType { get; set; }
         public CredentialBase Credential { get; set; }
 
+        public WebCredential WebCredential { get; set; }
+        public SQLCredential SQLCredential { get; set; }
+
+
     }
 }

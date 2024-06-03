@@ -75,7 +75,7 @@ namespace SmartPM
         private void bbSQLCredential_ItemClick(object sender, ItemClickEventArgs e)
         {
             CredentialEntry credentialEntry = new CredentialEntry();
-            credentialEntry.CredentialType = CredentialTypeEnum.Web;
+            credentialEntry.CredentialType = CredentialTypeEnum.SqlServer;
 
             CreateOrEditCredential addWebForm = new CreateOrEditCredential(credentialEntry);
             addWebForm.ShowDialog();
