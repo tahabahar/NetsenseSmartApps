@@ -31,8 +31,8 @@ namespace SmartPM
         {
             CredentialEntry myCredentialEntry = new CredentialEntry();
             myCredentialEntry.CredentialType = CredentialTypeEnum.Web;
-
-            CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
+            CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry;
+           
             myfrm.ShowDialog();
         }
 
@@ -47,10 +47,9 @@ namespace SmartPM
 
         private void gridControl_DoubleClick(object sender, EventArgs e)
         {
-            var row = gridView1.GetFocusedRow() as CredentialEntry;
-
-            CreateOrEditCredential myfrm = new CreateOrEditCredential(row);
-            myfrm.ShowDialog();
+           CredentialEntry credentialEntry= (CredentialEntry)gridView1.GetFocusedRow();
+           CreateOrEditCredential myfrm = new CreateOrEditCredential(credentialEntry);
+           myfrm.ShowDialog();
         }
     }
 }

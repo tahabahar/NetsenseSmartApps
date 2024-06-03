@@ -78,6 +78,7 @@
     <Compile Include="Forms\CreateOrEditCredential.Designer.cs">
       <DependentUpon>CreateOrEditCredential.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="Helper\AESHelper.cs" />
     <Compile Include="Forms\AskPasswordForm.cs">
       <SubType>Form</SubType>

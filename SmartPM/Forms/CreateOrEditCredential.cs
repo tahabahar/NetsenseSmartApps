@@ -15,53 +15,45 @@ namespace SmartPM.AddForms
 {
     public partial class CreateOrEditCredential : DevExpress.XtraEditors.XtraForm
     {
-        public CreateOrEditCredential(CredentialEntry credentialEntry)
+        public CreateOrEditCredential(CredentialEntry pCredential)
         {
             InitializeComponent();
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
+          
+             textCategory.Text = pCredential.Category;
+             textDescription.Text = pCredential.Description;
 
+
+
+             switch (pCredential.CredentialType)
+             {
+                 case CredentialTypeEnum.Web:
+                     xtraTabControl1.SelectedTabPage = xtraTabPageWeb;
+
+                     WebCredential MyWebmodel = (WebCredential)pCredential.Credential;                   
+
+                     if (MyWebmodel != null)
+                     {
+                         textWEBUsername.Text = MyWebmodel.WebUrl;
+                         textWEBUsername.Text = MyWebmodel.Username;
+                         textWEBPasword.Text = MyWebmodel.Password;
+                     }
+
+                     break;
+
+                 case CredentialTypeEnum.Database:
+                     xtraTabControl1.SelectedTabPage = xtraTabPageDB;
+                     DatabaseCredential MyDbmodel = (DatabaseCredential)pCredential.Credential;
+
+                     if (MyDbmodel != null)
+                     {
+                         textDBServerName.Text = MyDbmodel.DBServerName;
+                         textDBUserName.Text = MyDbmodel.DBServerName;
+                         textDBPassword.Text = MyDbmodel.DBPassword;
+                     }
+                     break;
+             }
+         }
        
-
-            textCategory.Text = credentialEntry.Category;
-            textDescription.Text = credentialEntry.Description;
-
-
-
-            switch (credentialEntry.CredentialType)
-            {
-                case CredentialTypeEnum.Web:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageWeb;
-
-                    var webmodel = credentialEntry.Credential as WebCredential;                   
-
-                    if (webmodel != null)
-                    {
-                        textWEBUsername.Text = webmodel.WebUrl;
-                        textWEBUsername.Text = webmodel.Username;
-                        textWEBPasword.Text = webmodel.Password;
-                    }
-
-                    break;
-            
-                case CredentialTypeEnum.Database:
-                   
-                    var dbmodel = credentialEntry.Credential as DatabaseCredential;                    
-
-                    xtraTabControl1.SelectedTabPage = xtraTabPageDB;
-
-                    if (dbmodel != null)
-                    {
-                        textDBServerName.Text = dbmodel.DBServerName;
-                        textDBUserName.Text = dbmodel.DBServerName;
-                        textDBPassword.Text = dbmodel.DBPassword;
-                    }
-                    break;
-               
-            }
-            
-        }
-
-
-
     }
 }
