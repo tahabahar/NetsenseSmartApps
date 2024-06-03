@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartPM.Model
 {
-    public class CreditCardCredential: CredentialBase
+    public class CreditCardCredential
     {
         public string CardNumber { get; set; }
         public string CardExpirationYear { get; set; }

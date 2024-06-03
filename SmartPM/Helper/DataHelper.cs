@@ -13,13 +13,11 @@ namespace SmartPM
 {
     public class DataHelper
     {
-        public static BindingList<CredentialEntry> GetData()
+        public static List<CredentialEntry> GetData()
         {
             string stringdata = File.ReadAllText("c:\\jsondenemes\\credentialdata.json");
 
-            BindingList<CredentialEntry> result = JsonConvert.DeserializeObject<BindingList<CredentialEntry>>(stringdata);
-
-
+            List<CredentialEntry> result = JsonConvert.DeserializeObject<List<CredentialEntry>>(stringdata);
 
             return result;
         }

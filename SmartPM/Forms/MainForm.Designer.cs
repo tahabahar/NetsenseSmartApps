@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -39,11 +40,10 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
-            this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbWebCredential = new DevExpress.XtraBars.BarButtonItem();
-            this.bbSQLCredential = new DevExpress.XtraBars.BarButtonItem();
+            this.bbDatabaseCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
@@ -52,9 +52,7 @@
             this.bbSave = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -73,6 +71,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1235, 581);
             this.gridControl1.TabIndex = 2;
+            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl_DoubleClick);
@@ -91,6 +90,8 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn7, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn1
             // 
@@ -146,7 +147,6 @@
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
             this.bbiPrintPreview,
-            this.bsiRecordsCount,
             this.bbiNew,
             this.bbiEdit,
             this.bbiDelete,
@@ -155,7 +155,7 @@
             this.skinPaletteDropDownButtonItem1,
             this.bbSave,
             this.bbWebCredential,
-            this.bbSQLCredential});
+            this.bbDatabaseCredential});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.MaxItemId = 30;
             this.ribbonControl.Name = "ribbonControl";
@@ -174,12 +174,6 @@
             this.bbiPrintPreview.ImageOptions.ImageUri.Uri = "Preview";
             this.bbiPrintPreview.Name = "bbiPrintPreview";
             // 
-            // bsiRecordsCount
-            // 
-            this.bsiRecordsCount.Caption = "RECORDS : 0";
-            this.bsiRecordsCount.Id = 15;
-            this.bsiRecordsCount.Name = "bsiRecordsCount";
-            // 
             // bbiNew
             // 
             this.bbiNew.ActAsDropDown = true;
@@ -189,12 +183,11 @@
             this.bbiNew.Id = 16;
             this.bbiNew.ImageOptions.ImageUri.Uri = "New";
             this.bbiNew.Name = "bbiNew";
-            this.bbiNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiNew_ItemClick);
             // 
             // popupMenu1
             // 
             this.popupMenu1.ItemLinks.Add(this.bbWebCredential);
-            this.popupMenu1.ItemLinks.Add(this.bbSQLCredential);
+            this.popupMenu1.ItemLinks.Add(this.bbDatabaseCredential);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl;
             // 
@@ -205,16 +198,17 @@
             this.bbWebCredential.Name = "bbWebCredential";
             this.bbWebCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbWebCredential_ItemClick);
             // 
-            // bbSQLCredential
+            // bbDatabaseCredential
             // 
-            this.bbSQLCredential.Caption = "SQL Credential";
-            this.bbSQLCredential.Id = 29;
-            this.bbSQLCredential.Name = "bbSQLCredential";
-            this.bbSQLCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbSQLCredential_ItemClick);
+            this.bbDatabaseCredential.Caption = "Database Credential";
+            this.bbDatabaseCredential.Id = 29;
+            this.bbDatabaseCredential.Name = "bbDatabaseCredential";
+            this.bbDatabaseCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbDatabaseCredential_ItemClick);
             // 
             // bbiEdit
             // 
             this.bbiEdit.Caption = "Edit";
+            this.bbiEdit.Enabled = false;
             this.bbiEdit.Id = 17;
             this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
             this.bbiEdit.Name = "bbiEdit";
@@ -222,14 +216,15 @@
             // bbiDelete
             // 
             this.bbiDelete.Caption = "Delete";
+            this.bbiDelete.Enabled = false;
             this.bbiDelete.Id = 18;
             this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
             this.bbiDelete.Name = "bbiDelete";
-            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
             // 
             // bbiRefresh
             // 
             this.bbiRefresh.Caption = "Refresh";
+            this.bbiRefresh.Enabled = false;
             this.bbiRefresh.Id = 19;
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
@@ -246,18 +241,16 @@
             // 
             // bbSave
             // 
-            this.bbSave.Caption = "barButtonItem1";
+            this.bbSave.Caption = "Save";
             this.bbSave.Id = 26;
+            this.bbSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbSave.ImageOptions.LargeImage")));
             this.bbSave.Name = "bbSave";
-            this.bbSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbSave_ItemClick);
             // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup3});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Home";
@@ -273,30 +266,15 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Tasks";
             // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.AllowTextClipping = false;
-            this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiPrintPreview);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Print and Export";
-            // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.skinDropDownButtonItem1);
             this.ribbonPageGroup3.ItemLinks.Add(this.skinPaletteDropDownButtonItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.bbSave);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            this.ribbonPageGroup3.Text = "Theme";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 782);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
@@ -325,7 +303,6 @@
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Shown += new System.EventHandler(this.MainForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -343,9 +320,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem bbiPrintPreview;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarStaticItem bsiRecordsCount;
         private DevExpress.XtraBars.BarButtonItem bbiNew;
         private DevExpress.XtraBars.BarButtonItem bbiEdit;
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
@@ -360,10 +335,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraBars.BarButtonItem bbSave;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.PopupControlContainer popupControlContainer1;
         private DevExpress.XtraBars.BarButtonItem bbWebCredential;
-        private DevExpress.XtraBars.BarButtonItem bbSQLCredential;
+        private DevExpress.XtraBars.BarButtonItem bbDatabaseCredential;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }

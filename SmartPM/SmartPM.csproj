@@ -72,125 +72,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddForms\AddAppForm.cs">
+    <Compile Include="Forms\CreateOrEditCredential.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddForms\AddAppForm.Designer.cs">
-      <DependentUpon>AddAppForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddBankForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddBankForm.Designer.cs">
-      <DependentUpon>AddBankForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddCreditCartForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddCreditCartForm.Designer.cs">
-      <DependentUpon>AddCreditCartForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddEmailForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddEmailForm.Designer.cs">
-      <DependentUpon>AddEmailForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddWifiNetwork.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddWifiNetwork.Designer.cs">
-      <DependentUpon>AddWifiNetwork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddSqlServerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddSqlServerForm.Designer.cs">
-      <DependentUpon>AddSqlServerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddComputerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddComputerForm.Designer.cs">
-      <DependentUpon>AddComputerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\AddWebForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\AddWebForm.Designer.cs">
-      <DependentUpon>AddWebForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddForms\CreateOrEditCredential.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddForms\CreateOrEditCredential.Designer.cs">
+    <Compile Include="Forms\CreateOrEditCredential.Designer.cs">
       <DependentUpon>CreateOrEditCredential.cs</DependentUpon>
     </Compile>
-    <Compile Include="AESHelper.cs" />
-    <Compile Include="AskPasswordForm.cs">
+    <Compile Include="Helper\AESHelper.cs" />
+    <Compile Include="Forms\AskPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AskPasswordForm.Designer.cs">
+    <Compile Include="Forms\AskPasswordForm.Designer.cs">
       <DependentUpon>AskPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataHelper.cs" />
-    <Compile Include="FormCleaner.cs" />
+    <Compile Include="Helper\DataHelper.cs" />
+    <Compile Include="Helper\FormCleaner.cs" />
     <Compile Include="Model\CredentialEntry.cs" />
-    <Compile Include="GeneratePassword.cs">
+    <Compile Include="Forms\GeneratePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneratePassword.Designer.cs">
+    <Compile Include="Forms\GeneratePassword.Designer.cs">
       <DependentUpon>GeneratePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CredentialTypes\CredentialBase.cs" />
     <Compile Include="Model\CredentialTypes\CreditCardCredential.cs" />
+    <Compile Include="Model\Enums\DBTypeEnum.cs" />
     <Compile Include="Model\Enums\MfaTypeEnum.cs" />
     <Compile Include="Model\Enums\PriorityEnum.cs" />
-    <Compile Include="Model\CredentialTypes\SQLCredential.cs" />
+    <Compile Include="Model\CredentialTypes\DatabaseCredential.cs" />
     <Compile Include="Model\CredentialTypes\WebCredential.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Enums\CredentialTypeEnum.cs" />
-    <EmbeddedResource Include="AddForms\AddAppForm.resx">
-      <DependentUpon>AddAppForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddBankForm.resx">
-      <DependentUpon>AddBankForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddCreditCartForm.resx">
-      <DependentUpon>AddCreditCartForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddEmailForm.resx">
-      <DependentUpon>AddEmailForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddWifiNetwork.resx">
-      <DependentUpon>AddWifiNetwork.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddSqlServerForm.resx">
-      <DependentUpon>AddSqlServerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddComputerForm.resx">
-      <DependentUpon>AddComputerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\AddWebForm.resx">
-      <DependentUpon>AddWebForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddForms\CreateOrEditCredential.resx">
+    <EmbeddedResource Include="Forms\CreateOrEditCredential.resx">
       <DependentUpon>CreateOrEditCredential.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AskPasswordForm.resx">
+    <EmbeddedResource Include="Forms\AskPasswordForm.resx">
       <DependentUpon>AskPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeneratePassword.resx">
+    <EmbeddedResource Include="Forms\GeneratePassword.resx">
       <DependentUpon>GeneratePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -215,6 +143,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

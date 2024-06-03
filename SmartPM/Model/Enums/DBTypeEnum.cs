@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartPM.Model
+namespace SmartPM.Model.Enums
 {
-    public class CredentialBase
+    public enum DBTypeEnum
     {
+        SQLServer =1,
+        Oracle =2,
+        MySQL =3,
+
     }
 }

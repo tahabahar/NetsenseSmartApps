@@ -16,11 +16,7 @@ namespace SmartPM
         public DateTime ValidThru { get; set; }
         public string Priority { get; set; }
         public CredentialTypeEnum CredentialType { get; set; }
-        public CredentialBase Credential { get; set; }
-
-        public WebCredential WebCredential { get; set; }
-        public SQLCredential SQLCredential { get; set; }
-
+        public object Credential { get; set; }    
 
     }
 }

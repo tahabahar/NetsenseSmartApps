@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartPM.Model
 {
-    public class WebCredential : CredentialBase
+    public class WebCredential 
     {
         public string WebUrl { get; set; }
         public string Username { get; set; }

@@ -14,7 +14,7 @@ namespace SmartPM
         Web = 1, // WebURL, Username, Passwork        
         Email = 2, // Emailaccount, Password, 
         Computer = 3, //Domain, Username, Password, Pin
-        SqlServer = 4, // Server Name, Username, Password
+        Database = 4, // Server Name, Username, Password
 
         App = 5,  //app name, username, pwd, 
         Bank = 6, //wesite, username, parola, password
