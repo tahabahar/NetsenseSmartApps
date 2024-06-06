@@ -43,6 +43,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textCategory = new DevExpress.XtraEditors.TextEdit();
             this.textDescription = new DevExpress.XtraEditors.TextEdit();
+            this.textValidThru = new DevExpress.XtraEditors.DateEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageWeb = new DevExpress.XtraTab.XtraTabPage();
@@ -53,6 +54,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.textWEBUrl = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPageEmail = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPageDB = new DevExpress.XtraTab.XtraTabPage();
             this.comboBoxDBType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -62,7 +64,68 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.textDBUserName = new DevExpress.XtraEditors.TextEdit();
             this.textDBPassword = new DevExpress.XtraEditors.TextEdit();
-            this.textValidThru = new DevExpress.XtraEditors.DateEdit();
+            this.xtraTabPageComputer = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPageApp = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPageBank = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPageCreditCard = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPageWifi = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPageApi = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.textEMAILAccountAdress = new DevExpress.XtraEditors.TextEdit();
+            this.textEMAILPassword = new DevExpress.XtraEditors.TextEdit();
+            this.textEMAILRecoveryAccountAdress = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.textCOMPUTERDomainName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.textCOMPUTERUsername = new DevExpress.XtraEditors.TextEdit();
+            this.textCOMPUTERPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.textCOMPUTERPin = new DevExpress.XtraEditors.SpinEdit();
+            this.textAPPPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
+            this.textAPPName = new DevExpress.XtraEditors.TextEdit();
+            this.textAPPUsername = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.textBANKPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.textBANKUsername = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.textBANKName = new DevExpress.XtraEditors.TextEdit();
+            this.textBANKPasscode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
+            this.textCREDITCARDOwnerName = new DevExpress.XtraEditors.TextEdit();
+            this.textCREDITCARDNumber = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
+            this.dateCREDITCARDExpirationMonth = new DevExpress.XtraEditors.DateEdit();
+            this.textCREDITCARDCvv = new DevExpress.XtraEditors.SpinEdit();
+            this.textWIFIName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
+            this.textWIFIPassword = new DevExpress.XtraEditors.TextEdit();
+            this.dateCREDITCARDExpirationYear = new DevExpress.XtraEditors.DateEdit();
+            this.textAPIKey = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
+            this.textAPIAccessToken = new DevExpress.XtraEditors.TextEdit();
+            this.textAPISecretKey = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.textAPIPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
+            this.textAPINName = new DevExpress.XtraEditors.TextEdit();
+            this.textAPIUsername = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
+            this.textAPIUrl = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxMfaType.Properties)).BeginInit();
@@ -71,6 +134,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxPriority.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.xtraTabPageWeb.SuspendLayout();
@@ -79,13 +144,48 @@
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUrl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPageEmail.SuspendLayout();
             this.xtraTabPageDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).BeginInit();
+            this.xtraTabPageComputer.SuspendLayout();
+            this.xtraTabPageApp.SuspendLayout();
+            this.xtraTabPageBank.SuspendLayout();
+            this.xtraTabPageCreditCard.SuspendLayout();
+            this.xtraTabPageWifi.SuspendLayout();
+            this.xtraTabPageApi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEMAILRecoveryAccountAdress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERDomainName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPPPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPPName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPPUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKPasscode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textWIFIName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textWIFIPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIKey.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIAccessToken.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPISecretKey.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPINName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIUrl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -214,6 +314,24 @@
             this.textDescription.Size = new System.Drawing.Size(151, 28);
             this.textDescription.TabIndex = 0;
             // 
+            // textValidThru
+            // 
+            this.textValidThru.EditValue = null;
+            this.textValidThru.Location = new System.Drawing.Point(188, 101);
+            this.textValidThru.Name = "textValidThru";
+            this.textValidThru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textValidThru.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textValidThru.Properties.DisplayFormat.FormatString = "";
+            this.textValidThru.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.textValidThru.Properties.EditFormat.FormatString = "";
+            this.textValidThru.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.textValidThru.Properties.Mask.EditMask = "";
+            this.textValidThru.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.textValidThru.Size = new System.Drawing.Size(158, 28);
+            this.textValidThru.TabIndex = 5;
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.saveButton);
@@ -254,11 +372,11 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(31, 112);
+            this.labelControl5.Location = new System.Drawing.Point(35, 112);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(50, 13);
+            this.labelControl5.Size = new System.Drawing.Size(46, 13);
             this.labelControl5.TabIndex = 2;
-            this.labelControl5.Text = "Password:";
+            this.labelControl5.Text = "Password";
             // 
             // textWEBUsername
             // 
@@ -269,19 +387,19 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(25, 78);
+            this.labelControl4.Location = new System.Drawing.Point(31, 78);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(56, 13);
+            this.labelControl4.Size = new System.Drawing.Size(52, 13);
             this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "User Name:";
+            this.labelControl4.Text = "User Name";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(33, 44);
+            this.labelControl3.Location = new System.Drawing.Point(39, 44);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(48, 13);
+            this.labelControl3.Size = new System.Drawing.Size(44, 13);
             this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Web URL:";
+            this.labelControl3.Text = "Web URL";
             // 
             // textWEBUrl
             // 
@@ -295,12 +413,31 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 154);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPageWeb;
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPageEmail;
             this.xtraTabControl1.Size = new System.Drawing.Size(1057, 455);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageWeb,
-            this.xtraTabPageDB});
+            this.xtraTabPageDB,
+            this.xtraTabPageEmail,
+            this.xtraTabPageComputer,
+            this.xtraTabPageApp,
+            this.xtraTabPageBank,
+            this.xtraTabPageCreditCard,
+            this.xtraTabPageWifi,
+            this.xtraTabPageApi});
+            // 
+            // xtraTabPageEmail
+            // 
+            this.xtraTabPageEmail.Controls.Add(this.textEMAILRecoveryAccountAdress);
+            this.xtraTabPageEmail.Controls.Add(this.labelControl16);
+            this.xtraTabPageEmail.Controls.Add(this.textEMAILAccountAdress);
+            this.xtraTabPageEmail.Controls.Add(this.textEMAILPassword);
+            this.xtraTabPageEmail.Controls.Add(this.labelControl15);
+            this.xtraTabPageEmail.Controls.Add(this.labelControl18);
+            this.xtraTabPageEmail.Name = "xtraTabPageEmail";
+            this.xtraTabPageEmail.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageEmail.Text = "xtraTabPageEmail";
             // 
             // xtraTabPageDB
             // 
@@ -329,9 +466,9 @@
             // 
             this.labelControl9.Location = new System.Drawing.Point(49, 33);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(77, 13);
+            this.labelControl9.Size = new System.Drawing.Size(73, 13);
             this.labelControl9.TabIndex = 4;
-            this.labelControl9.Text = "Database Type:";
+            this.labelControl9.Text = "Database Type";
             // 
             // textDBServerName
             // 
@@ -344,25 +481,25 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(27, 135);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(99, 13);
+            this.labelControl8.Size = new System.Drawing.Size(95, 13);
             this.labelControl8.TabIndex = 2;
-            this.labelControl8.Text = "Database Password:";
+            this.labelControl8.Text = "Database Password";
             // 
             // labelControl7
             // 
             this.labelControl7.Location = new System.Drawing.Point(21, 101);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(105, 13);
+            this.labelControl7.Size = new System.Drawing.Size(101, 13);
             this.labelControl7.TabIndex = 2;
-            this.labelControl7.Text = "Database User Name:";
+            this.labelControl7.Text = "Database User Name";
             // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(11, 67);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(115, 13);
+            this.labelControl6.Size = new System.Drawing.Size(111, 13);
             this.labelControl6.TabIndex = 2;
-            this.labelControl6.Text = "Database Server Name:";
+            this.labelControl6.Text = "Database Server Name";
             // 
             // textDBUserName
             // 
@@ -378,21 +515,537 @@
             this.textDBPassword.Size = new System.Drawing.Size(155, 28);
             this.textDBPassword.TabIndex = 0;
             // 
-            // textValidThru
+            // xtraTabPageComputer
             // 
-            this.textValidThru.EditValue = null;
-            this.textValidThru.Location = new System.Drawing.Point(188, 101);
-            this.textValidThru.Name = "textValidThru";
-            this.textValidThru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.xtraTabPageComputer.Controls.Add(this.labelControl21);
+            this.xtraTabPageComputer.Controls.Add(this.textCOMPUTERDomainName);
+            this.xtraTabPageComputer.Controls.Add(this.labelControl17);
+            this.xtraTabPageComputer.Controls.Add(this.labelControl19);
+            this.xtraTabPageComputer.Controls.Add(this.labelControl20);
+            this.xtraTabPageComputer.Controls.Add(this.textCOMPUTERUsername);
+            this.xtraTabPageComputer.Controls.Add(this.textCOMPUTERPassword);
+            this.xtraTabPageComputer.Controls.Add(this.textCOMPUTERPin);
+            this.xtraTabPageComputer.Name = "xtraTabPageComputer";
+            this.xtraTabPageComputer.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageComputer.Text = "xtraTabPageComputer";
+            // 
+            // xtraTabPageApp
+            // 
+            this.xtraTabPageApp.Controls.Add(this.textAPPPassword);
+            this.xtraTabPageApp.Controls.Add(this.labelControl22);
+            this.xtraTabPageApp.Controls.Add(this.textAPPName);
+            this.xtraTabPageApp.Controls.Add(this.textAPPUsername);
+            this.xtraTabPageApp.Controls.Add(this.labelControl23);
+            this.xtraTabPageApp.Controls.Add(this.labelControl24);
+            this.xtraTabPageApp.Name = "xtraTabPageApp";
+            this.xtraTabPageApp.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageApp.Text = "xtraTabPageApp";
+            // 
+            // xtraTabPageBank
+            // 
+            this.xtraTabPageBank.Controls.Add(this.textBANKPasscode);
+            this.xtraTabPageBank.Controls.Add(this.labelControl28);
+            this.xtraTabPageBank.Controls.Add(this.textBANKPassword);
+            this.xtraTabPageBank.Controls.Add(this.labelControl25);
+            this.xtraTabPageBank.Controls.Add(this.textBANKUsername);
+            this.xtraTabPageBank.Controls.Add(this.labelControl26);
+            this.xtraTabPageBank.Controls.Add(this.labelControl27);
+            this.xtraTabPageBank.Controls.Add(this.textBANKName);
+            this.xtraTabPageBank.Name = "xtraTabPageBank";
+            this.xtraTabPageBank.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageBank.Text = "xtraTabPageBank";
+            // 
+            // xtraTabPageCreditCard
+            // 
+            this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationYear);
+            this.xtraTabPageCreditCard.Controls.Add(this.labelControl33);
+            this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationMonth);
+            this.xtraTabPageCreditCard.Controls.Add(this.labelControl32);
+            this.xtraTabPageCreditCard.Controls.Add(this.labelControl29);
+            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDOwnerName);
+            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDNumber);
+            this.xtraTabPageCreditCard.Controls.Add(this.labelControl30);
+            this.xtraTabPageCreditCard.Controls.Add(this.labelControl31);
+            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDCvv);
+            this.xtraTabPageCreditCard.Name = "xtraTabPageCreditCard";
+            this.xtraTabPageCreditCard.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageCreditCard.Text = "xtraTabPageCreditCard";
+            // 
+            // xtraTabPageWifi
+            // 
+            this.xtraTabPageWifi.Controls.Add(this.textWIFIName);
+            this.xtraTabPageWifi.Controls.Add(this.labelControl34);
+            this.xtraTabPageWifi.Controls.Add(this.labelControl35);
+            this.xtraTabPageWifi.Controls.Add(this.textWIFIPassword);
+            this.xtraTabPageWifi.Name = "xtraTabPageWifi";
+            this.xtraTabPageWifi.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageWifi.Text = "xtraTabPageWifi";
+            // 
+            // xtraTabPageApi
+            // 
+            this.xtraTabPageApi.Controls.Add(this.textAPIUrl);
+            this.xtraTabPageApi.Controls.Add(this.labelControl43);
+            this.xtraTabPageApi.Controls.Add(this.textAPIPassword);
+            this.xtraTabPageApi.Controls.Add(this.labelControl39);
+            this.xtraTabPageApi.Controls.Add(this.textAPINName);
+            this.xtraTabPageApi.Controls.Add(this.textAPIUsername);
+            this.xtraTabPageApi.Controls.Add(this.labelControl40);
+            this.xtraTabPageApi.Controls.Add(this.labelControl41);
+            this.xtraTabPageApi.Controls.Add(this.textAPIKey);
+            this.xtraTabPageApi.Controls.Add(this.labelControl36);
+            this.xtraTabPageApi.Controls.Add(this.textAPIAccessToken);
+            this.xtraTabPageApi.Controls.Add(this.textAPISecretKey);
+            this.xtraTabPageApi.Controls.Add(this.labelControl37);
+            this.xtraTabPageApi.Controls.Add(this.labelControl38);
+            this.xtraTabPageApi.Name = "xtraTabPageApi";
+            this.xtraTabPageApi.Size = new System.Drawing.Size(1055, 424);
+            this.xtraTabPageApi.Text = "xtraTabPageApi";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(42, 39);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(60, 13);
+            this.labelControl15.TabIndex = 8;
+            this.labelControl15.Text = "Email Adress";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(56, 73);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(46, 13);
+            this.labelControl18.TabIndex = 7;
+            this.labelControl18.Text = "Password";
+            // 
+            // textEMAILAccountAdress
+            // 
+            this.textEMAILAccountAdress.Location = new System.Drawing.Point(108, 32);
+            this.textEMAILAccountAdress.Name = "textEMAILAccountAdress";
+            this.textEMAILAccountAdress.Size = new System.Drawing.Size(155, 28);
+            this.textEMAILAccountAdress.TabIndex = 9;
+            // 
+            // textEMAILPassword
+            // 
+            this.textEMAILPassword.Location = new System.Drawing.Point(108, 66);
+            this.textEMAILPassword.Name = "textEMAILPassword";
+            this.textEMAILPassword.Size = new System.Drawing.Size(155, 28);
+            this.textEMAILPassword.TabIndex = 10;
+            // 
+            // textEMAILRecoveryAccountAdress
+            // 
+            this.textEMAILRecoveryAccountAdress.Location = new System.Drawing.Point(108, 100);
+            this.textEMAILRecoveryAccountAdress.Name = "textEMAILRecoveryAccountAdress";
+            this.textEMAILRecoveryAccountAdress.Size = new System.Drawing.Size(155, 28);
+            this.textEMAILRecoveryAccountAdress.TabIndex = 12;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(29, 107);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(73, 13);
+            this.labelControl16.TabIndex = 11;
+            this.labelControl16.Text = "Recovery Email";
+            // 
+            // textCOMPUTERDomainName
+            // 
+            this.textCOMPUTERDomainName.Location = new System.Drawing.Point(79, 26);
+            this.textCOMPUTERDomainName.Name = "textCOMPUTERDomainName";
+            this.textCOMPUTERDomainName.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERDomainName.TabIndex = 5;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(27, 101);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(46, 13);
+            this.labelControl17.TabIndex = 6;
+            this.labelControl17.Text = "Password";
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(25, 67);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(48, 13);
+            this.labelControl19.TabIndex = 7;
+            this.labelControl19.Text = "Username";
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Location = new System.Drawing.Point(38, 33);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(35, 13);
+            this.labelControl20.TabIndex = 8;
+            this.labelControl20.Text = "Domain";
+            // 
+            // textCOMPUTERUsername
+            // 
+            this.textCOMPUTERUsername.Location = new System.Drawing.Point(79, 60);
+            this.textCOMPUTERUsername.Name = "textCOMPUTERUsername";
+            this.textCOMPUTERUsername.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERUsername.TabIndex = 3;
+            // 
+            // textCOMPUTERPassword
+            // 
+            this.textCOMPUTERPassword.Location = new System.Drawing.Point(79, 94);
+            this.textCOMPUTERPassword.Name = "textCOMPUTERPassword";
+            this.textCOMPUTERPassword.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERPassword.TabIndex = 4;
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Location = new System.Drawing.Point(59, 135);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(14, 13);
+            this.labelControl21.TabIndex = 10;
+            this.labelControl21.Text = "Pin";
+            // 
+            // textCOMPUTERPin
+            // 
+            this.textCOMPUTERPin.Location = new System.Drawing.Point(79, 128);
+            this.textCOMPUTERPin.Name = "textCOMPUTERPin";
+            this.textCOMPUTERPin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textValidThru.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.textCOMPUTERPin.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.textCOMPUTERPin.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERPin.TabIndex = 9;
+            // 
+            // textAPPPassword
+            // 
+            this.textAPPPassword.Location = new System.Drawing.Point(92, 102);
+            this.textAPPPassword.Name = "textAPPPassword";
+            this.textAPPPassword.Size = new System.Drawing.Size(155, 28);
+            this.textAPPPassword.TabIndex = 18;
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Location = new System.Drawing.Point(40, 109);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(46, 13);
+            this.labelControl22.TabIndex = 17;
+            this.labelControl22.Text = "Password";
+            // 
+            // textAPPName
+            // 
+            this.textAPPName.Location = new System.Drawing.Point(92, 34);
+            this.textAPPName.Name = "textAPPName";
+            this.textAPPName.Size = new System.Drawing.Size(155, 28);
+            this.textAPPName.TabIndex = 15;
+            // 
+            // textAPPUsername
+            // 
+            this.textAPPUsername.Location = new System.Drawing.Point(92, 68);
+            this.textAPPUsername.Name = "textAPPUsername";
+            this.textAPPUsername.Size = new System.Drawing.Size(155, 28);
+            this.textAPPUsername.TabIndex = 16;
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Location = new System.Drawing.Point(37, 41);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(49, 13);
+            this.labelControl23.TabIndex = 14;
+            this.labelControl23.Text = "App Name";
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Location = new System.Drawing.Point(38, 75);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(48, 13);
+            this.labelControl24.TabIndex = 13;
+            this.labelControl24.Text = "Username";
+            // 
+            // textBANKPassword
+            // 
+            this.textBANKPassword.Location = new System.Drawing.Point(79, 94);
+            this.textBANKPassword.Name = "textBANKPassword";
+            this.textBANKPassword.Size = new System.Drawing.Size(155, 28);
+            this.textBANKPassword.TabIndex = 4;
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Location = new System.Drawing.Point(27, 101);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(46, 13);
+            this.labelControl25.TabIndex = 6;
+            this.labelControl25.Text = "Password";
+            // 
+            // textBANKUsername
+            // 
+            this.textBANKUsername.Location = new System.Drawing.Point(79, 60);
+            this.textBANKUsername.Name = "textBANKUsername";
+            this.textBANKUsername.Size = new System.Drawing.Size(155, 28);
+            this.textBANKUsername.TabIndex = 5;
+            // 
+            // labelControl26
+            // 
+            this.labelControl26.Location = new System.Drawing.Point(25, 67);
+            this.labelControl26.Name = "labelControl26";
+            this.labelControl26.Size = new System.Drawing.Size(48, 13);
+            this.labelControl26.TabIndex = 7;
+            this.labelControl26.Text = "Username";
+            // 
+            // labelControl27
+            // 
+            this.labelControl27.Location = new System.Drawing.Point(20, 33);
+            this.labelControl27.Name = "labelControl27";
+            this.labelControl27.Size = new System.Drawing.Size(53, 13);
+            this.labelControl27.TabIndex = 8;
+            this.labelControl27.Text = "Bank Name";
+            // 
+            // textBANKName
+            // 
+            this.textBANKName.Location = new System.Drawing.Point(79, 26);
+            this.textBANKName.Name = "textBANKName";
+            this.textBANKName.Size = new System.Drawing.Size(155, 28);
+            this.textBANKName.TabIndex = 3;
+            // 
+            // textBANKPasscode
+            // 
+            this.textBANKPasscode.Location = new System.Drawing.Point(79, 128);
+            this.textBANKPasscode.Name = "textBANKPasscode";
+            this.textBANKPasscode.Size = new System.Drawing.Size(155, 28);
+            this.textBANKPasscode.TabIndex = 9;
+            // 
+            // labelControl28
+            // 
+            this.labelControl28.Location = new System.Drawing.Point(28, 135);
+            this.labelControl28.Name = "labelControl28";
+            this.labelControl28.Size = new System.Drawing.Size(45, 13);
+            this.labelControl28.TabIndex = 10;
+            this.labelControl28.Text = "Passcode";
+            // 
+            // labelControl29
+            // 
+            this.labelControl29.Location = new System.Drawing.Point(17, 136);
+            this.labelControl29.Name = "labelControl29";
+            this.labelControl29.Size = new System.Drawing.Size(99, 13);
+            this.labelControl29.TabIndex = 17;
+            this.labelControl29.Text = "Card Expiration Year";
+            // 
+            // textCREDITCARDOwnerName
+            // 
+            this.textCREDITCARDOwnerName.Location = new System.Drawing.Point(122, 27);
+            this.textCREDITCARDOwnerName.Name = "textCREDITCARDOwnerName";
+            this.textCREDITCARDOwnerName.Size = new System.Drawing.Size(155, 28);
+            this.textCREDITCARDOwnerName.TabIndex = 15;
+            // 
+            // textCREDITCARDNumber
+            // 
+            this.textCREDITCARDNumber.Location = new System.Drawing.Point(122, 61);
+            this.textCREDITCARDNumber.Name = "textCREDITCARDNumber";
+            this.textCREDITCARDNumber.Size = new System.Drawing.Size(155, 28);
+            this.textCREDITCARDNumber.TabIndex = 16;
+            // 
+            // labelControl30
+            // 
+            this.labelControl30.Location = new System.Drawing.Point(58, 34);
+            this.labelControl30.Name = "labelControl30";
+            this.labelControl30.Size = new System.Drawing.Size(58, 13);
+            this.labelControl30.TabIndex = 14;
+            this.labelControl30.Text = "Card Owner";
+            // 
+            // labelControl31
+            // 
+            this.labelControl31.Location = new System.Drawing.Point(53, 68);
+            this.labelControl31.Name = "labelControl31";
+            this.labelControl31.Size = new System.Drawing.Size(63, 13);
+            this.labelControl31.TabIndex = 13;
+            this.labelControl31.Text = "Card Number";
+            // 
+            // labelControl32
+            // 
+            this.labelControl32.Location = new System.Drawing.Point(97, 170);
+            this.labelControl32.Name = "labelControl32";
+            this.labelControl32.Size = new System.Drawing.Size(19, 13);
+            this.labelControl32.TabIndex = 19;
+            this.labelControl32.Text = "CVV";
+            // 
+            // labelControl33
+            // 
+            this.labelControl33.Location = new System.Drawing.Point(9, 102);
+            this.labelControl33.Name = "labelControl33";
+            this.labelControl33.Size = new System.Drawing.Size(107, 13);
+            this.labelControl33.TabIndex = 21;
+            this.labelControl33.Text = "Card Expiration Month";
+            // 
+            // dateCREDITCARDExpirationMonth
+            // 
+            this.dateCREDITCARDExpirationMonth.EditValue = null;
+            this.dateCREDITCARDExpirationMonth.Location = new System.Drawing.Point(122, 95);
+            this.dateCREDITCARDExpirationMonth.Name = "dateCREDITCARDExpirationMonth";
+            this.dateCREDITCARDExpirationMonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textValidThru.Properties.DisplayFormat.FormatString = "";
-            this.textValidThru.Properties.EditFormat.FormatString = "";
-            this.textValidThru.Properties.Mask.EditMask = "";
-            this.textValidThru.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textValidThru.Size = new System.Drawing.Size(158, 28);
-            this.textValidThru.TabIndex = 5;
+            this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateCREDITCARDExpirationMonth.Properties.DisplayFormat.FormatString = "";
+            this.dateCREDITCARDExpirationMonth.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateCREDITCARDExpirationMonth.Properties.EditFormat.FormatString = "";
+            this.dateCREDITCARDExpirationMonth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateCREDITCARDExpirationMonth.Properties.MaskSettings.Set("mask", "");
+            this.dateCREDITCARDExpirationMonth.Size = new System.Drawing.Size(64, 28);
+            this.dateCREDITCARDExpirationMonth.TabIndex = 22;
+            // 
+            // textCREDITCARDCvv
+            // 
+            this.textCREDITCARDCvv.Location = new System.Drawing.Point(122, 163);
+            this.textCREDITCARDCvv.Name = "textCREDITCARDCvv";
+            this.textCREDITCARDCvv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textCREDITCARDCvv.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.textCREDITCARDCvv.Size = new System.Drawing.Size(64, 28);
+            this.textCREDITCARDCvv.TabIndex = 20;
+            // 
+            // textWIFIName
+            // 
+            this.textWIFIName.Location = new System.Drawing.Point(98, 33);
+            this.textWIFIName.Name = "textWIFIName";
+            this.textWIFIName.Size = new System.Drawing.Size(155, 28);
+            this.textWIFIName.TabIndex = 10;
+            // 
+            // labelControl34
+            // 
+            this.labelControl34.Location = new System.Drawing.Point(25, 74);
+            this.labelControl34.Name = "labelControl34";
+            this.labelControl34.Size = new System.Drawing.Size(67, 13);
+            this.labelControl34.TabIndex = 11;
+            this.labelControl34.Text = "Wifi Password";
+            // 
+            // labelControl35
+            // 
+            this.labelControl35.Location = new System.Drawing.Point(44, 40);
+            this.labelControl35.Name = "labelControl35";
+            this.labelControl35.Size = new System.Drawing.Size(48, 13);
+            this.labelControl35.TabIndex = 12;
+            this.labelControl35.Text = "Wifi Name";
+            // 
+            // textWIFIPassword
+            // 
+            this.textWIFIPassword.Location = new System.Drawing.Point(98, 67);
+            this.textWIFIPassword.Name = "textWIFIPassword";
+            this.textWIFIPassword.Size = new System.Drawing.Size(155, 28);
+            this.textWIFIPassword.TabIndex = 9;
+            // 
+            // dateCREDITCARDExpirationYear
+            // 
+            this.dateCREDITCARDExpirationYear.EditValue = null;
+            this.dateCREDITCARDExpirationYear.Location = new System.Drawing.Point(122, 129);
+            this.dateCREDITCARDExpirationYear.Name = "dateCREDITCARDExpirationYear";
+            this.dateCREDITCARDExpirationYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateCREDITCARDExpirationYear.Properties.DisplayFormat.FormatString = "";
+            this.dateCREDITCARDExpirationYear.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateCREDITCARDExpirationYear.Properties.EditFormat.FormatString = "";
+            this.dateCREDITCARDExpirationYear.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateCREDITCARDExpirationYear.Properties.MaskSettings.Set("mask", "");
+            this.dateCREDITCARDExpirationYear.Size = new System.Drawing.Size(64, 28);
+            this.dateCREDITCARDExpirationYear.TabIndex = 23;
+            // 
+            // textAPIKey
+            // 
+            this.textAPIKey.Location = new System.Drawing.Point(105, 193);
+            this.textAPIKey.Name = "textAPIKey";
+            this.textAPIKey.Size = new System.Drawing.Size(617, 28);
+            this.textAPIKey.TabIndex = 18;
+            // 
+            // labelControl36
+            // 
+            this.labelControl36.Location = new System.Drawing.Point(63, 200);
+            this.labelControl36.Name = "labelControl36";
+            this.labelControl36.Size = new System.Drawing.Size(36, 13);
+            this.labelControl36.TabIndex = 17;
+            this.labelControl36.Text = "Api Key";
+            // 
+            // textAPIAccessToken
+            // 
+            this.textAPIAccessToken.Location = new System.Drawing.Point(105, 125);
+            this.textAPIAccessToken.Name = "textAPIAccessToken";
+            this.textAPIAccessToken.Size = new System.Drawing.Size(617, 28);
+            this.textAPIAccessToken.TabIndex = 15;
+            // 
+            // textAPISecretKey
+            // 
+            this.textAPISecretKey.Location = new System.Drawing.Point(105, 159);
+            this.textAPISecretKey.Name = "textAPISecretKey";
+            this.textAPISecretKey.Size = new System.Drawing.Size(617, 28);
+            this.textAPISecretKey.TabIndex = 16;
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Location = new System.Drawing.Point(34, 132);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(65, 13);
+            this.labelControl37.TabIndex = 14;
+            this.labelControl37.Text = "Access Token";
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Location = new System.Drawing.Point(47, 166);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(52, 13);
+            this.labelControl38.TabIndex = 13;
+            this.labelControl38.Text = "Secret Key";
+            // 
+            // textAPIPassword
+            // 
+            this.textAPIPassword.Location = new System.Drawing.Point(105, 91);
+            this.textAPIPassword.Name = "textAPIPassword";
+            this.textAPIPassword.Size = new System.Drawing.Size(617, 28);
+            this.textAPIPassword.TabIndex = 24;
+            // 
+            // labelControl39
+            // 
+            this.labelControl39.Location = new System.Drawing.Point(35, 98);
+            this.labelControl39.Name = "labelControl39";
+            this.labelControl39.Size = new System.Drawing.Size(64, 13);
+            this.labelControl39.TabIndex = 23;
+            this.labelControl39.Text = "Api Password";
+            // 
+            // textAPINName
+            // 
+            this.textAPINName.Location = new System.Drawing.Point(105, 23);
+            this.textAPINName.Name = "textAPINName";
+            this.textAPINName.Size = new System.Drawing.Size(617, 28);
+            this.textAPINName.TabIndex = 21;
+            // 
+            // textAPIUsername
+            // 
+            this.textAPIUsername.Location = new System.Drawing.Point(105, 57);
+            this.textAPIUsername.Name = "textAPIUsername";
+            this.textAPIUsername.Size = new System.Drawing.Size(617, 28);
+            this.textAPIUsername.TabIndex = 22;
+            // 
+            // labelControl40
+            // 
+            this.labelControl40.Location = new System.Drawing.Point(54, 30);
+            this.labelControl40.Name = "labelControl40";
+            this.labelControl40.Size = new System.Drawing.Size(45, 13);
+            this.labelControl40.TabIndex = 20;
+            this.labelControl40.Text = "Api Name";
+            // 
+            // labelControl41
+            // 
+            this.labelControl41.Location = new System.Drawing.Point(33, 64);
+            this.labelControl41.Name = "labelControl41";
+            this.labelControl41.Size = new System.Drawing.Size(66, 13);
+            this.labelControl41.TabIndex = 19;
+            this.labelControl41.Text = "Api Username";
+            // 
+            // textAPIUrl
+            // 
+            this.textAPIUrl.Location = new System.Drawing.Point(105, 227);
+            this.textAPIUrl.Name = "textAPIUrl";
+            this.textAPIUrl.Size = new System.Drawing.Size(617, 28);
+            this.textAPIUrl.TabIndex = 27;
+            // 
+            // labelControl43
+            // 
+            this.labelControl43.Location = new System.Drawing.Point(68, 234);
+            this.labelControl43.Name = "labelControl43";
+            this.labelControl43.Size = new System.Drawing.Size(31, 13);
+            this.labelControl43.TabIndex = 26;
+            this.labelControl43.Text = "Api Url";
             // 
             // CreateOrEditCredential
             // 
@@ -414,6 +1067,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxPriority.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.xtraTabPageWeb.ResumeLayout(false);
@@ -423,14 +1078,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUrl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPageEmail.ResumeLayout(false);
+            this.xtraTabPageEmail.PerformLayout();
             this.xtraTabPageDB.ResumeLayout(false);
             this.xtraTabPageDB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).EndInit();
+            this.xtraTabPageComputer.ResumeLayout(false);
+            this.xtraTabPageComputer.PerformLayout();
+            this.xtraTabPageApp.ResumeLayout(false);
+            this.xtraTabPageApp.PerformLayout();
+            this.xtraTabPageBank.ResumeLayout(false);
+            this.xtraTabPageBank.PerformLayout();
+            this.xtraTabPageCreditCard.ResumeLayout(false);
+            this.xtraTabPageCreditCard.PerformLayout();
+            this.xtraTabPageWifi.ResumeLayout(false);
+            this.xtraTabPageWifi.PerformLayout();
+            this.xtraTabPageApi.ResumeLayout(false);
+            this.xtraTabPageApi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEMAILRecoveryAccountAdress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERDomainName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPPPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPPName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPPUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBANKPasscode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textWIFIName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textWIFIPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIKey.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIAccessToken.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPISecretKey.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPINName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAPIUrl.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -471,5 +1168,68 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxMfaType;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.DateEdit textValidThru;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageEmail;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageComputer;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageApp;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageBank;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageCreditCard;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageWifi;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageApi;
+        private DevExpress.XtraEditors.TextEdit textEMAILRecoveryAccountAdress;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.TextEdit textEMAILAccountAdress;
+        private DevExpress.XtraEditors.TextEdit textEMAILPassword;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
+        private DevExpress.XtraEditors.TextEdit textCOMPUTERDomainName;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.TextEdit textCOMPUTERUsername;
+        private DevExpress.XtraEditors.TextEdit textCOMPUTERPassword;
+        private DevExpress.XtraEditors.SpinEdit textCOMPUTERPin;
+        private DevExpress.XtraEditors.TextEdit textAPPPassword;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.TextEdit textAPPName;
+        private DevExpress.XtraEditors.TextEdit textAPPUsername;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
+        private DevExpress.XtraEditors.TextEdit textBANKPasscode;
+        private DevExpress.XtraEditors.LabelControl labelControl28;
+        private DevExpress.XtraEditors.TextEdit textBANKPassword;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.TextEdit textBANKUsername;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
+        private DevExpress.XtraEditors.LabelControl labelControl27;
+        private DevExpress.XtraEditors.TextEdit textBANKName;
+        private DevExpress.XtraEditors.LabelControl labelControl29;
+        private DevExpress.XtraEditors.TextEdit textCREDITCARDOwnerName;
+        private DevExpress.XtraEditors.TextEdit textCREDITCARDNumber;
+        private DevExpress.XtraEditors.LabelControl labelControl30;
+        private DevExpress.XtraEditors.LabelControl labelControl31;
+        private DevExpress.XtraEditors.LabelControl labelControl33;
+        private DevExpress.XtraEditors.DateEdit dateCREDITCARDExpirationMonth;
+        private DevExpress.XtraEditors.LabelControl labelControl32;
+        private DevExpress.XtraEditors.SpinEdit textCREDITCARDCvv;
+        private DevExpress.XtraEditors.TextEdit textWIFIName;
+        private DevExpress.XtraEditors.LabelControl labelControl34;
+        private DevExpress.XtraEditors.LabelControl labelControl35;
+        private DevExpress.XtraEditors.TextEdit textWIFIPassword;
+        private DevExpress.XtraEditors.DateEdit dateCREDITCARDExpirationYear;
+        private DevExpress.XtraEditors.TextEdit textAPIUrl;
+        private DevExpress.XtraEditors.LabelControl labelControl43;
+        private DevExpress.XtraEditors.TextEdit textAPIPassword;
+        private DevExpress.XtraEditors.LabelControl labelControl39;
+        private DevExpress.XtraEditors.TextEdit textAPINName;
+        private DevExpress.XtraEditors.TextEdit textAPIUsername;
+        private DevExpress.XtraEditors.LabelControl labelControl40;
+        private DevExpress.XtraEditors.LabelControl labelControl41;
+        private DevExpress.XtraEditors.TextEdit textAPIKey;
+        private DevExpress.XtraEditors.LabelControl labelControl36;
+        private DevExpress.XtraEditors.TextEdit textAPIAccessToken;
+        private DevExpress.XtraEditors.TextEdit textAPISecretKey;
+        private DevExpress.XtraEditors.LabelControl labelControl37;
+        private DevExpress.XtraEditors.LabelControl labelControl38;
     }
 }

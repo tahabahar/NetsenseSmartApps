@@ -18,10 +18,7 @@ namespace SmartPM
             InitializeComponent();
         }
 
-        private void okButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textPasswordLenght_TextChanged(object sender, EventArgs e)
         {

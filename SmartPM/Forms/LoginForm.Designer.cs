@@ -38,6 +38,7 @@
             // 
             this.textMasterKey.Location = new System.Drawing.Point(147, 85);
             this.textMasterKey.Name = "textMasterKey";
+            this.textMasterKey.Properties.PasswordChar = '*';
             this.textMasterKey.Size = new System.Drawing.Size(276, 28);
             this.textMasterKey.TabIndex = 0;
             // 

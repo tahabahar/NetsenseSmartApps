@@ -2,6 +2,7 @@
 using DevExpress.XtraEditors;
 using Newtonsoft.Json;
 using SmartPM.Model;
+using SmartPM.Model.CredentialTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,6 @@ namespace SmartPM.AddForms
             {
                 case CredentialTypeEnum.Web:
                     xtraTabControl1.SelectedTabPage = xtraTabPageWeb;
-                    //Unboxing
                     if (pCredential.CredentialJsonData != null)
                     {
                         WebCredential MyWebmodel = JsonConvert.DeserializeObject<WebCredential>(pCredential.CredentialJsonData);
@@ -54,7 +54,6 @@ namespace SmartPM.AddForms
 
                 case CredentialTypeEnum.Database:
                     xtraTabControl1.SelectedTabPage = xtraTabPageDB;
-                    //Unboxing
                     if (pCredential.CredentialJsonData != null)
                     {
                         DatabaseCredential MyDbmodel = JsonConvert.DeserializeObject<DatabaseCredential>(pCredential.CredentialJsonData);
@@ -65,6 +64,118 @@ namespace SmartPM.AddForms
                             textDBServerName.Text = MyDbmodel.DBServerName;
                             textDBUserName.Text = MyDbmodel.DBUsername;
                             textDBPassword.Text = MyDbmodel.DBPassword;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.API:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageApi;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        ApiCredential MyApiModel = JsonConvert.DeserializeObject<ApiCredential>(pCredential.CredentialJsonData);
+
+                        if (MyApiModel != null)
+                        {
+                            textAPIAccessToken.Text = MyApiModel.AccessToken;
+                            textAPIKey.Text = MyApiModel.ApiKey;
+                            textAPINName.Text = MyApiModel.ApiName;
+                            textAPIPassword.Text = MyApiModel.ApiPassword;
+                            textAPISecretKey.Text = MyApiModel.SecretKey;
+                            textAPIUrl.Text = MyApiModel.ApiUrl;
+                            textAPIUsername.Text = MyApiModel.ApiUsername;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.App:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageApp;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        AppCredential MyAppModel = JsonConvert.DeserializeObject<AppCredential>(pCredential.CredentialJsonData);
+
+                        if (MyAppModel != null)
+                        {
+                            textAPPName.Text = MyAppModel.AppName;
+                            textAPPPassword.Text = MyAppModel.Password;
+                            textAPPUsername.Text = MyAppModel.Username;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.Bank:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageBank;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        BankCredential MyBankModel = JsonConvert.DeserializeObject<BankCredential>(pCredential.CredentialJsonData);
+
+                        if (MyBankModel != null)
+                        {
+                            textBANKName.Text = MyBankModel.BankName;
+                            textBANKPasscode.Text = MyBankModel.Passcode;
+                            textBANKPassword.Text = MyBankModel.Password;
+                            textBANKUsername.Text = MyBankModel.Username;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.Computer:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageComputer;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        ComputerCredential MyComputerModel = JsonConvert.DeserializeObject<ComputerCredential>(pCredential.CredentialJsonData);
+
+                        if (MyComputerModel != null)
+                        {
+                            textCOMPUTERDomainName.Text = MyComputerModel.Domain;
+                            textCOMPUTERPassword.Text = MyComputerModel.Password;
+                            textCOMPUTERPin.Text = MyComputerModel.Pin.ToString();
+                            textCOMPUTERUsername.Text = MyComputerModel.Username;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.CreditCard:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageCreditCard;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        CreditCardCredential MyCreditCard = JsonConvert.DeserializeObject<CreditCardCredential>(pCredential.CredentialJsonData);
+
+                        if (MyCreditCard != null)
+                        {
+                            textCREDITCARDCvv.Text = MyCreditCard.CVV;
+                            textCREDITCARDNumber.Text = MyCreditCard.CardNumber;
+                            textCREDITCARDOwnerName.Text = MyCreditCard.CardOwner;
+                            dateCREDITCARDExpirationMonth.Text = MyCreditCard.CardExpirationMonth;
+                            dateCREDITCARDExpirationYear.Text = MyCreditCard.CardExpirationYear;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.Email:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageEmail;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        EmailCredential MyEmailModel = JsonConvert.DeserializeObject<EmailCredential>(pCredential.CredentialJsonData);
+
+                        if (MyEmailModel != null)
+                        {
+                            textEMAILAccountAdress.Text = MyEmailModel.EmailAccount;
+                            textEMAILPassword.Text = MyEmailModel.Password;
+                            textEMAILRecoveryAccountAdress.Text = MyEmailModel.RecoveryEmail;
+                        }
+                    }
+                    break;
+
+                case CredentialTypeEnum.WifiNetwork:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageWifi;
+                    if (pCredential.CredentialJsonData != null)
+                    {
+                        WifiNetworkCredential MyWifiNetworkModel = JsonConvert.DeserializeObject<WifiNetworkCredential>(pCredential.CredentialJsonData);
+
+                        if (MyWifiNetworkModel != null)
+                        {
+                            textWIFIName.Text = MyWifiNetworkModel.WifiName;
+                            textWIFIPassword.Text = MyWifiNetworkModel.Password;
                         }
                     }
                     break;
@@ -88,16 +199,14 @@ namespace SmartPM.AddForms
             {
                 case CredentialTypeEnum.Web:
                     xtraTabControl1.SelectedTabPage = xtraTabPageWeb;
-
                     WebCredential MyWebmodel = new WebCredential();
 
                     if (MyWebmodel != null)
                     {
                         MyWebmodel.WebUrl = textWEBUrl.Text;
-                        MyWebmodel.Username = textDBUserName.Text;
-                        MyWebmodel.Password = textDBPassword.Text;                        
+                        MyWebmodel.Username = textWEBUsername.Text;
+                        MyWebmodel.Password = textWEBPasword.Text;                        
                     }
-                    //Boxing
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWebmodel);
 
                     break;
@@ -109,13 +218,12 @@ namespace SmartPM.AddForms
                     if (MyDbmodel != null)
                     {
                         MyDbmodel.DBUsername = textDBUserName.Text;
-                        MyDbmodel.DBServerName =  textDBServerName.Text;
+                        MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
                         //Todo:
                         //MyDbmodel.DBType = comboBoxDBType.EditValue;
                         
                     }
-                    //Boxing
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
 
                     break;

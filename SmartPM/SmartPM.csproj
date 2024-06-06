@@ -88,12 +88,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\AESCipher.cs" />
-    <Compile Include="Forms\AskPasswordForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AskPasswordForm.Designer.cs">
-      <DependentUpon>AskPasswordForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataHelper.cs" />
     <Compile Include="Helper\FormCleaner.cs" />
     <Compile Include="Model\CredentialEntry.cs" />
@@ -103,7 +97,13 @@
     <Compile Include="Forms\GeneratePassword.Designer.cs">
       <DependentUpon>GeneratePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CredentialTypes\ApiCredential.cs" />
+    <Compile Include="Model\CredentialTypes\AppCredential.cs" />
+    <Compile Include="Model\CredentialTypes\BankCredential.cs" />
+    <Compile Include="Model\CredentialTypes\ComputerCredential.cs" />
     <Compile Include="Model\CredentialTypes\CreditCardCredential.cs" />
+    <Compile Include="Model\CredentialTypes\EmailCredential.cs" />
+    <Compile Include="Model\CredentialTypes\WifiNetworkCredential.cs" />
     <Compile Include="Model\Enums\DBTypeEnum.cs" />
     <Compile Include="Model\Enums\MfaTypeEnum.cs" />
     <Compile Include="Model\Enums\PriorityEnum.cs" />
@@ -120,9 +120,6 @@
     <Compile Include="Model\Enums\CredentialTypeEnum.cs" />
     <EmbeddedResource Include="Forms\CreateOrEditCredential.resx">
       <DependentUpon>CreateOrEditCredential.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AskPasswordForm.resx">
-      <DependentUpon>AskPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GeneratePassword.resx">
       <DependentUpon>GeneratePassword.cs</DependentUpon>

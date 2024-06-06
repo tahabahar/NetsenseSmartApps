@@ -141,7 +141,6 @@
             this.okButton.Size = new System.Drawing.Size(77, 40);
             this.okButton.TabIndex = 7;
             this.okButton.Text = "Ok";
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // clearButton
             // 
