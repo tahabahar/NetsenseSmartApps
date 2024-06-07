@@ -26,6 +26,7 @@ namespace SmartPM.Forms
             DataHelper.aesCipher = new AESCipher(textMasterKey.Text);
             
 
+
             if (textMasterKey.Text.Length<6)
             {
                 XtraMessageBox.Show("Please enter master password", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
