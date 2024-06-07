@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraLayout.Customization;
+﻿using DevExpress.XtraBars.Ribbon.ViewInfo;
+using DevExpress.XtraLayout.Customization;
 using SmartPM.Model;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace SmartPM
         public CredentialTypeEnum CredentialType { get; set; }
         public string CredentialJsonData { get; set; }
         public MFATypeEnum MFAType { get; set; }
-
+        public DateTime LastModifiedDate { get; set; } = DateTime.Now;
 
     }
 }

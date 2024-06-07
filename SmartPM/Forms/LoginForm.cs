@@ -17,6 +17,8 @@ namespace SmartPM.Forms
         public LoginForm()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += LoginForm_KeyDown;
         }
 
         private void bbLogin_Click(object sender, EventArgs e)
@@ -50,6 +52,15 @@ namespace SmartPM.Forms
 
            
            
+        }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !(ActiveControl is TextBox))
+            {
+                
+                bbLogin.PerformClick();
+            }
         }
     }
 }

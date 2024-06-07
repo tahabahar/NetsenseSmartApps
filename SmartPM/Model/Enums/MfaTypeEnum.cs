@@ -9,12 +9,12 @@ namespace SmartPM.Model
 
     public enum MFATypeEnum
     {
-        None ,
-        GoogleAuthenticator,
-        MicrosoftAuthenticator,
-        Defender,
-        Sms,
-        Mail
+        None = 1,
+        GoogleAuthenticator = 2,
+        MicrosoftAuthenticator = 3,
+        Defender = 4,
+        Sms = 5,
+        Mail = 6
     }
 
 }

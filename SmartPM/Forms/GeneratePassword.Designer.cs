@@ -56,7 +56,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(22, 12);
+            this.labelControl1.Location = new System.Drawing.Point(111, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(212, 23);
             this.labelControl1.TabIndex = 0;
@@ -99,7 +99,6 @@
             this.textPasswordLenght.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.textPasswordLenght.Size = new System.Drawing.Size(55, 28);
             this.textPasswordLenght.TabIndex = 0;
-            this.textPasswordLenght.TextChanged += new System.EventHandler(this.textPasswordLenght_TextChanged);
             // 
             // checkLowerCase
             // 
@@ -136,26 +135,27 @@
             // okButton
             // 
             this.okButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("okButton.ImageOptions.SvgImage")));
-            this.okButton.Location = new System.Drawing.Point(23, 184);
+            this.okButton.Location = new System.Drawing.Point(354, 207);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(77, 40);
-            this.okButton.TabIndex = 7;
+            this.okButton.TabIndex = 8;
             this.okButton.Text = "Ok";
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // clearButton
             // 
             this.clearButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("clearButton.ImageOptions.SvgImage")));
-            this.clearButton.Location = new System.Drawing.Point(106, 184);
+            this.clearButton.Location = new System.Drawing.Point(95, 207);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(77, 40);
-            this.clearButton.TabIndex = 8;
+            this.clearButton.TabIndex = 7;
             this.clearButton.Text = "Clear";
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // cancelButton
             // 
             this.cancelButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cancelButton.ImageOptions.SvgImage")));
-            this.cancelButton.Location = new System.Drawing.Point(189, 184);
+            this.cancelButton.Location = new System.Drawing.Point(12, 207);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(77, 40);
             this.cancelButton.TabIndex = 9;
@@ -190,8 +190,10 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.textPasswordLenght);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GeneratePassword";
             this.Text = "GeneratePassword";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GeneratePassword_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.textGeneratedPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPasswordLenght.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkLowerCase.Properties)).EndInit();

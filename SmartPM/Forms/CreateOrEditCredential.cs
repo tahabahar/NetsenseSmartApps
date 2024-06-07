@@ -1,8 +1,12 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using DevExpress.XtraExport.Helpers;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
 using SmartPM.Model;
 using SmartPM.Model.CredentialTypes;
+using SmartPM.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +28,10 @@ namespace SmartPM.AddForms
         {
             InitializeComponent();
             _credentialEntry = pCredential;
+            this.KeyPreview = true;
+            
+
+            this.KeyDown += CreateOrEditCredential_KeyDown;
 
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
 
@@ -181,19 +189,16 @@ namespace SmartPM.AddForms
                     break;
             }
         }
-
         private void saveButton_Click(object sender, EventArgs e)
         {
             _credentialEntry.Category = textCategory.Text;
             _credentialEntry.Description = textDescription.Text;
             _credentialEntry.ValidThru = textValidThru.DateTime;
             _credentialEntry.Note = memoNote.Text;
-
-            //Todo:Şimdilik pas geçtik kontrol et.
-            /* 
-            _credentialEntry.Priority = comboBoxPriority.EditValue;
-            _credentialEntry.MFAType = comboBoxMfaType.EditValue;          ;
-            */
+            _credentialEntry.Priority = (PriorityEnum)comboBoxPriority.EditValue;
+            _credentialEntry.MFAType = (MFATypeEnum)comboBoxMfaType.EditValue;
+            _credentialEntry.LastModifiedDate = DateTime.Now;
+            
 
             switch (_credentialEntry.CredentialType)
             {
@@ -205,7 +210,7 @@ namespace SmartPM.AddForms
                     {
                         MyWebmodel.WebUrl = textWEBUrl.Text;
                         MyWebmodel.Username = textWEBUsername.Text;
-                        MyWebmodel.Password = textWEBPasword.Text;                        
+                        MyWebmodel.Password = textWEBPasword.Text;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWebmodel);
 
@@ -220,18 +225,188 @@ namespace SmartPM.AddForms
                         MyDbmodel.DBUsername = textDBUserName.Text;
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
+                       // MyDbmodel.DBType = 
+
                         //Todo:
                         //MyDbmodel.DBType = comboBoxDBType.EditValue;
-                        
+
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
+
+                    break;
+
+                case CredentialTypeEnum.API:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageApi;
+                    ApiCredential MyApiModel = new ApiCredential();
+
+                    if (MyApiModel != null)
+                    {
+                        MyApiModel.AccessToken = textAPIAccessToken.Text;
+                        MyApiModel.ApiKey = textAPIKey.Text;
+                        MyApiModel.ApiName = textAPINName.Text;
+                        MyApiModel.ApiPassword = textAPIPassword.Text;
+                        MyApiModel.SecretKey = textAPISecretKey.Text;
+                        MyApiModel.ApiUrl = textAPIUrl.Text;
+                        MyApiModel.ApiUsername = textAPIUsername.Text;
+
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyApiModel);
+
+                    break;
+
+                case CredentialTypeEnum.App:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageApp;
+                    AppCredential MyAppModel = new AppCredential();
+
+                    if (MyAppModel != null)
+                    {
+                        MyAppModel.AppName = textAPPName.Text;
+                        MyAppModel.Password = textAPPPassword.Text;
+                        MyAppModel.Username = textAPPUsername.Text;
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyAppModel);
+
+                    break;
+
+                case CredentialTypeEnum.Bank:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageBank;
+                    BankCredential MyBankModel = new BankCredential();
+
+                    if (MyBankModel != null)
+                    {
+                        MyBankModel.BankName = textBANKName.Text;
+                        MyBankModel.Passcode = textBANKPasscode.Text;
+                        MyBankModel.Password = textBANKPassword.Text;
+                        MyBankModel.Username = textBANKUsername.Text;
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyBankModel);
+
+                    break;
+
+                case CredentialTypeEnum.Computer:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageComputer;
+                    ComputerCredential MyComputerModel = new ComputerCredential();
+
+                    if (MyComputerModel != null)
+                    {
+                        MyComputerModel.Domain = textCOMPUTERDomainName.Text;
+                        MyComputerModel.Password = textCOMPUTERPassword.Text;
+                        MyComputerModel.Pin = int.Parse(textCOMPUTERPin.Text);
+                        MyComputerModel.Username = textCOMPUTERUsername.Text;
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyComputerModel);
+
+                    break;
+
+                case CredentialTypeEnum.CreditCard:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageCreditCard;
+                    CreditCardCredential MyCreditCard = new CreditCardCredential();
+
+                    if (MyCreditCard != null)
+                    {
+                        MyCreditCard.CVV = textCREDITCARDCvv.Text;
+                        MyCreditCard.CardNumber = textCREDITCARDNumber.Text;
+                        MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
+                        MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationMonth.Text;
+                        MyCreditCard.CardExpirationYear = dateCREDITCARDExpirationYear.Text;
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyCreditCard);
+
+                    break;
+
+                case CredentialTypeEnum.Email:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageEmail;
+                    EmailCredential MyEmailModel = new EmailCredential();
+
+                    if (MyEmailModel != null)
+                    {
+                        MyEmailModel.EmailAccount = textEMAILAccountAdress.Text;
+                        MyEmailModel.Password = textEMAILPassword.Text;
+                        MyEmailModel.RecoveryEmail = textEMAILRecoveryAccountAdress.Text;
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyEmailModel);
+
+                    break;
+
+                case CredentialTypeEnum.WifiNetwork:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageWifi;
+                    WifiNetworkCredential MyWifiNetworkModel = new WifiNetworkCredential();
+
+                    if (MyWifiNetworkModel != null)
+                    {
+                        MyWifiNetworkModel.WifiName = textWIFIName.Text;
+                        MyWifiNetworkModel.Password = textWIFIPassword.Text;
+                    }
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWifiNetworkModel);
 
                     break;
             }
 
             DataHelper.AddOrUpdate(_credentialEntry);
+            var MyMainForm = new MainForm();
+            
 
             this.Close();
+            
+
+        }
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void generateButton_Click(object sender, EventArgs e)
+        {
+            var MyGeneratePassword = new GeneratePassword();
+            MyGeneratePassword.ShowDialog();
+            if (xtraTabControl1.SelectedTabPage == xtraTabPageApi)
+            {
+                textAPIPassword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageApp) 
+            {
+                textAPPPassword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageBank)
+            {
+                textBANKPassword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageComputer)
+            {
+                textCOMPUTERPassword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
+            {
+                textDBPassword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageEmail)
+            {
+                textEMAILPassword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageWeb)
+            {
+                textWEBPasword.Text = MyGeneratePassword.Password;
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageWifi)
+            {
+                textWIFIPassword.Text = MyGeneratePassword.Password;
+            }
+        }
+        private void CreateOrEditCredential_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !(ActiveControl is TextBox))
+            {
+                saveButton.PerformClick();
+            }
+        }
+        private void CreateOrEditCredential_Load(object sender, EventArgs e)
+        {
+            comboBoxPriority.Properties.Items.AddRange(Enum.GetValues(typeof(PriorityEnum)));
+            comboBoxCredentialType.Properties.Items.AddRange(Enum.GetValues(typeof(CredentialTypeEnum)));
+            comboBoxMfaType.Properties.Items.AddRange(Enum.GetValues(typeof(MFATypeEnum)));
+            if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
+            {
+                comboBoxDBType.Properties.Items.AddRange(Enum.GetValues(typeof(DBTypeEnum)));
+            }
 
         }
     }

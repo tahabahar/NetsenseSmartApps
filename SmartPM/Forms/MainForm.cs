@@ -140,7 +140,10 @@ namespace SmartPM
         }
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
+            CredentialEntry credentialEntry = (CredentialEntry)gridView1.GetFocusedRow();
 
+            CreateOrEditCredential myfrm = new CreateOrEditCredential(credentialEntry);
+            myfrm.ShowDialog();
         }
     }
 }

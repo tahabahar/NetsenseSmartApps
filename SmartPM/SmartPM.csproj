@@ -88,7 +88,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\AESCipher.cs" />
-    <Compile Include="DataHelper.cs" />
+    <Compile Include="Helper\DataHelper.cs" />
     <Compile Include="Helper\FormCleaner.cs" />
     <Compile Include="Model\CredentialEntry.cs" />
     <Compile Include="Forms\GeneratePassword.cs">

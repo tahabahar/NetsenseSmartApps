@@ -16,22 +16,11 @@ namespace SmartPM
         public GeneratePassword()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+
+            this.KeyDown += GeneratePassword_KeyDown;
         }
-
-        
-
-        private void textPasswordLenght_TextChanged(object sender, EventArgs e)
-        {
-            if (int.TryParse(textPasswordLenght.Text, out int lenght))
-            {
-
-                if (lenght < 8 && lenght > 30)
-                {
-                    textPasswordLenght.Text = "";
-                    MessageBox.Show("Your password length can't be more than 30 characters!");
-                }
-            }
-        }
+        public string  Password { get; set; }
         private string GenerateCustomPassword(int length, bool useLowercase, bool useUppercase, bool useNumbers, bool useSymbols)
         {
             const string lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -61,7 +50,6 @@ namespace SmartPM
 
             return password.ToString();
         }
-
         private void generateButton_Click(object sender, EventArgs e)
         {
             bool useLowercase = checkLowerCase.Checked;
@@ -88,16 +76,26 @@ namespace SmartPM
                 }
             }
         }
-
         private void clearButton_Click(object sender, EventArgs e)
         {
             FormCleaner.ResetAllControls(this);
             textPasswordLenght.Focus();
         }
-
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void okButton_Click(object sender, EventArgs e)
+        {
+           Password = textGeneratedPassword.Text;
+            this.Close();
+        }
+        private void GeneratePassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !(ActiveControl is TextBox))
+            {
+                okButton.PerformClick();
+            }
         }
     }
 }

@@ -50,8 +50,6 @@ namespace SmartPM
 
         public static void AddOrUpdate(CredentialEntry credentialEntry)
         {
-
-            //eklenen kayıt listede varsa onu bul ve sil
             foreach (CredentialEntry entry in MyData)
             {
                 if (credentialEntry.Id == entry.Id)
@@ -60,11 +58,7 @@ namespace SmartPM
                     break;
                 }
             }
-
-            //listeye yeni kaydı ekle.
             MyData.Add(credentialEntry);
-
-
             SaveData();
         }
 
