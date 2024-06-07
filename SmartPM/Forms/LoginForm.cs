@@ -36,6 +36,7 @@ namespace SmartPM.Forms
             {
                 if (DataHelper.TryLoadData())
                 {
+
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
