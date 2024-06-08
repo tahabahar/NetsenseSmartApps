@@ -8,8 +8,6 @@ namespace SmartPM
 {
     public enum CredentialTypeEnum
     {
-        
-
         Web = 1,      
         Email = 2, 
         Computer = 3,
@@ -19,8 +17,6 @@ namespace SmartPM
         CreditCard =7, 
         WifiNetwork =8,        
         API = 9
-
-
     }
 
 }

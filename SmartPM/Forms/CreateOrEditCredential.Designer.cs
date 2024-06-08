@@ -50,6 +50,7 @@
             this.backButton = new DevExpress.XtraEditors.SimpleButton();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageWeb = new DevExpress.XtraTab.XtraTabPage();
+            this.checkShowPassword = new DevExpress.XtraEditors.CheckEdit();
             this.textWEBPasword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textWEBUsername = new DevExpress.XtraEditors.TextEdit();
@@ -143,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.xtraTabPageWeb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkShowPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBPasword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUrl.Properties)).BeginInit();
@@ -380,6 +382,7 @@
             // 
             // xtraTabPageWeb
             // 
+            this.xtraTabPageWeb.Controls.Add(this.checkShowPassword);
             this.xtraTabPageWeb.Controls.Add(this.textWEBPasword);
             this.xtraTabPageWeb.Controls.Add(this.labelControl5);
             this.xtraTabPageWeb.Controls.Add(this.textWEBUsername);
@@ -390,10 +393,21 @@
             this.xtraTabPageWeb.Size = new System.Drawing.Size(1055, 424);
             this.xtraTabPageWeb.Text = "xtraTabPageWEB";
             // 
+            // checkShowPassword
+            // 
+            this.checkShowPassword.EditValue = true;
+            this.checkShowPassword.Location = new System.Drawing.Point(249, 108);
+            this.checkShowPassword.Name = "checkShowPassword";
+            this.checkShowPassword.Properties.Caption = "ShowPassword";
+            this.checkShowPassword.Size = new System.Drawing.Size(107, 22);
+            this.checkShowPassword.TabIndex = 3;
+            this.checkShowPassword.Click += new System.EventHandler(this.checkShowPassword_Click);
+            // 
             // textWEBPasword
             // 
             this.textWEBPasword.Location = new System.Drawing.Point(87, 105);
             this.textWEBPasword.Name = "textWEBPasword";
+            this.textWEBPasword.Properties.PasswordChar = '*';
             this.textWEBPasword.Size = new System.Drawing.Size(155, 28);
             this.textWEBPasword.TabIndex = 2;
             // 
@@ -492,6 +506,7 @@
             // 
             this.textEMAILPassword.Location = new System.Drawing.Point(108, 66);
             this.textEMAILPassword.Name = "textEMAILPassword";
+            this.textEMAILPassword.Properties.PasswordChar = '*';
             this.textEMAILPassword.Size = new System.Drawing.Size(155, 28);
             this.textEMAILPassword.TabIndex = 1;
             // 
@@ -584,6 +599,7 @@
             // 
             this.textDBPassword.Location = new System.Drawing.Point(132, 128);
             this.textDBPassword.Name = "textDBPassword";
+            this.textDBPassword.Properties.PasswordChar = '*';
             this.textDBPassword.Size = new System.Drawing.Size(155, 28);
             this.textDBPassword.TabIndex = 3;
             // 
@@ -651,6 +667,7 @@
             // 
             this.textCOMPUTERPassword.Location = new System.Drawing.Point(79, 94);
             this.textCOMPUTERPassword.Name = "textCOMPUTERPassword";
+            this.textCOMPUTERPassword.Properties.PasswordChar = '*';
             this.textCOMPUTERPassword.Size = new System.Drawing.Size(155, 28);
             this.textCOMPUTERPassword.TabIndex = 2;
             // 
@@ -685,6 +702,7 @@
             // 
             this.textAPPPassword.Location = new System.Drawing.Point(92, 102);
             this.textAPPPassword.Name = "textAPPPassword";
+            this.textAPPPassword.Properties.PasswordChar = '*';
             this.textAPPPassword.Size = new System.Drawing.Size(155, 28);
             this.textAPPPassword.TabIndex = 2;
             // 
@@ -759,6 +777,7 @@
             // 
             this.textBANKPassword.Location = new System.Drawing.Point(79, 94);
             this.textBANKPassword.Name = "textBANKPassword";
+            this.textBANKPassword.Properties.PasswordChar = '*';
             this.textBANKPassword.Size = new System.Drawing.Size(155, 28);
             this.textBANKPassword.TabIndex = 2;
             // 
@@ -956,6 +975,7 @@
             // 
             this.textWIFIPassword.Location = new System.Drawing.Point(98, 67);
             this.textWIFIPassword.Name = "textWIFIPassword";
+            this.textWIFIPassword.Properties.PasswordChar = '*';
             this.textWIFIPassword.Size = new System.Drawing.Size(155, 28);
             this.textWIFIPassword.TabIndex = 1;
             // 
@@ -998,6 +1018,7 @@
             // 
             this.textAPIPassword.Location = new System.Drawing.Point(105, 91);
             this.textAPIPassword.Name = "textAPIPassword";
+            this.textAPIPassword.Properties.PasswordChar = '*';
             this.textAPIPassword.Size = new System.Drawing.Size(617, 28);
             this.textAPIPassword.TabIndex = 2;
             // 
@@ -1112,6 +1133,7 @@
             this.panelControl2.ResumeLayout(false);
             this.xtraTabPageWeb.ResumeLayout(false);
             this.xtraTabPageWeb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkShowPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBPasword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUrl.Properties)).EndInit();
@@ -1274,5 +1296,6 @@
         private DevExpress.XtraEditors.SimpleButton backButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.CheckEdit checkShowPassword;
     }
 }

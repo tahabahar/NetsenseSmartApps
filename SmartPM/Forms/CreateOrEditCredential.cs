@@ -1,9 +1,11 @@
 ﻿using DevExpress.Utils;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using DevExpress.XtraExport.Helpers;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
+using SmartPM.Helper;
 using SmartPM.Model;
 using SmartPM.Model.CredentialTypes;
 using SmartPM.Model.Enums;
@@ -18,6 +20,7 @@ using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace SmartPM.AddForms
 {
@@ -42,6 +45,7 @@ namespace SmartPM.AddForms
             comboBoxCredentialType.EditValue = pCredential.CredentialType;
             comboBoxPriority.EditValue = pCredential.Priority;
             comboBoxMfaType.EditValue = pCredential.MFAType;
+
 
             switch (pCredential.CredentialType)
             {
@@ -407,5 +411,20 @@ namespace SmartPM.AddForms
             }
 
         }
+
+        private void checkShowPassword_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in xtraTabControl1.SelectedTabPage.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.PasswordChar = '0'; // TextBox'ın PasswordChar özelliğini '*' karakterine ayarla
+                }
+            }
+
+            // CheckBox'un durumunu PasswordChar özelliğine göre ayarla
+            checkShowPassword.Checked = (xtraTabControl1.SelectedTabPage.Controls.OfType<TextBox>().Any(tb => tb.PasswordChar == '*'));
+        }
     }
+    
 }
