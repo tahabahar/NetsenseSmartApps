@@ -222,13 +222,11 @@ namespace SmartPM.AddForms
 
                     if (MyDbmodel != null)
                     {
+
                         MyDbmodel.DBUsername = textDBUserName.Text;
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
-                       // MyDbmodel.DBType = 
-
-                        //Todo:
-                        //MyDbmodel.DBType = comboBoxDBType.EditValue;
+                        MyDbmodel.DBType = (DBTypeEnum)comboBoxDBType.EditValue;
 
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
