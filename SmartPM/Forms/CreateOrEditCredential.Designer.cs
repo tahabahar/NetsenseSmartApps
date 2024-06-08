@@ -1095,7 +1095,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CreateOrEditCredential";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "CreateOrEditCredential";
             this.Load += new System.EventHandler(this.CreateOrEditCredential_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CreateOrEditCredential_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

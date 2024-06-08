@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneratePassword));
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.textGeneratedPassword = new DevExpress.XtraEditors.TextEdit();
@@ -42,6 +41,7 @@
             this.clearButton = new DevExpress.XtraEditors.SimpleButton();
             this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.generateButton = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.textGeneratedPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPasswordLenght.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkLowerCase.Properties)).BeginInit();
@@ -49,18 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkNumbers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkSymbols.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(111, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(212, 23);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Customize your password";
             // 
             // labelControl2
             // 
@@ -172,11 +160,22 @@
             this.generateButton.Text = "Generate";
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(22, 32);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(169, 18);
+            this.labelControl1.TabIndex = 10;
+            this.labelControl1.Text = "Customize Your Password";
+            // 
             // GeneratePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 259);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.clearButton);
@@ -188,11 +187,10 @@
             this.Controls.Add(this.textGeneratedPassword);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.textPasswordLenght);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GeneratePassword";
-            this.Text = "GeneratePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GeneratePassword_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.textGeneratedPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPasswordLenght.Properties)).EndInit();
@@ -206,8 +204,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit textGeneratedPassword;
@@ -220,5 +216,6 @@
         private DevExpress.XtraEditors.SimpleButton clearButton;
         private DevExpress.XtraEditors.SimpleButton cancelButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
