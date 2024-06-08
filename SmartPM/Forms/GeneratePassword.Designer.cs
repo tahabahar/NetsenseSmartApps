@@ -76,7 +76,7 @@
             // textPasswordLenght
             // 
             this.textPasswordLenght.EditValue = new decimal(new int[] {
-            0,
+            10,
             0,
             0,
             0});
@@ -90,6 +90,7 @@
             // 
             // checkLowerCase
             // 
+            this.checkLowerCase.EditValue = true;
             this.checkLowerCase.Location = new System.Drawing.Point(22, 100);
             this.checkLowerCase.Name = "checkLowerCase";
             this.checkLowerCase.Properties.Caption = "abc";
@@ -98,6 +99,7 @@
             // 
             // checkUpperCase
             // 
+            this.checkUpperCase.EditValue = true;
             this.checkUpperCase.Location = new System.Drawing.Point(78, 100);
             this.checkUpperCase.Name = "checkUpperCase";
             this.checkUpperCase.Properties.Caption = "ABC";
@@ -106,6 +108,7 @@
             // 
             // checkNumbers
             // 
+            this.checkNumbers.EditValue = true;
             this.checkNumbers.Location = new System.Drawing.Point(136, 100);
             this.checkNumbers.Name = "checkNumbers";
             this.checkNumbers.Properties.Caption = "123";
@@ -114,6 +117,7 @@
             // 
             // checkSymbols
             // 
+            this.checkSymbols.EditValue = true;
             this.checkSymbols.Location = new System.Drawing.Point(194, 100);
             this.checkSymbols.Name = "checkSymbols";
             this.checkSymbols.Properties.Caption = "!+-";
@@ -164,7 +168,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(22, 42);
+            this.labelControl1.Location = new System.Drawing.Point(22, 32);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(169, 18);
             this.labelControl1.TabIndex = 10;
