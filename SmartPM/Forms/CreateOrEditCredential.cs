@@ -72,7 +72,7 @@ namespace SmartPM.AddForms
 
                         if (MyDbmodel != null)
                         {
-                            comboBoxDBType.Text = MyDbmodel.DBType.ToString();
+                            comboBoxDBType.EditValue = MyDbmodel.DBType;
                             textDBServerName.Text = MyDbmodel.DBServerName;
                             textDBUserName.Text = MyDbmodel.DBUsername;
                             textDBPassword.Text = MyDbmodel.DBPassword;
@@ -423,7 +423,103 @@ namespace SmartPM.AddForms
             }
 
             // CheckBox'un durumunu PasswordChar özelliğine göre ayarla
-            checkShowPassword.Checked = (xtraTabControl1.SelectedTabPage.Controls.OfType<TextBox>().Any(tb => tb.PasswordChar == '*'));
+            checkShowPasswordWeb.Checked = (xtraTabControl1.SelectedTabPage.Controls.OfType<TextBox>().Any(tb => tb.PasswordChar == '*'));
+        }
+
+        private void checkShowPasswordWeb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordWeb.Checked == false)
+            {
+                textWEBPasword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textWEBPasword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordDB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordDB.Checked == false)
+            {
+                textDBPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textDBPassword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordEmail_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordEmail.Checked == false)
+            {
+                textEMAILPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textEMAILPassword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordComputer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordComputer.Checked == false)
+            {
+                textCOMPUTERPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textCOMPUTERPassword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordApp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordApp.Checked == false)
+            {
+                textAPPPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textAPPPassword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordBank_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordBank.Checked == false)
+            {
+                textBANKPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBANKPassword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordWifi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordWifi.Checked == false)
+            {
+                textWIFIPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textWIFIPassword.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkShowPasswordApi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPasswordApi.Checked == false)
+            {
+                textAPIPassword.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textAPIPassword.Properties.UseSystemPasswordChar = true;
+            }
         }
     }
     

@@ -63,6 +63,8 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbiOpenDataFolder = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -189,9 +191,10 @@
             this.bbComputerCredential,
             this.bbCreditCardCredential,
             this.bbEmailCredential,
-            this.bbWifiNetworkCredential});
+            this.bbWifiNetworkCredential,
+            this.bbiOpenDataFolder});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 47;
+            this.ribbonControl.MaxItemId = 48;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -332,7 +335,8 @@
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup2});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Home";
@@ -370,6 +374,19 @@
             this.popupControlContainer1.Size = new System.Drawing.Size(250, 130);
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiOpenDataFolder);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
+            // bbiOpenDataFolder
+            // 
+            this.bbiOpenDataFolder.Caption = "Open Data Folder";
+            this.bbiOpenDataFolder.Id = 47;
+            this.bbiOpenDataFolder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.bbiOpenDataFolder.Name = "bbiOpenDataFolder";
             // 
             // MainForm
             // 
@@ -431,5 +448,7 @@
         private DevExpress.XtraBars.BarButtonItem bbEmailCredential;
         private DevExpress.XtraBars.BarButtonItem bbWifiNetworkCredential;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraBars.BarButtonItem bbiOpenDataFolder;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }

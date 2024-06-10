@@ -32,15 +32,17 @@
             this.bbLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.checkShowPassword = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textMasterKey.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkShowPassword.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textMasterKey
             // 
             this.textMasterKey.Location = new System.Drawing.Point(153, 79);
             this.textMasterKey.Name = "textMasterKey";
-            this.textMasterKey.Properties.PasswordChar = '*';
+            this.textMasterKey.Properties.UseSystemPasswordChar = true;
             this.textMasterKey.Size = new System.Drawing.Size(276, 28);
             this.textMasterKey.TabIndex = 0;
             // 
@@ -70,11 +72,22 @@
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Enter Your Master Password";
             // 
+            // checkShowPassword
+            // 
+            this.checkShowPassword.EditValue = true;
+            this.checkShowPassword.Location = new System.Drawing.Point(435, 82);
+            this.checkShowPassword.Name = "checkShowPassword";
+            this.checkShowPassword.Properties.Caption = "ShowPassword";
+            this.checkShowPassword.Size = new System.Drawing.Size(107, 22);
+            this.checkShowPassword.TabIndex = 12;
+            this.checkShowPassword.CheckedChanged += new System.EventHandler(this.checkShowPassword_CheckedChanged);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 286);
+            this.Controls.Add(this.checkShowPassword);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.bbLogin);
@@ -85,6 +98,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.textMasterKey.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkShowPassword.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,5 +110,6 @@
         private DevExpress.XtraEditors.SimpleButton bbLogin;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CheckEdit checkShowPassword;
     }
 }

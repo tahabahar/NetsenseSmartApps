@@ -64,5 +64,17 @@ namespace SmartPM.Forms
                 bbLogin.PerformClick();
             }
         }
+
+        private void checkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkShowPassword.Checked == false)
+            {
+                textMasterKey.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textMasterKey.Properties.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
