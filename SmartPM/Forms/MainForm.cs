@@ -124,7 +124,7 @@ namespace SmartPM
         }
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = XtraMessageBox.Show("Are you sure to delete focused row?", "Warning!", MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+            var result = XtraMessageBox.Show("Are you sure to delete focused row?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.No)
             {
@@ -135,7 +135,7 @@ namespace SmartPM
 
             DataHelper.MyData.Remove(credentialEntry);
             DataHelper.SaveData();
-            
+
 
         }
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
@@ -144,6 +144,30 @@ namespace SmartPM
 
             CreateOrEditCredential myfrm = new CreateOrEditCredential(credentialEntry);
             myfrm.ShowDialog();
+        }
+
+        private void bbiOpenDataFolder_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbiDuplicate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var credentialEntry = (CredentialEntry)gridView1.GetFocusedRow();
+
+            CredentialEntry newCredentialEntry = new CredentialEntry();
+            newCredentialEntry.Note = credentialEntry.Note;
+            newCredentialEntry.Description = credentialEntry.Description;
+            newCredentialEntry.Category = credentialEntry.Category;
+            newCredentialEntry.Priority = credentialEntry.Priority;
+            newCredentialEntry.ValidThru = credentialEntry.ValidThru;
+            newCredentialEntry.Id = Guid.NewGuid();
+            newCredentialEntry.CredentialJsonData = credentialEntry.CredentialJsonData;
+            newCredentialEntry.CredentialType = credentialEntry.CredentialType;
+
+            CreateOrEditCredential myfrm = new CreateOrEditCredential(newCredentialEntry);
+            myfrm.ShowDialog();
+
         }
     }
 }

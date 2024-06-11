@@ -344,13 +344,8 @@ namespace SmartPM.AddForms
                     break;
             }
 
-            DataHelper.AddOrUpdate(_credentialEntry);
-            var MyMainForm = new MainForm();
-            
-
-            this.Close();
-            
-
+            DataHelper.AddOrUpdate(_credentialEntry);     
+            this.Close();         
         }
         private void backButton_Click(object sender, EventArgs e)
         {

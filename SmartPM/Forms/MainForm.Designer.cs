@@ -58,13 +58,17 @@
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.bbSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiOpenDataFolder = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiOpenDataFolder = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDuplicate = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -192,9 +196,13 @@
             this.bbCreditCardCredential,
             this.bbEmailCredential,
             this.bbWifiNetworkCredential,
-            this.bbiOpenDataFolder});
+            this.bbiOpenDataFolder,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.ribbonGalleryBarItem1,
+            this.bbiDuplicate});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 48;
+            this.ribbonControl.MaxItemId = 52;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -331,6 +339,32 @@
             this.bbSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbSave.ImageOptions.LargeImage")));
             this.bbSave.Name = "bbSave";
             // 
+            // bbiOpenDataFolder
+            // 
+            this.bbiOpenDataFolder.Caption = "Open Data Folder";
+            this.bbiOpenDataFolder.Id = 47;
+            this.bbiOpenDataFolder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiOpenDataFolder.ImageOptions.LargeImage")));
+            this.bbiOpenDataFolder.Name = "bbiOpenDataFolder";
+            this.bbiOpenDataFolder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiOpenDataFolder_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Duplicate";
+            this.barButtonItem1.Id = 48;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "duplicate";
+            this.barButtonItem2.Id = 49;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "InplaceGallery1";
+            this.ribbonGalleryBarItem1.Id = 50;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -348,6 +382,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiNew);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiDuplicate);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Tasks";
             // 
@@ -357,6 +392,12 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.skinPaletteDropDownButtonItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Theme";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiOpenDataFolder);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // ribbonStatusBar
             // 
@@ -375,18 +416,12 @@
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
             // 
-            // ribbonPageGroup2
+            // bbiDuplicate
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiOpenDataFolder);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
-            // bbiOpenDataFolder
-            // 
-            this.bbiOpenDataFolder.Caption = "Open Data Folder";
-            this.bbiOpenDataFolder.Id = 47;
-            this.bbiOpenDataFolder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.bbiOpenDataFolder.Name = "bbiOpenDataFolder";
+            this.bbiDuplicate.Caption = "barButtonItem3";
+            this.bbiDuplicate.Id = 51;
+            this.bbiDuplicate.Name = "bbiDuplicate";
+            this.bbiDuplicate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDuplicate_ItemClick);
             // 
             // MainForm
             // 
@@ -450,5 +485,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraBars.BarButtonItem bbiOpenDataFolder;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem bbiDuplicate;
     }
 }
