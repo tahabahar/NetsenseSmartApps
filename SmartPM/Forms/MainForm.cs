@@ -30,6 +30,24 @@ namespace SmartPM
             InitializeComponent();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            string savedTheme = Properties.Settings.Default.Theme;
+            string savedPalette = Properties.Settings.Default.Template;
+
+            // Apply the saved theme if it exists
+            if (!string.IsNullOrEmpty(savedTheme))
+            {
+                DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme);
+            }
+
+            // Apply the saved palette if it exists
+            if (!string.IsNullOrEmpty(savedPalette))
+            {
+                DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme, savedPalette);
+            }
+        }
+
         private void bbWebCredential_ItemClick(object sender, ItemClickEventArgs e)
         {
             CredentialEntry myCredentialEntry = new CredentialEntry();
@@ -146,10 +164,7 @@ namespace SmartPM
             myfrm.ShowDialog();
         }
 
-        private void bbiOpenDataFolder_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
+      
 
         private void bbiDuplicate_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -169,5 +184,14 @@ namespace SmartPM
             myfrm.ShowDialog();
 
         }
+
+        private void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Properties.Settings.Default.Theme = skinDropDownButtonItem1.Caption;
+            Properties.Settings.Default.Template = skinPaletteDropDownButtonItem1.Caption;
+            Properties.Settings.Default.Save();
+        }
+
+       
     }
 }
