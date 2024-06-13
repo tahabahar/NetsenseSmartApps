@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -192,6 +193,18 @@ namespace SmartPM
             Properties.Settings.Default.Save();
         }
 
-       
+        private void bbiOpenDataFolder_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (File.Exists(DataHelper.FileName))
+            {
+                string folderPath = Path.GetDirectoryName(DataHelper.FileName);
+
+                Process.Start("explorer.exe", folderPath);
+            }
+            else
+            {
+                XtraMessageBox.Show("Data file doesn't exists", "Warning!", MessageBoxButtons.OK);
+            }
+        }
     }
 }

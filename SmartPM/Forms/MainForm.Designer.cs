@@ -348,6 +348,7 @@
             this.bbiOpenDataFolder.Id = 47;
             this.bbiOpenDataFolder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiOpenDataFolder.ImageOptions.LargeImage")));
             this.bbiOpenDataFolder.Name = "bbiOpenDataFolder";
+            this.bbiOpenDataFolder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiOpenDataFolder_ItemClick);
             // 
             // barButtonItem1
             // 
