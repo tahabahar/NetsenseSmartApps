@@ -67,7 +67,7 @@ namespace SmartPM.Forms
 
         private void checkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPassword.Checked == false)
+            if (CheckHidePassword.Checked == false)
             {
                 textMasterKey.Properties.UseSystemPasswordChar = false;
             }

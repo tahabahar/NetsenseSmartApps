@@ -50,7 +50,7 @@
             this.backButton = new DevExpress.XtraEditors.SimpleButton();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageWeb = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordWeb = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordWeb = new DevExpress.XtraEditors.CheckEdit();
             this.textWEBPasword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textWEBUsername = new DevExpress.XtraEditors.TextEdit();
@@ -59,7 +59,7 @@
             this.textWEBUrl = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageEmail = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordEmail = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordEmail = new DevExpress.XtraEditors.CheckEdit();
             this.textEMAILRecoveryAccountAdress = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.textEMAILAccountAdress = new DevExpress.XtraEditors.TextEdit();
@@ -67,7 +67,7 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageDB = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordDB = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordDB = new DevExpress.XtraEditors.CheckEdit();
             this.comboBoxDBType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.textDBServerName = new DevExpress.XtraEditors.TextEdit();
@@ -77,7 +77,7 @@
             this.textDBUserName = new DevExpress.XtraEditors.TextEdit();
             this.textDBPassword = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPageComputer = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordComputer = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordComputer = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.textCOMPUTERDomainName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -87,7 +87,7 @@
             this.textCOMPUTERPassword = new DevExpress.XtraEditors.TextEdit();
             this.textCOMPUTERPin = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPageApp = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordApp = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordApp = new DevExpress.XtraEditors.CheckEdit();
             this.textAPPPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.textAPPName = new DevExpress.XtraEditors.TextEdit();
@@ -95,7 +95,7 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageBank = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordBank = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordBank = new DevExpress.XtraEditors.CheckEdit();
             this.textBANKPasscode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
             this.textBANKPassword = new DevExpress.XtraEditors.TextEdit();
@@ -116,13 +116,13 @@
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.textCREDITCARDCvv = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPageWifi = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordWifi = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordWifi = new DevExpress.XtraEditors.CheckEdit();
             this.textWIFIName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
             this.textWIFIPassword = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPageApi = new DevExpress.XtraTab.XtraTabPage();
-            this.checkShowPasswordApi = new DevExpress.XtraEditors.CheckEdit();
+            this.checkHidePasswordApi = new DevExpress.XtraEditors.CheckEdit();
             this.textAPIUrl = new DevExpress.XtraEditors.TextEdit();
             this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
             this.textAPIPassword = new DevExpress.XtraEditors.TextEdit();
@@ -151,36 +151,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.xtraTabPageWeb.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordWeb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordWeb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBPasword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUrl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPageEmail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILRecoveryAccountAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).BeginInit();
             this.xtraTabPageDB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordDB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordDB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).BeginInit();
             this.xtraTabPageComputer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordComputer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordComputer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERDomainName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPin.Properties)).BeginInit();
             this.xtraTabPageApp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordApp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordApp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPUsername.Properties)).BeginInit();
             this.xtraTabPageBank.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordBank.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordBank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKPasscode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).BeginInit();
@@ -194,11 +194,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).BeginInit();
             this.xtraTabPageWifi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordWifi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordWifi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWIFIName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWIFIPassword.Properties)).BeginInit();
             this.xtraTabPageApi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordApi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordApi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPIUrl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPIPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPINName.Properties)).BeginInit();
@@ -396,7 +396,7 @@
             // 
             // xtraTabPageWeb
             // 
-            this.xtraTabPageWeb.Controls.Add(this.checkShowPasswordWeb);
+            this.xtraTabPageWeb.Controls.Add(this.checkHidePasswordWeb);
             this.xtraTabPageWeb.Controls.Add(this.textWEBPasword);
             this.xtraTabPageWeb.Controls.Add(this.labelControl5);
             this.xtraTabPageWeb.Controls.Add(this.textWEBUsername);
@@ -407,16 +407,16 @@
             this.xtraTabPageWeb.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageWeb.Text = "xtraTabPageWEB";
             // 
-            // checkShowPasswordWeb
+            // checkHidePasswordWeb
             // 
-            this.checkShowPasswordWeb.EditValue = true;
-            this.checkShowPasswordWeb.Location = new System.Drawing.Point(249, 108);
-            this.checkShowPasswordWeb.Name = "checkShowPasswordWeb";
-            this.checkShowPasswordWeb.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordWeb.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordWeb.TabIndex = 3;
-            this.checkShowPasswordWeb.CheckedChanged += new System.EventHandler(this.checkShowPasswordWeb_CheckedChanged);
-            this.checkShowPasswordWeb.Click += new System.EventHandler(this.checkShowPassword_Click);
+            this.checkHidePasswordWeb.EditValue = true;
+            this.checkHidePasswordWeb.Location = new System.Drawing.Point(249, 108);
+            this.checkHidePasswordWeb.Name = "checkHidePasswordWeb";
+            this.checkHidePasswordWeb.Properties.Caption = "Hide Password";
+            this.checkHidePasswordWeb.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordWeb.TabIndex = 3;
+            this.checkHidePasswordWeb.CheckedChanged += new System.EventHandler(this.checkShowPasswordWeb_CheckedChanged);
+            this.checkHidePasswordWeb.Click += new System.EventHandler(this.checkShowPassword_Click);
             // 
             // textWEBPasword
             // 
@@ -485,7 +485,7 @@
             // 
             // xtraTabPageEmail
             // 
-            this.xtraTabPageEmail.Controls.Add(this.checkShowPasswordEmail);
+            this.xtraTabPageEmail.Controls.Add(this.checkHidePasswordEmail);
             this.xtraTabPageEmail.Controls.Add(this.textEMAILRecoveryAccountAdress);
             this.xtraTabPageEmail.Controls.Add(this.labelControl16);
             this.xtraTabPageEmail.Controls.Add(this.textEMAILAccountAdress);
@@ -496,15 +496,15 @@
             this.xtraTabPageEmail.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageEmail.Text = "xtraTabPageEmail";
             // 
-            // checkShowPasswordEmail
+            // checkHidePasswordEmail
             // 
-            this.checkShowPasswordEmail.EditValue = true;
-            this.checkShowPasswordEmail.Location = new System.Drawing.Point(269, 72);
-            this.checkShowPasswordEmail.Name = "checkShowPasswordEmail";
-            this.checkShowPasswordEmail.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordEmail.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordEmail.TabIndex = 12;
-            this.checkShowPasswordEmail.CheckedChanged += new System.EventHandler(this.checkShowPasswordEmail_CheckedChanged);
+            this.checkHidePasswordEmail.EditValue = true;
+            this.checkHidePasswordEmail.Location = new System.Drawing.Point(269, 72);
+            this.checkHidePasswordEmail.Name = "checkHidePasswordEmail";
+            this.checkHidePasswordEmail.Properties.Caption = "Hide Password";
+            this.checkHidePasswordEmail.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordEmail.TabIndex = 12;
+            this.checkHidePasswordEmail.CheckedChanged += new System.EventHandler(this.checkShowPasswordEmail_CheckedChanged);
             // 
             // textEMAILRecoveryAccountAdress
             // 
@@ -554,7 +554,7 @@
             // 
             // xtraTabPageDB
             // 
-            this.xtraTabPageDB.Controls.Add(this.checkShowPasswordDB);
+            this.xtraTabPageDB.Controls.Add(this.checkHidePasswordDB);
             this.xtraTabPageDB.Controls.Add(this.comboBoxDBType);
             this.xtraTabPageDB.Controls.Add(this.labelControl9);
             this.xtraTabPageDB.Controls.Add(this.textDBServerName);
@@ -567,15 +567,15 @@
             this.xtraTabPageDB.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageDB.Text = "xtraTabPageDatabase";
             // 
-            // checkShowPasswordDB
+            // checkHidePasswordDB
             // 
-            this.checkShowPasswordDB.EditValue = true;
-            this.checkShowPasswordDB.Location = new System.Drawing.Point(293, 131);
-            this.checkShowPasswordDB.Name = "checkShowPasswordDB";
-            this.checkShowPasswordDB.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordDB.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordDB.TabIndex = 5;
-            this.checkShowPasswordDB.CheckedChanged += new System.EventHandler(this.checkShowPasswordDB_CheckedChanged);
+            this.checkHidePasswordDB.EditValue = true;
+            this.checkHidePasswordDB.Location = new System.Drawing.Point(293, 131);
+            this.checkHidePasswordDB.Name = "checkHidePasswordDB";
+            this.checkHidePasswordDB.Properties.Caption = "Hide Password";
+            this.checkHidePasswordDB.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordDB.TabIndex = 5;
+            this.checkHidePasswordDB.CheckedChanged += new System.EventHandler(this.checkShowPasswordDB_CheckedChanged);
             // 
             // comboBoxDBType
             // 
@@ -642,7 +642,7 @@
             // 
             // xtraTabPageComputer
             // 
-            this.xtraTabPageComputer.Controls.Add(this.checkShowPasswordComputer);
+            this.xtraTabPageComputer.Controls.Add(this.checkHidePasswordComputer);
             this.xtraTabPageComputer.Controls.Add(this.labelControl21);
             this.xtraTabPageComputer.Controls.Add(this.textCOMPUTERDomainName);
             this.xtraTabPageComputer.Controls.Add(this.labelControl17);
@@ -655,15 +655,15 @@
             this.xtraTabPageComputer.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageComputer.Text = "xtraTabPageComputer";
             // 
-            // checkShowPasswordComputer
+            // checkHidePasswordComputer
             // 
-            this.checkShowPasswordComputer.EditValue = true;
-            this.checkShowPasswordComputer.Location = new System.Drawing.Point(240, 97);
-            this.checkShowPasswordComputer.Name = "checkShowPasswordComputer";
-            this.checkShowPasswordComputer.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordComputer.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordComputer.TabIndex = 11;
-            this.checkShowPasswordComputer.CheckedChanged += new System.EventHandler(this.checkShowPasswordComputer_CheckedChanged);
+            this.checkHidePasswordComputer.EditValue = true;
+            this.checkHidePasswordComputer.Location = new System.Drawing.Point(240, 97);
+            this.checkHidePasswordComputer.Name = "checkHidePasswordComputer";
+            this.checkHidePasswordComputer.Properties.Caption = "Hide Password";
+            this.checkHidePasswordComputer.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordComputer.TabIndex = 11;
+            this.checkHidePasswordComputer.CheckedChanged += new System.EventHandler(this.checkShowPasswordComputer_CheckedChanged);
             // 
             // labelControl21
             // 
@@ -736,7 +736,7 @@
             // 
             // xtraTabPageApp
             // 
-            this.xtraTabPageApp.Controls.Add(this.checkShowPasswordApp);
+            this.xtraTabPageApp.Controls.Add(this.checkHidePasswordApp);
             this.xtraTabPageApp.Controls.Add(this.textAPPPassword);
             this.xtraTabPageApp.Controls.Add(this.labelControl22);
             this.xtraTabPageApp.Controls.Add(this.textAPPName);
@@ -747,15 +747,15 @@
             this.xtraTabPageApp.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageApp.Text = "xtraTabPageApp";
             // 
-            // checkShowPasswordApp
+            // checkHidePasswordApp
             // 
-            this.checkShowPasswordApp.EditValue = true;
-            this.checkShowPasswordApp.Location = new System.Drawing.Point(253, 108);
-            this.checkShowPasswordApp.Name = "checkShowPasswordApp";
-            this.checkShowPasswordApp.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordApp.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordApp.TabIndex = 18;
-            this.checkShowPasswordApp.CheckedChanged += new System.EventHandler(this.checkShowPasswordApp_CheckedChanged);
+            this.checkHidePasswordApp.EditValue = true;
+            this.checkHidePasswordApp.Location = new System.Drawing.Point(253, 108);
+            this.checkHidePasswordApp.Name = "checkHidePasswordApp";
+            this.checkHidePasswordApp.Properties.Caption = "Hide Password";
+            this.checkHidePasswordApp.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordApp.TabIndex = 18;
+            this.checkHidePasswordApp.CheckedChanged += new System.EventHandler(this.checkShowPasswordApp_CheckedChanged);
             // 
             // textAPPPassword
             // 
@@ -805,7 +805,7 @@
             // 
             // xtraTabPageBank
             // 
-            this.xtraTabPageBank.Controls.Add(this.checkShowPasswordBank);
+            this.xtraTabPageBank.Controls.Add(this.checkHidePasswordBank);
             this.xtraTabPageBank.Controls.Add(this.textBANKPasscode);
             this.xtraTabPageBank.Controls.Add(this.labelControl28);
             this.xtraTabPageBank.Controls.Add(this.textBANKPassword);
@@ -818,15 +818,15 @@
             this.xtraTabPageBank.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageBank.Text = "xtraTabPageBank";
             // 
-            // checkShowPasswordBank
+            // checkHidePasswordBank
             // 
-            this.checkShowPasswordBank.EditValue = true;
-            this.checkShowPasswordBank.Location = new System.Drawing.Point(240, 100);
-            this.checkShowPasswordBank.Name = "checkShowPasswordBank";
-            this.checkShowPasswordBank.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordBank.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordBank.TabIndex = 11;
-            this.checkShowPasswordBank.CheckedChanged += new System.EventHandler(this.checkShowPasswordBank_CheckedChanged);
+            this.checkHidePasswordBank.EditValue = true;
+            this.checkHidePasswordBank.Location = new System.Drawing.Point(240, 100);
+            this.checkHidePasswordBank.Name = "checkHidePasswordBank";
+            this.checkHidePasswordBank.Properties.Caption = "Hide Password";
+            this.checkHidePasswordBank.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordBank.TabIndex = 11;
+            this.checkHidePasswordBank.CheckedChanged += new System.EventHandler(this.checkShowPasswordBank_CheckedChanged);
             // 
             // textBANKPasscode
             // 
@@ -1010,7 +1010,7 @@
             // 
             // xtraTabPageWifi
             // 
-            this.xtraTabPageWifi.Controls.Add(this.checkShowPasswordWifi);
+            this.xtraTabPageWifi.Controls.Add(this.checkHidePasswordWifi);
             this.xtraTabPageWifi.Controls.Add(this.textWIFIName);
             this.xtraTabPageWifi.Controls.Add(this.labelControl34);
             this.xtraTabPageWifi.Controls.Add(this.labelControl35);
@@ -1019,15 +1019,15 @@
             this.xtraTabPageWifi.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageWifi.Text = "xtraTabPageWifi";
             // 
-            // checkShowPasswordWifi
+            // checkHidePasswordWifi
             // 
-            this.checkShowPasswordWifi.EditValue = true;
-            this.checkShowPasswordWifi.Location = new System.Drawing.Point(259, 73);
-            this.checkShowPasswordWifi.Name = "checkShowPasswordWifi";
-            this.checkShowPasswordWifi.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordWifi.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordWifi.TabIndex = 13;
-            this.checkShowPasswordWifi.CheckedChanged += new System.EventHandler(this.checkShowPasswordWifi_CheckedChanged);
+            this.checkHidePasswordWifi.EditValue = true;
+            this.checkHidePasswordWifi.Location = new System.Drawing.Point(259, 73);
+            this.checkHidePasswordWifi.Name = "checkHidePasswordWifi";
+            this.checkHidePasswordWifi.Properties.Caption = "Hide Password";
+            this.checkHidePasswordWifi.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordWifi.TabIndex = 13;
+            this.checkHidePasswordWifi.CheckedChanged += new System.EventHandler(this.checkShowPasswordWifi_CheckedChanged);
             // 
             // textWIFIName
             // 
@@ -1062,7 +1062,7 @@
             // 
             // xtraTabPageApi
             // 
-            this.xtraTabPageApi.Controls.Add(this.checkShowPasswordApi);
+            this.xtraTabPageApi.Controls.Add(this.checkHidePasswordApi);
             this.xtraTabPageApi.Controls.Add(this.textAPIUrl);
             this.xtraTabPageApi.Controls.Add(this.labelControl43);
             this.xtraTabPageApi.Controls.Add(this.textAPIPassword);
@@ -1081,15 +1081,15 @@
             this.xtraTabPageApi.Size = new System.Drawing.Size(1150, 426);
             this.xtraTabPageApi.Text = "xtraTabPageApi";
             // 
-            // checkShowPasswordApi
+            // checkHidePasswordApi
             // 
-            this.checkShowPasswordApi.EditValue = true;
-            this.checkShowPasswordApi.Location = new System.Drawing.Point(728, 94);
-            this.checkShowPasswordApi.Name = "checkShowPasswordApi";
-            this.checkShowPasswordApi.Properties.Caption = "ShowPassword";
-            this.checkShowPasswordApi.Size = new System.Drawing.Size(107, 22);
-            this.checkShowPasswordApi.TabIndex = 27;
-            this.checkShowPasswordApi.CheckedChanged += new System.EventHandler(this.checkShowPasswordApi_CheckedChanged);
+            this.checkHidePasswordApi.EditValue = true;
+            this.checkHidePasswordApi.Location = new System.Drawing.Point(728, 94);
+            this.checkHidePasswordApi.Name = "checkHidePasswordApi";
+            this.checkHidePasswordApi.Properties.Caption = "Hide Password";
+            this.checkHidePasswordApi.Size = new System.Drawing.Size(107, 22);
+            this.checkHidePasswordApi.TabIndex = 27;
+            this.checkHidePasswordApi.CheckedChanged += new System.EventHandler(this.checkShowPasswordApi_CheckedChanged);
             // 
             // textAPIUrl
             // 
@@ -1225,7 +1225,7 @@
             this.panelControl2.ResumeLayout(false);
             this.xtraTabPageWeb.ResumeLayout(false);
             this.xtraTabPageWeb.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordWeb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordWeb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBPasword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUrl.Properties)).EndInit();
@@ -1233,33 +1233,33 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPageEmail.ResumeLayout(false);
             this.xtraTabPageEmail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILRecoveryAccountAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).EndInit();
             this.xtraTabPageDB.ResumeLayout(false);
             this.xtraTabPageDB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordDB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordDB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).EndInit();
             this.xtraTabPageComputer.ResumeLayout(false);
             this.xtraTabPageComputer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordComputer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordComputer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERDomainName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCOMPUTERPin.Properties)).EndInit();
             this.xtraTabPageApp.ResumeLayout(false);
             this.xtraTabPageApp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordApp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordApp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPUsername.Properties)).EndInit();
             this.xtraTabPageBank.ResumeLayout(false);
             this.xtraTabPageBank.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordBank.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordBank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKPasscode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).EndInit();
@@ -1275,12 +1275,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).EndInit();
             this.xtraTabPageWifi.ResumeLayout(false);
             this.xtraTabPageWifi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordWifi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordWifi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWIFIName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWIFIPassword.Properties)).EndInit();
             this.xtraTabPageApi.ResumeLayout(false);
             this.xtraTabPageApi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkShowPasswordApi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkHidePasswordApi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPIUrl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPIPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPINName.Properties)).EndInit();
@@ -1395,13 +1395,13 @@
         private DevExpress.XtraEditors.SimpleButton backButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordWeb;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordEmail;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordDB;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordComputer;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordApp;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordBank;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordWifi;
-        private DevExpress.XtraEditors.CheckEdit checkShowPasswordApi;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordWeb;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordEmail;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordDB;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordComputer;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordApp;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordBank;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordWifi;
+        private DevExpress.XtraEditors.CheckEdit checkHidePasswordApi;
     }
 }

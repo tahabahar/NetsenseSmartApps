@@ -418,12 +418,12 @@ namespace SmartPM.AddForms
             }
 
             // CheckBox'un durumunu PasswordChar özelliğine göre ayarla
-            checkShowPasswordWeb.Checked = (xtraTabControl1.SelectedTabPage.Controls.OfType<TextBox>().Any(tb => tb.PasswordChar == '*'));
+            checkHidePasswordWeb.Checked = (xtraTabControl1.SelectedTabPage.Controls.OfType<TextBox>().Any(tb => tb.PasswordChar == '*'));
         }
 
         private void checkShowPasswordWeb_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordWeb.Checked == false)
+            if (checkHidePasswordWeb.Checked == false)
             {
                 textWEBPasword.Properties.UseSystemPasswordChar = false;
             }
@@ -435,7 +435,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordDB_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordDB.Checked == false)
+            if (checkHidePasswordDB.Checked == false)
             {
                 textDBPassword.Properties.UseSystemPasswordChar = false;
             }
@@ -447,7 +447,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordEmail_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordEmail.Checked == false)
+            if (checkHidePasswordEmail.Checked == false)
             {
                 textEMAILPassword.Properties.UseSystemPasswordChar = false;
             }
@@ -459,7 +459,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordComputer_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordComputer.Checked == false)
+            if (checkHidePasswordComputer.Checked == false)
             {
                 textCOMPUTERPassword.Properties.UseSystemPasswordChar = false;
             }
@@ -471,7 +471,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordApp_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordApp.Checked == false)
+            if (checkHidePasswordApp.Checked == false)
             {
                 textAPPPassword.Properties.UseSystemPasswordChar = false;
             }
@@ -483,7 +483,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordBank_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordBank.Checked == false)
+            if (checkHidePasswordBank.Checked == false)
             {
                 textBANKPassword.Properties.UseSystemPasswordChar = false;
             }
@@ -495,7 +495,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordWifi_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordWifi.Checked == false)
+            if (checkHidePasswordWifi.Checked == false)
             {
                 textWIFIPassword.Properties.UseSystemPasswordChar = false;
             }
@@ -507,7 +507,7 @@ namespace SmartPM.AddForms
 
         private void checkShowPasswordApi_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkShowPasswordApi.Checked == false)
+            if (checkHidePasswordApi.Checked == false)
             {
                 textAPIPassword.Properties.UseSystemPasswordChar = false;
             }
