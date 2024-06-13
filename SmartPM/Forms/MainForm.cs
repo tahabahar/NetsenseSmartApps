@@ -47,6 +47,8 @@ namespace SmartPM
             {
                 DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme, savedPalette);
             }
+
+            gridView1.RestoreLayoutFromRegistry("SmartPM");
         }
 
         private void bbWebCredential_ItemClick(object sender, ItemClickEventArgs e)
@@ -191,6 +193,8 @@ namespace SmartPM
             Properties.Settings.Default.Theme = skinDropDownButtonItem1.Caption;
             Properties.Settings.Default.Template = skinPaletteDropDownButtonItem1.Caption;
             Properties.Settings.Default.Save();
+
+            gridView1.SaveLayoutToRegistry("SmartPM");
         }
 
         private void bbiOpenDataFolder_ItemClick(object sender, ItemClickEventArgs e)
