@@ -20,7 +20,7 @@ namespace SmartPM
 
             this.KeyDown += GeneratePassword_KeyDown;
         }
-        public string  Password { get; set; }
+        public string Password { get; set; }
         private string GenerateCustomPassword(int length, bool useLowercase, bool useUppercase, bool useNumbers, bool useSymbols)
         {
             const string lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -85,18 +85,18 @@ namespace SmartPM
         {
             this.Close();
         }
-        private void okButton_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
-           Password = textGeneratedPassword.Text;
+            Password = textGeneratedPassword.Text;
             this.Close();
         }
         private void GeneratePassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && !(ActiveControl is TextBox))
             {
-                okButton.PerformClick();
+                saveButton.PerformClick();
             }
         }
     }
 }
-    
+

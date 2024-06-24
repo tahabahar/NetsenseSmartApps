@@ -140,7 +140,6 @@ namespace SmartPM
                 Application.Exit();
             }
 
-
             gridControl.DataSource = DataHelper.MyData;
         }
         private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
@@ -209,6 +208,12 @@ namespace SmartPM
             {
                 XtraMessageBox.Show("Data file doesn't exists", "Warning!", MessageBoxButtons.OK);
             }
+        }
+
+        private void bbiChangeMasterPassword_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var Mychangemasterpassword = new ChangeMasterPassword();
+            Mychangemasterpassword.ShowDialog();
         }
     }
 }

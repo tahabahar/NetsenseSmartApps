@@ -114,6 +114,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ChangeMasterPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeMasterPassword.Designer.cs">
+      <DependentUpon>ChangeMasterPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CreateOrEditCredential.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Enums\CredentialTypeEnum.cs" />
+    <EmbeddedResource Include="Forms\ChangeMasterPassword.resx">
+      <DependentUpon>ChangeMasterPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateOrEditCredential.resx">
       <DependentUpon>CreateOrEditCredential.cs</DependentUpon>
     </EmbeddedResource>

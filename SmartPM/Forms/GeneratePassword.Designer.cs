@@ -37,7 +37,7 @@
             this.checkUpperCase = new DevExpress.XtraEditors.CheckEdit();
             this.checkNumbers = new DevExpress.XtraEditors.CheckEdit();
             this.checkSymbols = new DevExpress.XtraEditors.CheckEdit();
-            this.okButton = new DevExpress.XtraEditors.SimpleButton();
+            this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             this.clearButton = new DevExpress.XtraEditors.SimpleButton();
             this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.generateButton = new DevExpress.XtraEditors.SimpleButton();
@@ -52,7 +52,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(22, 73);
+            this.labelControl2.Location = new System.Drawing.Point(28, 54);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(83, 13);
             this.labelControl2.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(22, 146);
+            this.labelControl3.Location = new System.Drawing.Point(28, 127);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(50, 13);
             this.labelControl3.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             // textGeneratedPassword
             // 
-            this.textGeneratedPassword.Location = new System.Drawing.Point(78, 139);
+            this.textGeneratedPassword.Location = new System.Drawing.Point(84, 120);
             this.textGeneratedPassword.Name = "textGeneratedPassword";
             this.textGeneratedPassword.Size = new System.Drawing.Size(223, 28);
             this.textGeneratedPassword.TabIndex = 5;
@@ -80,7 +80,7 @@
             0,
             0,
             0});
-            this.textPasswordLenght.Location = new System.Drawing.Point(111, 66);
+            this.textPasswordLenght.Location = new System.Drawing.Point(117, 47);
             this.textPasswordLenght.Name = "textPasswordLenght";
             this.textPasswordLenght.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -91,7 +91,7 @@
             // checkLowerCase
             // 
             this.checkLowerCase.EditValue = true;
-            this.checkLowerCase.Location = new System.Drawing.Point(22, 100);
+            this.checkLowerCase.Location = new System.Drawing.Point(28, 81);
             this.checkLowerCase.Name = "checkLowerCase";
             this.checkLowerCase.Properties.Caption = "abc";
             this.checkLowerCase.Size = new System.Drawing.Size(50, 22);
@@ -100,7 +100,7 @@
             // checkUpperCase
             // 
             this.checkUpperCase.EditValue = true;
-            this.checkUpperCase.Location = new System.Drawing.Point(78, 100);
+            this.checkUpperCase.Location = new System.Drawing.Point(84, 81);
             this.checkUpperCase.Name = "checkUpperCase";
             this.checkUpperCase.Properties.Caption = "ABC";
             this.checkUpperCase.Size = new System.Drawing.Size(52, 22);
@@ -109,7 +109,7 @@
             // checkNumbers
             // 
             this.checkNumbers.EditValue = true;
-            this.checkNumbers.Location = new System.Drawing.Point(136, 100);
+            this.checkNumbers.Location = new System.Drawing.Point(142, 81);
             this.checkNumbers.Name = "checkNumbers";
             this.checkNumbers.Properties.Caption = "123";
             this.checkNumbers.Size = new System.Drawing.Size(52, 22);
@@ -118,21 +118,21 @@
             // checkSymbols
             // 
             this.checkSymbols.EditValue = true;
-            this.checkSymbols.Location = new System.Drawing.Point(194, 100);
+            this.checkSymbols.Location = new System.Drawing.Point(200, 81);
             this.checkSymbols.Name = "checkSymbols";
             this.checkSymbols.Properties.Caption = "!+-";
             this.checkSymbols.Size = new System.Drawing.Size(49, 22);
             this.checkSymbols.TabIndex = 4;
             // 
-            // okButton
+            // saveButton
             // 
-            this.okButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("okButton.ImageOptions.SvgImage")));
-            this.okButton.Location = new System.Drawing.Point(354, 207);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(77, 40);
-            this.okButton.TabIndex = 8;
-            this.okButton.Text = "Ok";
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            this.saveButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("saveButton.ImageOptions.Image")));
+            this.saveButton.Location = new System.Drawing.Point(340, 207);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(91, 40);
+            this.saveButton.TabIndex = 8;
+            this.saveButton.Text = "Save";
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // clearButton
             // 
@@ -157,7 +157,7 @@
             // generateButton
             // 
             this.generateButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("generateButton.ImageOptions.SvgImage")));
-            this.generateButton.Location = new System.Drawing.Point(307, 137);
+            this.generateButton.Location = new System.Drawing.Point(313, 118);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(101, 31);
             this.generateButton.TabIndex = 6;
@@ -168,7 +168,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(22, 32);
+            this.labelControl1.Location = new System.Drawing.Point(28, 13);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(169, 18);
             this.labelControl1.TabIndex = 10;
@@ -183,7 +183,7 @@
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.okButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.checkSymbols);
             this.Controls.Add(this.checkNumbers);
             this.Controls.Add(this.checkUpperCase);
@@ -216,7 +216,7 @@
         private DevExpress.XtraEditors.CheckEdit checkUpperCase;
         private DevExpress.XtraEditors.CheckEdit checkNumbers;
         private DevExpress.XtraEditors.CheckEdit checkSymbols;
-        private DevExpress.XtraEditors.SimpleButton okButton;
+        private DevExpress.XtraEditors.SimpleButton saveButton;
         private DevExpress.XtraEditors.SimpleButton clearButton;
         private DevExpress.XtraEditors.SimpleButton cancelButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;

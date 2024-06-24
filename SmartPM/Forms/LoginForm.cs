@@ -60,7 +60,6 @@ namespace SmartPM.Forms
         {
             if (e.KeyCode == Keys.Enter && !(ActiveControl is TextBox))
             {
-                
                 bbLogin.PerformClick();
             }
         }

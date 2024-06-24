@@ -68,9 +68,9 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.bbiChangeMasterPassword = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -203,9 +203,10 @@
             this.barButtonItem2,
             this.ribbonGalleryBarItem1,
             this.bbiDuplicate,
-            this.bbiSave});
+            this.bbiSave,
+            this.bbiChangeMasterPassword});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 53;
+            this.ribbonControl.MaxItemId = 54;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -389,8 +390,7 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup3,
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup4});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Home";
@@ -416,12 +416,9 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.bbiSave);
+            this.ribbonPageGroup4.ItemLinks.Add(this.bbiOpenDataFolder);
+            this.ribbonPageGroup4.ItemLinks.Add(this.bbiChangeMasterPassword);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiOpenDataFolder);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonStatusBar
             // 
@@ -439,6 +436,14 @@
             this.popupControlContainer1.Size = new System.Drawing.Size(250, 130);
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
+            // 
+            // bbiChangeMasterPassword
+            // 
+            this.bbiChangeMasterPassword.Caption = "Change Master Password";
+            this.bbiChangeMasterPassword.Id = 53;
+            this.bbiChangeMasterPassword.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiChangeMasterPassword.ImageOptions.SvgImage")));
+            this.bbiChangeMasterPassword.Name = "bbiChangeMasterPassword";
+            this.bbiChangeMasterPassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiChangeMasterPassword_ItemClick);
             // 
             // MainForm
             // 
@@ -502,12 +507,12 @@
         private DevExpress.XtraBars.BarButtonItem bbWifiNetworkCredential;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraBars.BarButtonItem bbiOpenDataFolder;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
         private DevExpress.XtraBars.BarButtonItem bbiDuplicate;
         private DevExpress.XtraBars.BarButtonItem bbiSave;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem bbiChangeMasterPassword;
     }
 }
