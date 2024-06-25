@@ -138,6 +138,7 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.copyButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxMfaType.Properties)).BeginInit();
@@ -355,6 +356,7 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.copyButton);
             this.panelControl2.Controls.Add(this.generateButton);
             this.panelControl2.Controls.Add(this.backButton);
             this.panelControl2.Controls.Add(this.saveButton);
@@ -1197,6 +1199,16 @@
             this.labelControl38.TabIndex = 13;
             this.labelControl38.Text = "Secret Key";
             // 
+            // copyButton
+            // 
+            this.copyButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("copyButton.ImageOptions.SvgImage")));
+            this.copyButton.Location = new System.Drawing.Point(271, 14);
+            this.copyButton.Name = "copyButton";
+            this.copyButton.Size = new System.Drawing.Size(157, 46);
+            this.copyButton.TabIndex = 4;
+            this.copyButton.Text = "Copy Password";
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
+            // 
             // CreateOrEditCredential
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1403,5 +1415,6 @@
         private DevExpress.XtraEditors.CheckEdit checkHidePasswordBank;
         private DevExpress.XtraEditors.CheckEdit checkHidePasswordWifi;
         private DevExpress.XtraEditors.CheckEdit checkHidePasswordApi;
+        private DevExpress.XtraEditors.SimpleButton copyButton;
     }
 }

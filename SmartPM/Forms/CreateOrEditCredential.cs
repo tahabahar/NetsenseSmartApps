@@ -516,6 +516,42 @@ namespace SmartPM.AddForms
                 textAPIPassword.Properties.UseSystemPasswordChar = true;
             }
         }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            if (xtraTabControl1.SelectedTabPage == xtraTabPageApi)
+            {
+                Clipboard.SetText(textAPIPassword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageApp)
+            {
+                Clipboard.SetText(textAPPPassword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageBank)
+            {
+                Clipboard.SetText(textBANKPassword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageComputer)
+            {
+                Clipboard.SetText(textCOMPUTERPassword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
+            {
+                Clipboard.SetText(textDBPassword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageEmail)
+            {
+                Clipboard.SetText(textEMAILPassword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageWeb)
+            {
+                Clipboard.SetText(textWEBPasword.Text);
+            }
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageWifi)
+            {
+                Clipboard.SetText(textWEBPasword.Text);
+            }
+        }
     }
     
 }
