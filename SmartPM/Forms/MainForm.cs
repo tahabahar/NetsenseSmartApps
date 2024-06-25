@@ -1,6 +1,7 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using DevExpress.XtraTab;
 using DevExpress.XtraWaitForm;
 using Newtonsoft.Json;
@@ -35,6 +36,7 @@ namespace SmartPM
         {
             string savedTheme = Properties.Settings.Default.Theme;
             string savedPalette = Properties.Settings.Default.Template;
+            string savedGridLayout = Properties.Settings.Default.GridLayout;
 
             // Apply the saved theme if it exists
             if (!string.IsNullOrEmpty(savedTheme))
@@ -46,6 +48,14 @@ namespace SmartPM
             if (!string.IsNullOrEmpty(savedPalette))
             {
                 DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme, savedPalette);
+            }
+
+            if(!string.IsNullOrEmpty(savedGridLayout))
+            {
+                using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(savedGridLayout)))
+                {
+                    gridControl.MainView.RestoreLayoutFromStream(stream);
+                }
             }
 
             gridView1.RestoreLayoutFromRegistry("SmartPM");
@@ -191,7 +201,19 @@ namespace SmartPM
         {
             Properties.Settings.Default.Theme = skinDropDownButtonItem1.Caption;
             Properties.Settings.Default.Template = skinPaletteDropDownButtonItem1.Caption;
+            using (var stream = new MemoryStream())
+            {
+                gridControl.MainView.SaveLayoutToStream(stream);
+                stream.Seek(0, SeekOrigin.Begin);
+                using (var reader = new StreamReader(stream))
+                {
+                    string layoutString = reader.ReadToEnd();
+                    Properties.Settings.Default.GridLayout = layoutString;
+                    Properties.Settings.Default.Save();
+                }
+            }
             Properties.Settings.Default.Save();
+
 
             gridView1.SaveLayoutToRegistry("SmartPM");
         }

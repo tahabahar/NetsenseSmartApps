@@ -46,5 +46,17 @@ namespace SmartPM.Properties {
                 this["Theme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GridLayout {
+            get {
+                return ((string)(this["GridLayout"]));
+            }
+            set {
+                this["GridLayout"] = value;
+            }
+        }
     }
 }

@@ -64,13 +64,13 @@
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.bbiDuplicate = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiChangeMasterPassword = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.bbiChangeMasterPassword = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -385,6 +385,14 @@
             this.bbiSave.Name = "bbiSave";
             this.bbiSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSave_ItemClick);
             // 
+            // bbiChangeMasterPassword
+            // 
+            this.bbiChangeMasterPassword.Caption = "Change Master Password";
+            this.bbiChangeMasterPassword.Id = 53;
+            this.bbiChangeMasterPassword.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiChangeMasterPassword.ImageOptions.SvgImage")));
+            this.bbiChangeMasterPassword.Name = "bbiChangeMasterPassword";
+            this.bbiChangeMasterPassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiChangeMasterPassword_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -436,14 +444,6 @@
             this.popupControlContainer1.Size = new System.Drawing.Size(250, 130);
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
-            // 
-            // bbiChangeMasterPassword
-            // 
-            this.bbiChangeMasterPassword.Caption = "Change Master Password";
-            this.bbiChangeMasterPassword.Id = 53;
-            this.bbiChangeMasterPassword.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiChangeMasterPassword.ImageOptions.SvgImage")));
-            this.bbiChangeMasterPassword.Name = "bbiChangeMasterPassword";
-            this.bbiChangeMasterPassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiChangeMasterPassword_ItemClick);
             // 
             // MainForm
             // 
