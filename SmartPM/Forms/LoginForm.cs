@@ -51,9 +51,6 @@ namespace SmartPM.Forms
                 this.DialogResult= DialogResult.OK;
                 this.Close();
             }
-
-           
-           
         }
 
         private void LoginForm_KeyDown(object sender, KeyEventArgs e)

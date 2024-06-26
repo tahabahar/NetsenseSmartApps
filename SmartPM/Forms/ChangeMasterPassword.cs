@@ -13,6 +13,7 @@ namespace SmartPM.Forms
 {
     public partial class ChangeMasterPassword : DevExpress.XtraEditors.XtraForm
     {
+
         public ChangeMasterPassword()
         {
             InitializeComponent();
@@ -27,9 +28,7 @@ namespace SmartPM.Forms
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            var Myloginform = new LoginForm();
-            //DataHelper.aesCipher = new AESCipher(textMasterKey.Text);
-            DataHelper.aesCipher = new AESCipher(textNewPassword.Text);
+            this.Close();
         }
 
         private void ChangeMasterPassword_KeyDown(object sender, KeyEventArgs e)
@@ -38,6 +37,11 @@ namespace SmartPM.Forms
             {
                 saveButton.PerformClick();
             }
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

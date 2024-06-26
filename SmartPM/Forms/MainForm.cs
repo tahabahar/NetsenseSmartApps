@@ -175,9 +175,6 @@ namespace SmartPM
             CreateOrEditCredential myfrm = new CreateOrEditCredential(credentialEntry);
             myfrm.ShowDialog();
         }
-
-      
-
         private void bbiDuplicate_ItemClick(object sender, ItemClickEventArgs e)
         {
             var credentialEntry = (CredentialEntry)gridView1.GetFocusedRow();
@@ -196,7 +193,6 @@ namespace SmartPM
             myfrm.ShowDialog();
 
         }
-
         private void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             Properties.Settings.Default.Theme = skinDropDownButtonItem1.Caption;
@@ -217,7 +213,6 @@ namespace SmartPM
 
             gridView1.SaveLayoutToRegistry("SmartPM");
         }
-
         private void bbiOpenDataFolder_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (File.Exists(DataHelper.FileName))
@@ -231,7 +226,6 @@ namespace SmartPM
                 XtraMessageBox.Show("Data file doesn't exists", "Warning!", MessageBoxButtons.OK);
             }
         }
-
         private void bbiChangeMasterPassword_ItemClick(object sender, ItemClickEventArgs e)
         {
             var Mychangemasterpassword = new ChangeMasterPassword();
