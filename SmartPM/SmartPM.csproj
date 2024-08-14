@@ -196,9 +196,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SmartPM_1_TemporaryKey.pfx" />
-    <None Include="SmartPM_2_TemporaryKey.pfx" />
-    <None Include="SmartPM_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="120x120px.ico" />
