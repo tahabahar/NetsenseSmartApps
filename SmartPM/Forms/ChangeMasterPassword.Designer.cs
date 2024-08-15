@@ -36,27 +36,30 @@
             this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             this.generateButton = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.textConfirmPassword = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textCurrentPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNewPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textConfirmPassword.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textCurrentPassword
             // 
-            this.textCurrentPassword.Location = new System.Drawing.Point(170, 42);
+            this.textCurrentPassword.Location = new System.Drawing.Point(170, 12);
             this.textCurrentPassword.Name = "textCurrentPassword";
             this.textCurrentPassword.Size = new System.Drawing.Size(211, 28);
             this.textCurrentPassword.TabIndex = 0;
             // 
             // textNewPassword
             // 
-            this.textNewPassword.Location = new System.Drawing.Point(170, 99);
+            this.textNewPassword.Location = new System.Drawing.Point(170, 53);
             this.textNewPassword.Name = "textNewPassword";
             this.textNewPassword.Size = new System.Drawing.Size(211, 28);
             this.textNewPassword.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(78, 49);
+            this.labelControl1.Location = new System.Drawing.Point(78, 19);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(86, 13);
             this.labelControl1.TabIndex = 2;
@@ -64,7 +67,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(94, 106);
+            this.labelControl2.Location = new System.Drawing.Point(94, 60);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 13);
             this.labelControl2.TabIndex = 3;
@@ -100,11 +103,28 @@
             this.generateButton.Text = "Generate Password";
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(78, 101);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(86, 13);
+            this.labelControl3.TabIndex = 18;
+            this.labelControl3.Text = "Confirm Password";
+            // 
+            // textConfirmPassword
+            // 
+            this.textConfirmPassword.Location = new System.Drawing.Point(170, 94);
+            this.textConfirmPassword.Name = "textConfirmPassword";
+            this.textConfirmPassword.Size = new System.Drawing.Size(211, 28);
+            this.textConfirmPassword.TabIndex = 17;
+            // 
             // ChangeMasterPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 233);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.textConfirmPassword);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
@@ -118,6 +138,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChangeMasterPassword_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.textCurrentPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textNewPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textConfirmPassword.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +153,7 @@
         private DevExpress.XtraEditors.SimpleButton cancelButton;
         private DevExpress.XtraEditors.SimpleButton saveButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.TextEdit textConfirmPassword;
     }
 }

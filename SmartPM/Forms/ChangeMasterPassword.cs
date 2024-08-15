@@ -28,6 +28,10 @@ namespace SmartPM.Forms
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            if (textNewPassword.Text != textConfirmPassword.Text)
+            {
+                MessageBox.Show("New password and confirm password must be same!");
+            }
             this.Close();
         }
 
