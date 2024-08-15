@@ -511,7 +511,7 @@
             // checkHidePasswordEmail
             // 
             this.checkHidePasswordEmail.EditValue = true;
-            this.checkHidePasswordEmail.Location = new System.Drawing.Point(300, 103);
+            this.checkHidePasswordEmail.Location = new System.Drawing.Point(300, 69);
             this.checkHidePasswordEmail.Name = "checkHidePasswordEmail";
             this.checkHidePasswordEmail.Properties.Caption = "Hide Password";
             this.checkHidePasswordEmail.Size = new System.Drawing.Size(107, 22);
