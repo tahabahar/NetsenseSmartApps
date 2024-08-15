@@ -46,6 +46,7 @@
             this.textDescription = new DevExpress.XtraEditors.TextEdit();
             this.textValidThru = new DevExpress.XtraEditors.DateEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.copyButton = new DevExpress.XtraEditors.SimpleButton();
             this.generateButton = new DevExpress.XtraEditors.SimpleButton();
             this.backButton = new DevExpress.XtraEditors.SimpleButton();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
@@ -138,7 +139,6 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.copyButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxMfaType.Properties)).BeginInit();
@@ -147,8 +147,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxPriority.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textValidThru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.xtraTabPageWeb.SuspendLayout();
@@ -187,10 +187,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).BeginInit();
             this.xtraTabPageCreditCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).BeginInit();
@@ -366,12 +366,22 @@
             this.panelControl2.Size = new System.Drawing.Size(1152, 71);
             this.panelControl2.TabIndex = 1;
             // 
+            // copyButton
+            // 
+            this.copyButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("copyButton.ImageOptions.SvgImage")));
+            this.copyButton.Location = new System.Drawing.Point(162, 14);
+            this.copyButton.Name = "copyButton";
+            this.copyButton.Size = new System.Drawing.Size(38, 45);
+            this.copyButton.TabIndex = 4;
+            this.copyButton.Text = "Copy Password";
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
+            // 
             // generateButton
             // 
             this.generateButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("generateButton.ImageOptions.SvgImage")));
             this.generateButton.Location = new System.Drawing.Point(118, 14);
             this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(144, 45);
+            this.generateButton.Size = new System.Drawing.Size(38, 45);
             this.generateButton.TabIndex = 15;
             this.generateButton.Text = "Generate Password";
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
@@ -412,7 +422,7 @@
             // checkHidePasswordWeb
             // 
             this.checkHidePasswordWeb.EditValue = true;
-            this.checkHidePasswordWeb.Location = new System.Drawing.Point(249, 108);
+            this.checkHidePasswordWeb.Location = new System.Drawing.Point(279, 108);
             this.checkHidePasswordWeb.Name = "checkHidePasswordWeb";
             this.checkHidePasswordWeb.Properties.Caption = "Hide Password";
             this.checkHidePasswordWeb.Size = new System.Drawing.Size(107, 22);
@@ -425,7 +435,7 @@
             this.textWEBPasword.Location = new System.Drawing.Point(87, 105);
             this.textWEBPasword.Name = "textWEBPasword";
             this.textWEBPasword.Properties.UseSystemPasswordChar = true;
-            this.textWEBPasword.Size = new System.Drawing.Size(155, 28);
+            this.textWEBPasword.Size = new System.Drawing.Size(186, 28);
             this.textWEBPasword.TabIndex = 2;
             // 
             // labelControl5
@@ -440,7 +450,7 @@
             // 
             this.textWEBUsername.Location = new System.Drawing.Point(87, 71);
             this.textWEBUsername.Name = "textWEBUsername";
-            this.textWEBUsername.Size = new System.Drawing.Size(155, 28);
+            this.textWEBUsername.Size = new System.Drawing.Size(186, 28);
             this.textWEBUsername.TabIndex = 1;
             // 
             // labelControl4
@@ -463,7 +473,7 @@
             // 
             this.textWEBUrl.Location = new System.Drawing.Point(87, 37);
             this.textWEBUrl.Name = "textWEBUrl";
-            this.textWEBUrl.Size = new System.Drawing.Size(155, 28);
+            this.textWEBUrl.Size = new System.Drawing.Size(186, 28);
             this.textWEBUrl.TabIndex = 0;
             // 
             // xtraTabControl1
@@ -501,7 +511,7 @@
             // checkHidePasswordEmail
             // 
             this.checkHidePasswordEmail.EditValue = true;
-            this.checkHidePasswordEmail.Location = new System.Drawing.Point(269, 72);
+            this.checkHidePasswordEmail.Location = new System.Drawing.Point(300, 103);
             this.checkHidePasswordEmail.Name = "checkHidePasswordEmail";
             this.checkHidePasswordEmail.Properties.Caption = "Hide Password";
             this.checkHidePasswordEmail.Size = new System.Drawing.Size(107, 22);
@@ -512,7 +522,7 @@
             // 
             this.textEMAILRecoveryAccountAdress.Location = new System.Drawing.Point(108, 100);
             this.textEMAILRecoveryAccountAdress.Name = "textEMAILRecoveryAccountAdress";
-            this.textEMAILRecoveryAccountAdress.Size = new System.Drawing.Size(155, 28);
+            this.textEMAILRecoveryAccountAdress.Size = new System.Drawing.Size(186, 28);
             this.textEMAILRecoveryAccountAdress.TabIndex = 2;
             // 
             // labelControl16
@@ -527,7 +537,7 @@
             // 
             this.textEMAILAccountAdress.Location = new System.Drawing.Point(108, 32);
             this.textEMAILAccountAdress.Name = "textEMAILAccountAdress";
-            this.textEMAILAccountAdress.Size = new System.Drawing.Size(155, 28);
+            this.textEMAILAccountAdress.Size = new System.Drawing.Size(186, 28);
             this.textEMAILAccountAdress.TabIndex = 0;
             // 
             // textEMAILPassword
@@ -535,7 +545,7 @@
             this.textEMAILPassword.Location = new System.Drawing.Point(108, 66);
             this.textEMAILPassword.Name = "textEMAILPassword";
             this.textEMAILPassword.Properties.UseSystemPasswordChar = true;
-            this.textEMAILPassword.Size = new System.Drawing.Size(155, 28);
+            this.textEMAILPassword.Size = new System.Drawing.Size(186, 28);
             this.textEMAILPassword.TabIndex = 1;
             // 
             // labelControl15
@@ -572,7 +582,7 @@
             // checkHidePasswordDB
             // 
             this.checkHidePasswordDB.EditValue = true;
-            this.checkHidePasswordDB.Location = new System.Drawing.Point(293, 131);
+            this.checkHidePasswordDB.Location = new System.Drawing.Point(324, 131);
             this.checkHidePasswordDB.Name = "checkHidePasswordDB";
             this.checkHidePasswordDB.Properties.Caption = "Hide Password";
             this.checkHidePasswordDB.Size = new System.Drawing.Size(107, 22);
@@ -585,7 +595,7 @@
             this.comboBoxDBType.Name = "comboBoxDBType";
             this.comboBoxDBType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxDBType.Size = new System.Drawing.Size(154, 28);
+            this.comboBoxDBType.Size = new System.Drawing.Size(186, 28);
             this.comboBoxDBType.TabIndex = 0;
             // 
             // labelControl9
@@ -600,7 +610,7 @@
             // 
             this.textDBServerName.Location = new System.Drawing.Point(132, 60);
             this.textDBServerName.Name = "textDBServerName";
-            this.textDBServerName.Size = new System.Drawing.Size(155, 28);
+            this.textDBServerName.Size = new System.Drawing.Size(186, 28);
             this.textDBServerName.TabIndex = 1;
             // 
             // labelControl8
@@ -631,7 +641,7 @@
             // 
             this.textDBUserName.Location = new System.Drawing.Point(132, 94);
             this.textDBUserName.Name = "textDBUserName";
-            this.textDBUserName.Size = new System.Drawing.Size(155, 28);
+            this.textDBUserName.Size = new System.Drawing.Size(186, 28);
             this.textDBUserName.TabIndex = 2;
             // 
             // textDBPassword
@@ -639,7 +649,7 @@
             this.textDBPassword.Location = new System.Drawing.Point(132, 128);
             this.textDBPassword.Name = "textDBPassword";
             this.textDBPassword.Properties.UseSystemPasswordChar = true;
-            this.textDBPassword.Size = new System.Drawing.Size(155, 28);
+            this.textDBPassword.Size = new System.Drawing.Size(186, 28);
             this.textDBPassword.TabIndex = 3;
             // 
             // xtraTabPageComputer
@@ -660,7 +670,7 @@
             // checkHidePasswordComputer
             // 
             this.checkHidePasswordComputer.EditValue = true;
-            this.checkHidePasswordComputer.Location = new System.Drawing.Point(240, 97);
+            this.checkHidePasswordComputer.Location = new System.Drawing.Point(271, 97);
             this.checkHidePasswordComputer.Name = "checkHidePasswordComputer";
             this.checkHidePasswordComputer.Properties.Caption = "Hide Password";
             this.checkHidePasswordComputer.Size = new System.Drawing.Size(107, 22);
@@ -679,7 +689,7 @@
             // 
             this.textCOMPUTERDomainName.Location = new System.Drawing.Point(79, 26);
             this.textCOMPUTERDomainName.Name = "textCOMPUTERDomainName";
-            this.textCOMPUTERDomainName.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERDomainName.Size = new System.Drawing.Size(186, 28);
             this.textCOMPUTERDomainName.TabIndex = 0;
             // 
             // labelControl17
@@ -710,7 +720,7 @@
             // 
             this.textCOMPUTERUsername.Location = new System.Drawing.Point(79, 60);
             this.textCOMPUTERUsername.Name = "textCOMPUTERUsername";
-            this.textCOMPUTERUsername.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERUsername.Size = new System.Drawing.Size(186, 28);
             this.textCOMPUTERUsername.TabIndex = 1;
             // 
             // textCOMPUTERPassword
@@ -718,7 +728,7 @@
             this.textCOMPUTERPassword.Location = new System.Drawing.Point(79, 94);
             this.textCOMPUTERPassword.Name = "textCOMPUTERPassword";
             this.textCOMPUTERPassword.Properties.UseSystemPasswordChar = true;
-            this.textCOMPUTERPassword.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERPassword.Size = new System.Drawing.Size(186, 28);
             this.textCOMPUTERPassword.TabIndex = 2;
             // 
             // textCOMPUTERPin
@@ -733,7 +743,7 @@
             this.textCOMPUTERPin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textCOMPUTERPin.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.textCOMPUTERPin.Size = new System.Drawing.Size(155, 28);
+            this.textCOMPUTERPin.Size = new System.Drawing.Size(186, 28);
             this.textCOMPUTERPin.TabIndex = 3;
             // 
             // xtraTabPageApp
@@ -752,7 +762,7 @@
             // checkHidePasswordApp
             // 
             this.checkHidePasswordApp.EditValue = true;
-            this.checkHidePasswordApp.Location = new System.Drawing.Point(253, 108);
+            this.checkHidePasswordApp.Location = new System.Drawing.Point(284, 105);
             this.checkHidePasswordApp.Name = "checkHidePasswordApp";
             this.checkHidePasswordApp.Properties.Caption = "Hide Password";
             this.checkHidePasswordApp.Size = new System.Drawing.Size(107, 22);
@@ -764,7 +774,7 @@
             this.textAPPPassword.Location = new System.Drawing.Point(92, 102);
             this.textAPPPassword.Name = "textAPPPassword";
             this.textAPPPassword.Properties.UseSystemPasswordChar = true;
-            this.textAPPPassword.Size = new System.Drawing.Size(155, 28);
+            this.textAPPPassword.Size = new System.Drawing.Size(186, 28);
             this.textAPPPassword.TabIndex = 2;
             // 
             // labelControl22
@@ -779,14 +789,14 @@
             // 
             this.textAPPName.Location = new System.Drawing.Point(92, 34);
             this.textAPPName.Name = "textAPPName";
-            this.textAPPName.Size = new System.Drawing.Size(155, 28);
+            this.textAPPName.Size = new System.Drawing.Size(186, 28);
             this.textAPPName.TabIndex = 0;
             // 
             // textAPPUsername
             // 
             this.textAPPUsername.Location = new System.Drawing.Point(92, 68);
             this.textAPPUsername.Name = "textAPPUsername";
-            this.textAPPUsername.Size = new System.Drawing.Size(155, 28);
+            this.textAPPUsername.Size = new System.Drawing.Size(186, 28);
             this.textAPPUsername.TabIndex = 1;
             // 
             // labelControl23
@@ -823,7 +833,7 @@
             // checkHidePasswordBank
             // 
             this.checkHidePasswordBank.EditValue = true;
-            this.checkHidePasswordBank.Location = new System.Drawing.Point(240, 100);
+            this.checkHidePasswordBank.Location = new System.Drawing.Point(271, 97);
             this.checkHidePasswordBank.Name = "checkHidePasswordBank";
             this.checkHidePasswordBank.Properties.Caption = "Hide Password";
             this.checkHidePasswordBank.Size = new System.Drawing.Size(107, 22);
@@ -834,7 +844,7 @@
             // 
             this.textBANKPasscode.Location = new System.Drawing.Point(79, 128);
             this.textBANKPasscode.Name = "textBANKPasscode";
-            this.textBANKPasscode.Size = new System.Drawing.Size(155, 28);
+            this.textBANKPasscode.Size = new System.Drawing.Size(186, 28);
             this.textBANKPasscode.TabIndex = 3;
             // 
             // labelControl28
@@ -850,7 +860,7 @@
             this.textBANKPassword.Location = new System.Drawing.Point(79, 94);
             this.textBANKPassword.Name = "textBANKPassword";
             this.textBANKPassword.Properties.UseSystemPasswordChar = true;
-            this.textBANKPassword.Size = new System.Drawing.Size(155, 28);
+            this.textBANKPassword.Size = new System.Drawing.Size(186, 28);
             this.textBANKPassword.TabIndex = 2;
             // 
             // labelControl25
@@ -865,7 +875,7 @@
             // 
             this.textBANKUsername.Location = new System.Drawing.Point(79, 60);
             this.textBANKUsername.Name = "textBANKUsername";
-            this.textBANKUsername.Size = new System.Drawing.Size(155, 28);
+            this.textBANKUsername.Size = new System.Drawing.Size(186, 28);
             this.textBANKUsername.TabIndex = 1;
             // 
             // labelControl26
@@ -888,7 +898,7 @@
             // 
             this.textBANKName.Location = new System.Drawing.Point(79, 26);
             this.textBANKName.Name = "textBANKName";
-            this.textBANKName.Size = new System.Drawing.Size(155, 28);
+            this.textBANKName.Size = new System.Drawing.Size(186, 28);
             this.textBANKName.TabIndex = 0;
             // 
             // xtraTabPageCreditCard
@@ -921,7 +931,7 @@
             this.dateCREDITCARDExpirationYear.Properties.EditFormat.FormatString = "";
             this.dateCREDITCARDExpirationYear.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateCREDITCARDExpirationYear.Properties.MaskSettings.Set("mask", "");
-            this.dateCREDITCARDExpirationYear.Size = new System.Drawing.Size(64, 28);
+            this.dateCREDITCARDExpirationYear.Size = new System.Drawing.Size(89, 28);
             this.dateCREDITCARDExpirationYear.TabIndex = 3;
             // 
             // labelControl33
@@ -946,7 +956,7 @@
             this.dateCREDITCARDExpirationMonth.Properties.EditFormat.FormatString = "";
             this.dateCREDITCARDExpirationMonth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateCREDITCARDExpirationMonth.Properties.MaskSettings.Set("mask", "");
-            this.dateCREDITCARDExpirationMonth.Size = new System.Drawing.Size(64, 28);
+            this.dateCREDITCARDExpirationMonth.Size = new System.Drawing.Size(89, 28);
             this.dateCREDITCARDExpirationMonth.TabIndex = 2;
             // 
             // labelControl32
@@ -969,14 +979,14 @@
             // 
             this.textCREDITCARDOwnerName.Location = new System.Drawing.Point(122, 27);
             this.textCREDITCARDOwnerName.Name = "textCREDITCARDOwnerName";
-            this.textCREDITCARDOwnerName.Size = new System.Drawing.Size(155, 28);
+            this.textCREDITCARDOwnerName.Size = new System.Drawing.Size(186, 28);
             this.textCREDITCARDOwnerName.TabIndex = 0;
             // 
             // textCREDITCARDNumber
             // 
             this.textCREDITCARDNumber.Location = new System.Drawing.Point(122, 61);
             this.textCREDITCARDNumber.Name = "textCREDITCARDNumber";
-            this.textCREDITCARDNumber.Size = new System.Drawing.Size(155, 28);
+            this.textCREDITCARDNumber.Size = new System.Drawing.Size(186, 28);
             this.textCREDITCARDNumber.TabIndex = 1;
             // 
             // labelControl30
@@ -1007,7 +1017,7 @@
             this.textCREDITCARDCvv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textCREDITCARDCvv.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.textCREDITCARDCvv.Size = new System.Drawing.Size(64, 28);
+            this.textCREDITCARDCvv.Size = new System.Drawing.Size(89, 28);
             this.textCREDITCARDCvv.TabIndex = 4;
             // 
             // xtraTabPageWifi
@@ -1024,7 +1034,7 @@
             // checkHidePasswordWifi
             // 
             this.checkHidePasswordWifi.EditValue = true;
-            this.checkHidePasswordWifi.Location = new System.Drawing.Point(259, 73);
+            this.checkHidePasswordWifi.Location = new System.Drawing.Point(290, 70);
             this.checkHidePasswordWifi.Name = "checkHidePasswordWifi";
             this.checkHidePasswordWifi.Properties.Caption = "Hide Password";
             this.checkHidePasswordWifi.Size = new System.Drawing.Size(107, 22);
@@ -1035,7 +1045,7 @@
             // 
             this.textWIFIName.Location = new System.Drawing.Point(98, 33);
             this.textWIFIName.Name = "textWIFIName";
-            this.textWIFIName.Size = new System.Drawing.Size(155, 28);
+            this.textWIFIName.Size = new System.Drawing.Size(186, 28);
             this.textWIFIName.TabIndex = 0;
             // 
             // labelControl34
@@ -1059,7 +1069,7 @@
             this.textWIFIPassword.Location = new System.Drawing.Point(98, 67);
             this.textWIFIPassword.Name = "textWIFIPassword";
             this.textWIFIPassword.Properties.UseSystemPasswordChar = true;
-            this.textWIFIPassword.Size = new System.Drawing.Size(155, 28);
+            this.textWIFIPassword.Size = new System.Drawing.Size(186, 28);
             this.textWIFIPassword.TabIndex = 1;
             // 
             // xtraTabPageApi
@@ -1198,16 +1208,6 @@
             this.labelControl38.Size = new System.Drawing.Size(52, 13);
             this.labelControl38.TabIndex = 13;
             this.labelControl38.Text = "Secret Key";
-            // 
-            // copyButton
-            // 
-            this.copyButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("copyButton.ImageOptions.SvgImage")));
-            this.copyButton.Location = new System.Drawing.Point(271, 14);
-            this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(157, 46);
-            this.copyButton.TabIndex = 4;
-            this.copyButton.Text = "Copy Password";
-            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // CreateOrEditCredential
             // 
