@@ -38,6 +38,9 @@ namespace SmartPM
             string savedPalette = Properties.Settings.Default.Template;
             string savedGridLayout = Properties.Settings.Default.GridLayout;
 
+
+           
+
             // Apply the saved theme if it exists
             if (!string.IsNullOrEmpty(savedTheme))
             {

@@ -24,8 +24,11 @@ namespace SmartPM.Forms
         private void bbLogin_Click(object sender, EventArgs e)
         {
             DataHelper.aesCipher = new AESCipher(textMasterKey.Text);
-            
 
+            if (!Directory.Exists(DataHelper.FolderName))
+            {
+                Directory.CreateDirectory(DataHelper.FolderName);
+            }
 
             if (textMasterKey.Text.Length<6)
             {
