@@ -16,7 +16,7 @@
     <PublishUrl>\\192.168.88.10\wwwroot\smartpm.netsense.com.tr\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -26,11 +26,11 @@
     <InstallUrl>http://smartpm.netsense.com.tr/</InstallUrl>
     <ProductName>SmartPM</ProductName>
     <PublisherName>Netsense</PublisherName>
-    <SuiteName>Harmony</SuiteName>
+    <SuiteName>Smart</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>13</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

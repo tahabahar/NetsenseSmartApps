@@ -29,7 +29,6 @@ namespace SmartPM.Forms
             {
                 Directory.CreateDirectory(DataHelper.FolderName);
             }
-
             if (textMasterKey.Text.Length<6)
             {
                 XtraMessageBox.Show("Please enter master password", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -40,7 +39,6 @@ namespace SmartPM.Forms
             {
                 if (DataHelper.TryLoadData())
                 {
-
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
