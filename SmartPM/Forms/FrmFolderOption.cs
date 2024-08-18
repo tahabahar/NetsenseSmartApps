@@ -45,7 +45,9 @@ namespace SmartPM.Forms
             Properties.Settings.Default.Save();
 
 
-           
+            Properties.Settings.Default.Reload();
+
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
