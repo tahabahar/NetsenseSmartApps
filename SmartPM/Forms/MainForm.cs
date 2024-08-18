@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Deployment.Application;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -34,7 +35,7 @@ namespace SmartPM
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
+
             string savedTheme = Properties.Settings.Default.Theme;
             string savedPalette = Properties.Settings.Default.Template;
             string savedGridLayout = Properties.Settings.Default.GridLayout;
@@ -143,6 +144,11 @@ namespace SmartPM
         }
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            if (ApplicationDeployment.IsNetworkDeployed)
+                barStaticVersion.Caption = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            else
+                barStaticVersion.Caption = "Preview";
+
             if (string.IsNullOrEmpty(Properties.Settings.Default.DataFolder))
             {
                 FrmFolderOption frmFolderOption = new FrmFolderOption();
@@ -150,7 +156,7 @@ namespace SmartPM
                     Application.Exit();
 
             }
-            else 
+            else
             {
                 DataHelper.FolderName = Properties.Settings.Default.DataFolder;
                 DataHelper.FileName = Path.Combine(DataHelper.FolderName, "credentialdata.json");

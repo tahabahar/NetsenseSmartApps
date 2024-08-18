@@ -65,15 +65,16 @@
             this.bbiDuplicate = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiChangeMasterPassword = new DevExpress.XtraBars.BarButtonItem();
-            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
+            this.barStaticItemFileName = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.barStaticItemFileName = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticVersion = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -210,9 +211,10 @@
             this.bbiDuplicate,
             this.bbiSave,
             this.bbiChangeMasterPassword,
-            this.barStaticItemFileName});
+            this.barStaticItemFileName,
+            this.barStaticVersion});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 56;
+            this.ribbonControl.MaxItemId = 57;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -401,9 +403,11 @@
             this.bbiChangeMasterPassword.Name = "bbiChangeMasterPassword";
             this.bbiChangeMasterPassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiChangeMasterPassword_ItemClick);
             // 
-            // repositoryItemHypertextLabel1
+            // barStaticItemFileName
             // 
-            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
+            this.barStaticItemFileName.Caption = "barStaticItem1";
+            this.barStaticItemFileName.Id = 55;
+            this.barStaticItemFileName.Name = "barStaticItemFileName";
             // 
             // ribbonPage1
             // 
@@ -447,9 +451,14 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Your Data";
             // 
+            // repositoryItemHypertextLabel1
+            // 
+            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItemFileName);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticVersion);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 947);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
@@ -465,11 +474,12 @@
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
             // 
-            // barStaticItemFileName
+            // barStaticVersion
             // 
-            this.barStaticItemFileName.Caption = "barStaticItem1";
-            this.barStaticItemFileName.Id = 55;
-            this.barStaticItemFileName.Name = "barStaticItemFileName";
+            this.barStaticVersion.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticVersion.Caption = "barStaticVersion";
+            this.barStaticVersion.Id = 56;
+            this.barStaticVersion.Name = "barStaticVersion";
             // 
             // MainForm
             // 
@@ -544,5 +554,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
         private DevExpress.XtraBars.BarStaticItem barStaticItemFileName;
+        private DevExpress.XtraBars.BarStaticItem barStaticVersion;
     }
 }
