@@ -25,10 +25,7 @@ namespace SmartPM.Forms
         {
             DataHelper.aesCipher = new AESCipher(textMasterKey.Text);
 
-            if (!Directory.Exists(DataHelper.FolderName))
-            {
-                Directory.CreateDirectory(DataHelper.FolderName);
-            }
+           
             if (textMasterKey.Text.Length<6)
             {
                 XtraMessageBox.Show("Please enter master password", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);

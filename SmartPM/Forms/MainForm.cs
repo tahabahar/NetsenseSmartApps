@@ -50,7 +50,7 @@ namespace SmartPM
                 DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme, savedPalette);
             }
 
-            if(!string.IsNullOrEmpty(savedGridLayout))
+            if (!string.IsNullOrEmpty(savedGridLayout))
             {
                 using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(savedGridLayout)))
                 {
@@ -142,6 +142,14 @@ namespace SmartPM
         }
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            if (1 == 1)
+            {
+                FrmFolderOption frmFolderOption = new FrmFolderOption();
+                if (frmFolderOption.ShowDialog() != DialogResult.OK)
+                    Application.Exit();
+
+            }
+
             LoginForm loginForm = new LoginForm();
             var result = loginForm.ShowDialog();
             if (result != DialogResult.OK)
