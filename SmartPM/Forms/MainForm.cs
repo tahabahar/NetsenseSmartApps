@@ -34,6 +34,7 @@ namespace SmartPM
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+           
             string savedTheme = Properties.Settings.Default.Theme;
             string savedPalette = Properties.Settings.Default.Template;
             string savedGridLayout = Properties.Settings.Default.GridLayout;
@@ -142,12 +143,18 @@ namespace SmartPM
         }
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            if (1 == 1)
+            if (string.IsNullOrEmpty(Properties.Settings.Default.DataFolder))
             {
                 FrmFolderOption frmFolderOption = new FrmFolderOption();
                 if (frmFolderOption.ShowDialog() != DialogResult.OK)
                     Application.Exit();
 
+            }
+            else 
+            {
+                DataHelper.FolderName = Properties.Settings.Default.DataFolder;
+                DataHelper.FileName = Path.Combine(DataHelper.FolderName, "credentialdata.json");
+                barStaticItemFileName.Caption = DataHelper.FileName;
             }
 
             LoginForm loginForm = new LoginForm();

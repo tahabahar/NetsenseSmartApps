@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.xtraFolderBrowserDialog1 = new DevExpress.XtraEditors.XtraFolderBrowserDialog(this.components);
             this.xDataFolder = new DevExpress.XtraEditors.TextEdit();
-            this.bbLogin = new DevExpress.XtraEditors.SimpleButton();
+            this.bbSaveAndContinue = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.xbtnBrowse = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xDataFolder.Properties)).BeginInit();
@@ -48,16 +48,16 @@
             this.xDataFolder.Size = new System.Drawing.Size(711, 28);
             this.xDataFolder.TabIndex = 0;
             // 
-            // bbLogin
+            // bbSaveAndContinue
             // 
-            this.bbLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.bbLogin.Appearance.Options.UseFont = true;
-            this.bbLogin.Location = new System.Drawing.Point(63, 182);
-            this.bbLogin.Name = "bbLogin";
-            this.bbLogin.Size = new System.Drawing.Size(168, 45);
-            this.bbLogin.TabIndex = 2;
-            this.bbLogin.Text = "&Save && Continue";
-            this.bbLogin.Click += new System.EventHandler(this.bbLogin_Click);
+            this.bbSaveAndContinue.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.bbSaveAndContinue.Appearance.Options.UseFont = true;
+            this.bbSaveAndContinue.Location = new System.Drawing.Point(63, 182);
+            this.bbSaveAndContinue.Name = "bbSaveAndContinue";
+            this.bbSaveAndContinue.Size = new System.Drawing.Size(168, 45);
+            this.bbSaveAndContinue.TabIndex = 2;
+            this.bbSaveAndContinue.Text = "&Save && Continue";
+            this.bbSaveAndContinue.Click += new System.EventHandler(this.bbSaveAndContinue_Click);
             // 
             // labelControl1
             // 
@@ -85,9 +85,10 @@
             this.ClientSize = new System.Drawing.Size(954, 280);
             this.Controls.Add(this.xbtnBrowse);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.bbLogin);
+            this.Controls.Add(this.bbSaveAndContinue);
             this.Controls.Add(this.xDataFolder);
             this.Name = "FrmFolderOption";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select Data Folder";
             this.Shown += new System.EventHandler(this.FrmFolderOption_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.xDataFolder.Properties)).EndInit();
@@ -100,7 +101,7 @@
 
         private DevExpress.XtraEditors.XtraFolderBrowserDialog xtraFolderBrowserDialog1;
         private DevExpress.XtraEditors.TextEdit xDataFolder;
-        private DevExpress.XtraEditors.SimpleButton bbLogin;
+        private DevExpress.XtraEditors.SimpleButton bbSaveAndContinue;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton xbtnBrowse;
     }

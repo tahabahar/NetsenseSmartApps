@@ -16,9 +16,9 @@ namespace SmartPM
     {
         public static BindingList<CredentialEntry> MyData = new BindingList<CredentialEntry>();
 
-        public static string FolderName = @"C:\netsense";
+        public static string FolderName;
 
-        public static string FileName = Path.Combine(FolderName, "credentialdata.json");
+        public static string FileName;
 
         public static AESCipher aesCipher;
 

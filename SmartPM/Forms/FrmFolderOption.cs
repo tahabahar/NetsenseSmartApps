@@ -34,22 +34,20 @@ namespace SmartPM.Forms
             }
         }
 
-        private void bbLogin_Click(object sender, EventArgs e)
+        private void bbSaveAndContinue_Click(object sender, EventArgs e)
         {
             if (!Directory.Exists(xDataFolder.Text))
             {
                 Directory.CreateDirectory(DataHelper.FolderName);
             }
 
-            xDataFolder.Text = Properties.Settings.Default.DataFolder;
+            Properties.Settings.Default.DataFolder = xDataFolder.Text;
             Properties.Settings.Default.Save();
 
 
-            DataHelper.FolderName = xDataFolder.Text;
+           
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-
-        
     }
 }
