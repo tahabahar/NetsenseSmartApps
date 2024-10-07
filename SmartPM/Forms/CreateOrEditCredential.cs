@@ -32,19 +32,17 @@ namespace SmartPM.AddForms
             InitializeComponent();
             _credentialEntry = pCredential;
             this.KeyPreview = true;
-            
+
 
             this.KeyDown += CreateOrEditCredential_KeyDown;
 
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
 
             textCategory.Text = pCredential.Category;
-            textDescription.Text = pCredential.Description;
-            textValidThru.Text = pCredential.ValidThru.ToString();
+           
             memoNote.Text = pCredential.Note;
-            comboBoxCredentialType.EditValue = pCredential.CredentialType;
-            comboBoxPriority.EditValue = pCredential.Priority;
-            comboBoxMfaType.EditValue = pCredential.MFAType;
+            this.Text = pCredential.CredentialType.ToString();
+            
 
 
             switch (pCredential.CredentialType)
@@ -196,13 +194,9 @@ namespace SmartPM.AddForms
         private void saveButton_Click(object sender, EventArgs e)
         {
             _credentialEntry.Category = textCategory.Text;
-            _credentialEntry.Description = textDescription.Text;
-            _credentialEntry.ValidThru = textValidThru.DateTime;
             _credentialEntry.Note = memoNote.Text;
-            _credentialEntry.Priority = (PriorityEnum)comboBoxPriority.EditValue;
-            _credentialEntry.MFAType = (MFATypeEnum)comboBoxMfaType.EditValue;
             _credentialEntry.LastModifiedDate = DateTime.Now;
-            
+
 
             switch (_credentialEntry.CredentialType)
             {
@@ -215,6 +209,7 @@ namespace SmartPM.AddForms
                         MyWebmodel.WebUrl = textWEBUrl.Text;
                         MyWebmodel.Username = textWEBUsername.Text;
                         MyWebmodel.Password = textWEBPasword.Text;
+                        _credentialEntry.Description = MyWebmodel.WebUrl;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWebmodel);
 
@@ -231,7 +226,7 @@ namespace SmartPM.AddForms
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
                         MyDbmodel.DBType = (DBTypeEnum)comboBoxDBType.EditValue;
-
+                        _credentialEntry.Description = MyDbmodel.DBServerName;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
 
@@ -250,6 +245,7 @@ namespace SmartPM.AddForms
                         MyApiModel.SecretKey = textAPISecretKey.Text;
                         MyApiModel.ApiUrl = textAPIUrl.Text;
                         MyApiModel.ApiUsername = textAPIUsername.Text;
+                        _credentialEntry.Description = MyApiModel.ApiName;
 
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyApiModel);
@@ -265,6 +261,7 @@ namespace SmartPM.AddForms
                         MyAppModel.AppName = textAPPName.Text;
                         MyAppModel.Password = textAPPPassword.Text;
                         MyAppModel.Username = textAPPUsername.Text;
+                        _credentialEntry.Description = MyAppModel.AppName;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyAppModel);
 
@@ -280,6 +277,7 @@ namespace SmartPM.AddForms
                         MyBankModel.Passcode = textBANKPasscode.Text;
                         MyBankModel.Password = textBANKPassword.Text;
                         MyBankModel.Username = textBANKUsername.Text;
+                        _credentialEntry.Description = MyBankModel.BankName;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyBankModel);
 
@@ -295,6 +293,7 @@ namespace SmartPM.AddForms
                         MyComputerModel.Password = textCOMPUTERPassword.Text;
                         MyComputerModel.Pin = int.Parse(textCOMPUTERPin.Text);
                         MyComputerModel.Username = textCOMPUTERUsername.Text;
+                        _credentialEntry.Description = MyComputerModel.Domain;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyComputerModel);
 
@@ -311,6 +310,7 @@ namespace SmartPM.AddForms
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
                         MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationMonth.Text;
                         MyCreditCard.CardExpirationYear = dateCREDITCARDExpirationYear.Text;
+                        _credentialEntry.Description = MyCreditCard.CardNumber; //Todo: Sadece sagdan 4 dıgıt goster
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyCreditCard);
 
@@ -325,6 +325,9 @@ namespace SmartPM.AddForms
                         MyEmailModel.EmailAccount = textEMAILAccountAdress.Text;
                         MyEmailModel.Password = textEMAILPassword.Text;
                         MyEmailModel.RecoveryEmail = textEMAILRecoveryAccountAdress.Text;
+
+                        _credentialEntry.Description = MyEmailModel.EmailAccount;
+
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyEmailModel);
 
@@ -338,14 +341,15 @@ namespace SmartPM.AddForms
                     {
                         MyWifiNetworkModel.WifiName = textWIFIName.Text;
                         MyWifiNetworkModel.Password = textWIFIPassword.Text;
+                        _credentialEntry.Description = MyWifiNetworkModel.WifiName;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWifiNetworkModel);
 
                     break;
             }
 
-            DataHelper.AddOrUpdate(_credentialEntry);     
-            this.Close();         
+            DataHelper.AddOrUpdate(_credentialEntry);
+            this.Close();
         }
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -359,7 +363,7 @@ namespace SmartPM.AddForms
             {
                 textAPIPassword.Text = MyGeneratePassword.Password;
             }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageApp) 
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageApp)
             {
                 textAPPPassword.Text = MyGeneratePassword.Password;
             }
@@ -397,9 +401,6 @@ namespace SmartPM.AddForms
         }
         private void CreateOrEditCredential_Load(object sender, EventArgs e)
         {
-            comboBoxPriority.Properties.Items.AddRange(Enum.GetValues(typeof(PriorityEnum)));
-            comboBoxCredentialType.Properties.Items.AddRange(Enum.GetValues(typeof(CredentialTypeEnum)));
-            comboBoxMfaType.Properties.Items.AddRange(Enum.GetValues(typeof(MFATypeEnum)));
             if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
             {
                 comboBoxDBType.Properties.Items.AddRange(Enum.GetValues(typeof(DBTypeEnum)));
@@ -407,115 +408,21 @@ namespace SmartPM.AddForms
 
         }
 
-        private void checkShowPassword_Click(object sender, EventArgs e)
-        {
-            foreach (Control control in xtraTabControl1.SelectedTabPage.Controls)
-            {
-                if (control is TextBox textBox)
-                {
-                    textBox.PasswordChar = '0'; // TextBox'ın PasswordChar özelliğini '*' karakterine ayarla
-                }
-            }
-
-            // CheckBox'un durumunu PasswordChar özelliğine göre ayarla
-            checkHidePasswordWeb.Checked = (xtraTabControl1.SelectedTabPage.Controls.OfType<TextBox>().Any(tb => tb.PasswordChar == '*'));
-        }
+     
 
         private void checkShowPasswordWeb_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkHidePasswordWeb.Checked == false)
-            {
-                textWEBPasword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textWEBPasword.Properties.UseSystemPasswordChar = true;
-            }
+           
         }
 
-        private void checkShowPasswordDB_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkHidePasswordDB.Checked == false)
-            {
-                textDBPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textDBPassword.Properties.UseSystemPasswordChar = true;
-            }
-        }
+       
 
         private void checkShowPasswordEmail_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkHidePasswordEmail.Checked == false)
-            {
-                textEMAILPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textEMAILPassword.Properties.UseSystemPasswordChar = true;
-            }
         }
 
-        private void checkShowPasswordComputer_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkHidePasswordComputer.Checked == false)
-            {
-                textCOMPUTERPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textCOMPUTERPassword.Properties.UseSystemPasswordChar = true;
-            }
-        }
+      
 
-        private void checkShowPasswordApp_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkHidePasswordApp.Checked == false)
-            {
-                textAPPPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textAPPPassword.Properties.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void checkShowPasswordBank_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkHidePasswordBank.Checked == false)
-            {
-                textBANKPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textBANKPassword.Properties.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void checkShowPasswordWifi_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkHidePasswordWifi.Checked == false)
-            {
-                textWIFIPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textWIFIPassword.Properties.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void checkShowPasswordApi_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkHidePasswordApi.Checked == false)
-            {
-                textAPIPassword.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textAPIPassword.Properties.UseSystemPasswordChar = true;
-            }
-        }
 
         private void copyButton_Click(object sender, EventArgs e)
         {
@@ -552,6 +459,49 @@ namespace SmartPM.AddForms
                 Clipboard.SetText(textWEBPasword.Text);
             }
         }
+
+        private void xcbHidePass_CheckedChanged(object sender, EventArgs e)
+        {
+            textEMAILPassword.Properties.UseSystemPasswordChar = !xcbShowPassEMail.Checked;
+
+        }
+
+        private void xcbShowPassWEB_CheckedChanged(object sender, EventArgs e)
+        {
+            textWEBPasword.Properties.UseSystemPasswordChar =!xcbShowPassWEB.Checked;
+        }
+
+        private void xcbShowPassDatabase_CheckedChanged(object sender, EventArgs e)
+        {
+            textDBPassword.Properties.UseSystemPasswordChar = !xcbShowPassDatabase.Checked;
+        }
+
+        private void xcbShowPassComputer_CheckedChanged(object sender, EventArgs e)
+        {
+            textCOMPUTERPassword.Properties.UseSystemPasswordChar = !xcbShowPassComputer.Checked;
+        }
+
+        private void xcbShowPassAPP_CheckedChanged(object sender, EventArgs e)
+        {
+            textAPPPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPP.Checked;
+        }
+
+        private void xcbShowPassBANK_CheckedChanged(object sender, EventArgs e)
+        {
+            textBANKPassword.Properties.UseSystemPasswordChar = !xcbShowPassBANK.Checked;
+        }
+
+        private void xcbShowPassWIFI_CheckedChanged(object sender, EventArgs e)
+        {
+            textWIFIPassword.Properties.UseSystemPasswordChar = !xcbShowPassWIFI.Checked;
+        }
+
+        private void xcbShowPassAPI_CheckedChanged(object sender, EventArgs e)
+        {
+            textAPIPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
+
+
+        }
     }
-    
+
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPM", "SmartPM\SmartPM.csproj", "{7139C457-F1B7-469E-AAA7-A6779E1BB2E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCalculator", "SmartCalculator\SmartCalculator.csproj", "{BFC8069A-1ED8-4BBF-8368-74F87BCB9FEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7139C457-F1B7-469E-AAA7-A6779E1BB2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7139C457-F1B7-469E-AAA7-A6779E1BB2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7139C457-F1B7-469E-AAA7-A6779E1BB2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC8069A-1ED8-4BBF-8368-74F87BCB9FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC8069A-1ED8-4BBF-8368-74F87BCB9FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC8069A-1ED8-4BBF-8368-74F87BCB9FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC8069A-1ED8-4BBF-8368-74F87BCB9FEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

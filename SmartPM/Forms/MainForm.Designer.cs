@@ -33,13 +33,10 @@
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Description = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
@@ -66,6 +63,7 @@
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiChangeMasterPassword = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItemFileName = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticVersion = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -74,7 +72,6 @@
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.barStaticVersion = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -102,18 +99,17 @@
             this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
             this.gridColumn7,
-            this.gridColumn6,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.Description});
             this.gridView1.GridControl = this.gridControl;
+            this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn7, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn1
@@ -123,14 +119,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Description";
-            this.gridColumn2.FieldName = "Description";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn1.Width = 200;
             // 
             // gridColumn3
             // 
@@ -139,22 +128,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Valid Thru";
-            this.gridColumn4.FieldName = "ValidThru";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Priority";
-            this.gridColumn5.FieldName = "Priority";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn3.Width = 792;
             // 
             // gridColumn7
             // 
@@ -162,15 +136,8 @@
             this.gridColumn7.FieldName = "CredentialType";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 5;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "MFA Type";
-            this.gridColumn6.FieldName = "MFAType";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 1;
+            this.gridColumn7.Width = 216;
             // 
             // gridColumn8
             // 
@@ -180,7 +147,17 @@
             this.gridColumn8.FieldName = "LastModifiedDate";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.VisibleIndex = 3;
+            this.gridColumn8.Width = 256;
+            // 
+            // Description
+            // 
+            this.Description.Caption = "Description";
+            this.Description.FieldName = "Description";
+            this.Description.Name = "Description";
+            this.Description.Visible = true;
+            this.Description.VisibleIndex = 0;
+            this.Description.Width = 249;
             // 
             // ribbonControl
             // 
@@ -409,6 +386,13 @@
             this.barStaticItemFileName.Id = 55;
             this.barStaticItemFileName.Name = "barStaticItemFileName";
             // 
+            // barStaticVersion
+            // 
+            this.barStaticVersion.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticVersion.Caption = "barStaticVersion";
+            this.barStaticVersion.Id = 56;
+            this.barStaticVersion.Name = "barStaticVersion";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -474,13 +458,6 @@
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
             // 
-            // barStaticVersion
-            // 
-            this.barStaticVersion.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticVersion.Caption = "barStaticVersion";
-            this.barStaticVersion.Id = 56;
-            this.barStaticVersion.Name = "barStaticVersion";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,17 +501,13 @@
         private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraBars.BarButtonItem bbSave;
         private DevExpress.XtraBars.PopupControlContainer popupControlContainer1;
         private DevExpress.XtraBars.BarButtonItem bbWebCredential;
         private DevExpress.XtraBars.BarButtonItem bbDatabaseCredential;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraBars.BarButtonItem bbApiCrendential;
         private DevExpress.XtraBars.BarButtonItem bbAppCredential;
         private DevExpress.XtraBars.BarButtonItem bbBankCredential;
@@ -555,5 +528,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
         private DevExpress.XtraBars.BarStaticItem barStaticItemFileName;
         private DevExpress.XtraBars.BarStaticItem barStaticVersion;
+        private DevExpress.XtraGrid.Columns.GridColumn Description;
     }
 }

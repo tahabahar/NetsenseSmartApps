@@ -204,8 +204,6 @@ namespace SmartPM
             newCredentialEntry.Note = credentialEntry.Note;
             newCredentialEntry.Description = credentialEntry.Description;
             newCredentialEntry.Category = credentialEntry.Category;
-            newCredentialEntry.Priority = credentialEntry.Priority;
-            newCredentialEntry.ValidThru = credentialEntry.ValidThru;
             newCredentialEntry.Id = Guid.NewGuid();
             newCredentialEntry.CredentialJsonData = credentialEntry.CredentialJsonData;
             newCredentialEntry.CredentialType = credentialEntry.CredentialType;
