@@ -459,7 +459,6 @@ namespace SmartPM.AddForms
         private void xcbHidePass_CheckedChanged(object sender, EventArgs e)
         {
             textEMAILPassword.Properties.UseSystemPasswordChar = !xcbShowPassEMail.Checked;
-
         }
 
         private void xcbShowPassWEB_CheckedChanged(object sender, EventArgs e)
@@ -496,15 +495,13 @@ namespace SmartPM.AddForms
         {
             textAPIPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
         }
-
-        private void checkEdit2_CheckedChanged(object sender, EventArgs e)
+        private void checkCvvCreditCard_CheckedChanged(object sender, EventArgs e)
         {
-            textCREDITCARDNumber.Properties.UseSystemPasswordChar= !xcbShowPassAPI.Checked;
+            textCREDITCARDcvv.Properties.UseSystemPasswordChar = !checkCvvCreditCard.Checked;
         }
-
-        private void xcbShowCvvCreditCard_CheckedChanged(object sender, EventArgs e)
+        private void checkCardNumberCreditCard_CheckedChanged(object sender, EventArgs e)
         {
-            textCREDITCARDcvv.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
+            textCREDITCARDNumber.Properties.UseSystemPasswordChar= !checkCardNumberCreditCard.Checked;
         }
 
         private void textCategory_TextChanged(object sender, EventArgs e)
@@ -520,5 +517,7 @@ namespace SmartPM.AddForms
                 textWEBUrl.Text = $"www.{categoryText}.com";
             }
         }
+
+       
     }
 }

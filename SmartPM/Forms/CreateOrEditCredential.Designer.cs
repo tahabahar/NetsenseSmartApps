@@ -96,6 +96,8 @@
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.textBANKName = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPageCreditCard = new DevExpress.XtraTab.XtraTabPage();
+            this.checkCvvCreditCard = new DevExpress.XtraEditors.CheckEdit();
+            this.checkCardNumberCreditCard = new DevExpress.XtraEditors.CheckEdit();
             this.textCREDITCARDcvv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
             this.dateCREDITCARDExpirationDate = new DevExpress.XtraEditors.DateEdit();
@@ -127,8 +129,6 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.xcbShowCvvCreditCard = new DevExpress.XtraEditors.CheckEdit();
-            this.xcbShowCardNumberCreditCard = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
@@ -171,6 +171,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).BeginInit();
             this.xtraTabPageCreditCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkCardNumberCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties)).BeginInit();
@@ -190,8 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textAPIAccessToken.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPISecretKey.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCvvCreditCard.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCardNumberCreditCard.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -779,8 +779,8 @@
             // 
             // xtraTabPageCreditCard
             // 
-            this.xtraTabPageCreditCard.Controls.Add(this.xcbShowCardNumberCreditCard);
-            this.xtraTabPageCreditCard.Controls.Add(this.xcbShowCvvCreditCard);
+            this.xtraTabPageCreditCard.Controls.Add(this.checkCvvCreditCard);
+            this.xtraTabPageCreditCard.Controls.Add(this.checkCardNumberCreditCard);
             this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDcvv);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl33);
             this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationDate);
@@ -793,10 +793,29 @@
             this.xtraTabPageCreditCard.Size = new System.Drawing.Size(1159, 493);
             this.xtraTabPageCreditCard.Text = "xtraTabPageCreditCard";
             // 
+            // checkCvvCreditCard
+            // 
+            this.checkCvvCreditCard.Location = new System.Drawing.Point(295, 132);
+            this.checkCvvCreditCard.Name = "checkCvvCreditCard";
+            this.checkCvvCreditCard.Properties.Caption = "Show Cvv";
+            this.checkCvvCreditCard.Size = new System.Drawing.Size(88, 22);
+            this.checkCvvCreditCard.TabIndex = 24;
+            this.checkCvvCreditCard.CheckedChanged += new System.EventHandler(this.checkCvvCreditCard_CheckedChanged);
+            // 
+            // checkCardNumberCreditCard
+            // 
+            this.checkCardNumberCreditCard.Location = new System.Drawing.Point(575, 64);
+            this.checkCardNumberCreditCard.Name = "checkCardNumberCreditCard";
+            this.checkCardNumberCreditCard.Properties.Caption = "Show Card Number";
+            this.checkCardNumberCreditCard.Size = new System.Drawing.Size(126, 22);
+            this.checkCardNumberCreditCard.TabIndex = 23;
+            this.checkCardNumberCreditCard.CheckedChanged += new System.EventHandler(this.checkCardNumberCreditCard_CheckedChanged);
+            // 
             // textCREDITCARDcvv
             // 
             this.textCREDITCARDcvv.Location = new System.Drawing.Point(146, 129);
             this.textCREDITCARDcvv.Name = "textCREDITCARDcvv";
+            this.textCREDITCARDcvv.Properties.UseSystemPasswordChar = true;
             this.textCREDITCARDcvv.Size = new System.Drawing.Size(143, 28);
             this.textCREDITCARDcvv.TabIndex = 22;
             // 
@@ -846,6 +865,7 @@
             this.textCREDITCARDNumber.Name = "textCREDITCARDNumber";
             this.textCREDITCARDNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textCREDITCARDNumber.Properties.MaskSettings.Set("mask", "0000-0000-0000-0000");
+            this.textCREDITCARDNumber.Properties.UseSystemPasswordChar = true;
             this.textCREDITCARDNumber.Size = new System.Drawing.Size(423, 28);
             this.textCREDITCARDNumber.TabIndex = 1;
             // 
@@ -1052,24 +1072,6 @@
             this.labelControl38.TabIndex = 13;
             this.labelControl38.Text = "Secret Key";
             // 
-            // xcbShowCvvCreditCard
-            // 
-            this.xcbShowCvvCreditCard.Location = new System.Drawing.Point(295, 132);
-            this.xcbShowCvvCreditCard.Name = "xcbShowCvvCreditCard";
-            this.xcbShowCvvCreditCard.Properties.Caption = "Show Cvv";
-            this.xcbShowCvvCreditCard.Size = new System.Drawing.Size(203, 22);
-            this.xcbShowCvvCreditCard.TabIndex = 23;
-            this.xcbShowCvvCreditCard.CheckedChanged += new System.EventHandler(this.xcbShowCvvCreditCard_CheckedChanged);
-            // 
-            // xcbShowCardNumberCreditCard
-            // 
-            this.xcbShowCardNumberCreditCard.Location = new System.Drawing.Point(575, 64);
-            this.xcbShowCardNumberCreditCard.Name = "xcbShowCardNumberCreditCard";
-            this.xcbShowCardNumberCreditCard.Properties.Caption = "Show Card Number";
-            this.xcbShowCardNumberCreditCard.Size = new System.Drawing.Size(203, 22);
-            this.xcbShowCardNumberCreditCard.TabIndex = 24;
-            this.xcbShowCardNumberCreditCard.CheckedChanged += new System.EventHandler(this.checkEdit2_CheckedChanged);
-            // 
             // CreateOrEditCredential
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1133,6 +1135,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).EndInit();
             this.xtraTabPageCreditCard.ResumeLayout(false);
             this.xtraTabPageCreditCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkCardNumberCreditCard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties)).EndInit();
@@ -1154,8 +1158,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textAPIAccessToken.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPISecretKey.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCvvCreditCard.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCardNumberCreditCard.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1259,7 +1261,7 @@
         private DevExpress.XtraEditors.CheckEdit xcbShowPassWIFI;
         private DevExpress.XtraEditors.CheckEdit xcbShowPassAPI;
         private DevExpress.XtraEditors.TextEdit textCREDITCARDcvv;
-        private DevExpress.XtraEditors.CheckEdit xcbShowCardNumberCreditCard;
-        private DevExpress.XtraEditors.CheckEdit xcbShowCvvCreditCard;
+        private DevExpress.XtraEditors.CheckEdit checkCvvCreditCard;
+        private DevExpress.XtraEditors.CheckEdit checkCardNumberCreditCard;
     }
 }
