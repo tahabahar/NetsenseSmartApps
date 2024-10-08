@@ -496,5 +496,15 @@ namespace SmartPM.AddForms
         {
             textAPIPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
         }
+
+        private void checkEdit2_CheckedChanged(object sender, EventArgs e)
+        {
+            textCREDITCARDNumber.Properties.UseSystemPasswordChar= !xcbShowPassAPI.Checked;
+        }
+
+        private void xcbShowCvvCreditCard_CheckedChanged(object sender, EventArgs e)
+        {
+            textCREDITCARDcvv.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
+        }
     }
 }

@@ -117,7 +117,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 200;
+            this.gridColumn1.Width = 241;
             // 
             // gridColumn3
             // 
@@ -126,7 +126,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 616;
+            this.gridColumn3.Width = 552;
             // 
             // gridColumn7
             // 
@@ -135,7 +135,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 2;
-            this.gridColumn7.Width = 371;
+            this.gridColumn7.Width = 166;
             // 
             // gridColumn8
             // 
@@ -146,7 +146,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 201;
+            this.gridColumn8.Width = 190;
             // 
             // Description
             // 
@@ -155,7 +155,7 @@
             this.Description.Name = "Description";
             this.Description.Visible = true;
             this.Description.VisibleIndex = 1;
-            this.Description.Width = 325;
+            this.Description.Width = 364;
             // 
             // ribbonControl
             // 

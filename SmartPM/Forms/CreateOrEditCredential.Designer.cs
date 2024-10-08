@@ -127,6 +127,8 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.xcbShowCvvCreditCard = new DevExpress.XtraEditors.CheckEdit();
+            this.xcbShowCardNumberCreditCard = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
@@ -188,6 +190,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textAPIAccessToken.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPISecretKey.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCvvCreditCard.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCardNumberCreditCard.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -774,6 +778,8 @@
             // 
             // xtraTabPageCreditCard
             // 
+            this.xtraTabPageCreditCard.Controls.Add(this.xcbShowCardNumberCreditCard);
+            this.xtraTabPageCreditCard.Controls.Add(this.xcbShowCvvCreditCard);
             this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDcvv);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl33);
             this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationDate);
@@ -1043,6 +1049,24 @@
             this.labelControl38.TabIndex = 13;
             this.labelControl38.Text = "Secret Key";
             // 
+            // xcbShowCvvCreditCard
+            // 
+            this.xcbShowCvvCreditCard.Location = new System.Drawing.Point(295, 132);
+            this.xcbShowCvvCreditCard.Name = "xcbShowCvvCreditCard";
+            this.xcbShowCvvCreditCard.Properties.Caption = "Show Cvv";
+            this.xcbShowCvvCreditCard.Size = new System.Drawing.Size(203, 22);
+            this.xcbShowCvvCreditCard.TabIndex = 23;
+            this.xcbShowCvvCreditCard.CheckedChanged += new System.EventHandler(this.xcbShowCvvCreditCard_CheckedChanged);
+            // 
+            // xcbShowCardNumberCreditCard
+            // 
+            this.xcbShowCardNumberCreditCard.Location = new System.Drawing.Point(575, 64);
+            this.xcbShowCardNumberCreditCard.Name = "xcbShowCardNumberCreditCard";
+            this.xcbShowCardNumberCreditCard.Properties.Caption = "Show Card Number";
+            this.xcbShowCardNumberCreditCard.Size = new System.Drawing.Size(203, 22);
+            this.xcbShowCardNumberCreditCard.TabIndex = 24;
+            this.xcbShowCardNumberCreditCard.CheckedChanged += new System.EventHandler(this.checkEdit2_CheckedChanged);
+            // 
             // CreateOrEditCredential
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1127,6 +1151,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textAPIAccessToken.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPISecretKey.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCvvCreditCard.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xcbShowCardNumberCreditCard.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1230,5 +1256,7 @@
         private DevExpress.XtraEditors.CheckEdit xcbShowPassWIFI;
         private DevExpress.XtraEditors.CheckEdit xcbShowPassAPI;
         private DevExpress.XtraEditors.TextEdit textCREDITCARDcvv;
+        private DevExpress.XtraEditors.CheckEdit xcbShowCardNumberCreditCard;
+        private DevExpress.XtraEditors.CheckEdit xcbShowCvvCreditCard;
     }
 }
