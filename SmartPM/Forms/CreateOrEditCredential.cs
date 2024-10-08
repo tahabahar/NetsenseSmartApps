@@ -20,6 +20,7 @@ using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace SmartPM.AddForms
@@ -307,7 +308,14 @@ namespace SmartPM.AddForms
                         MyCreditCard.CardNumber = textCREDITCARDNumber.Text;
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
                         MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationDate.Text;
-                        _credentialEntry.Description = MyCreditCard.CardNumber; //Todo: Sadece sagdan 4 dıgıt goster
+                        if (MyCreditCard.CardNumber.Length > 4)
+                        {
+                            _credentialEntry.Description = new string('*', MyCreditCard.CardNumber.Length - 4) + MyCreditCard.CardNumber.Substring(MyCreditCard.CardNumber.Length - 4);
+                        }
+                        else
+                        {
+                            textCREDITCARDNumber.Text = MyCreditCard.CardNumber;
+                        }
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyCreditCard);
 
@@ -389,7 +397,7 @@ namespace SmartPM.AddForms
         }
         private void CreateOrEditCredential_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && !(ActiveControl is TextBox))
+            if (e.KeyCode == Keys.Enter && !(ActiveControl is System.Windows.Forms.TextBox))
             {
                 saveButton.PerformClick();
             }
