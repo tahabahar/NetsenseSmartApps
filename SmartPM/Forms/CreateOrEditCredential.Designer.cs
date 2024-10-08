@@ -844,6 +844,8 @@
             // 
             this.textCREDITCARDNumber.Location = new System.Drawing.Point(146, 61);
             this.textCREDITCARDNumber.Name = "textCREDITCARDNumber";
+            this.textCREDITCARDNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.textCREDITCARDNumber.Properties.MaskSettings.Set("mask", "0000-0000-0000-0000");
             this.textCREDITCARDNumber.Size = new System.Drawing.Size(423, 28);
             this.textCREDITCARDNumber.TabIndex = 1;
             // 
