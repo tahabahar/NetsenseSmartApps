@@ -40,13 +40,11 @@ namespace SmartPM
             string savedPalette = Properties.Settings.Default.Template;
             string savedGridLayout = Properties.Settings.Default.GridLayout;
 
-            // Apply the saved theme if it exists
             if (!string.IsNullOrEmpty(savedTheme))
             {
                 DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme);
             }
 
-            // Apply the saved palette if it exists
             if (!string.IsNullOrEmpty(savedPalette))
             {
                 DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(savedTheme, savedPalette);
@@ -154,7 +152,6 @@ namespace SmartPM
                 FrmFolderOption frmFolderOption = new FrmFolderOption();
                 if (frmFolderOption.ShowDialog() != DialogResult.OK)
                     Application.Exit();
-
             }
             else
             {
@@ -186,8 +183,6 @@ namespace SmartPM
 
             DataHelper.MyData.Remove(credentialEntry);
             DataHelper.SaveData();
-
-
         }
         private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -210,7 +205,6 @@ namespace SmartPM
 
             CreateOrEditCredential myfrm = new CreateOrEditCredential(newCredentialEntry);
             myfrm.ShowDialog();
-
         }
         private void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -228,7 +222,6 @@ namespace SmartPM
                 }
             }
             Properties.Settings.Default.Save();
-
 
             gridView1.SaveLayoutToRegistry("SmartPM");
         }

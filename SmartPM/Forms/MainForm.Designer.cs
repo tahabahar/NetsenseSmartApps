@@ -104,12 +104,10 @@
             this.gridColumn8,
             this.Description});
             this.gridView1.GridControl = this.gridControl;
-            this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn7, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn1
@@ -127,8 +125,8 @@
             this.gridColumn3.FieldName = "Note";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 792;
+            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.Width = 616;
             // 
             // gridColumn7
             // 
@@ -136,8 +134,8 @@
             this.gridColumn7.FieldName = "CredentialType";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 1;
-            this.gridColumn7.Width = 216;
+            this.gridColumn7.VisibleIndex = 2;
+            this.gridColumn7.Width = 371;
             // 
             // gridColumn8
             // 
@@ -147,8 +145,8 @@
             this.gridColumn8.FieldName = "LastModifiedDate";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 3;
-            this.gridColumn8.Width = 256;
+            this.gridColumn8.VisibleIndex = 4;
+            this.gridColumn8.Width = 201;
             // 
             // Description
             // 
@@ -156,8 +154,8 @@
             this.Description.FieldName = "Description";
             this.Description.Name = "Description";
             this.Description.Visible = true;
-            this.Description.VisibleIndex = 0;
-            this.Description.Width = 249;
+            this.Description.VisibleIndex = 1;
+            this.Description.Width = 325;
             // 
             // ribbonControl
             // 

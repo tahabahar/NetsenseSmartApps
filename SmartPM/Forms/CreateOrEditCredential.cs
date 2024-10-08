@@ -152,11 +152,10 @@ namespace SmartPM.AddForms
 
                         if (MyCreditCard != null)
                         {
-                            textCREDITCARDCvv.Text = MyCreditCard.CVV;
+                            textCREDITCARDcvv.Text = MyCreditCard.CVV;
                             textCREDITCARDNumber.Text = MyCreditCard.CardNumber;
                             textCREDITCARDOwnerName.Text = MyCreditCard.CardOwner;
-                            dateCREDITCARDExpirationMonth.Text = MyCreditCard.CardExpirationMonth;
-                            dateCREDITCARDExpirationYear.Text = MyCreditCard.CardExpirationYear;
+                            dateCREDITCARDExpirationDate.Text = MyCreditCard.CardExpirationMonth;
                         }
                     }
                     break;
@@ -246,7 +245,6 @@ namespace SmartPM.AddForms
                         MyApiModel.ApiUrl = textAPIUrl.Text;
                         MyApiModel.ApiUsername = textAPIUsername.Text;
                         _credentialEntry.Description = MyApiModel.ApiName;
-
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyApiModel);
 
@@ -305,11 +303,10 @@ namespace SmartPM.AddForms
 
                     if (MyCreditCard != null)
                     {
-                        MyCreditCard.CVV = textCREDITCARDCvv.Text;
+                        MyCreditCard.CVV = textCREDITCARDcvv.Text;
                         MyCreditCard.CardNumber = textCREDITCARDNumber.Text;
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
-                        MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationMonth.Text;
-                        MyCreditCard.CardExpirationYear = dateCREDITCARDExpirationYear.Text;
+                        MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationDate.Text;
                         _credentialEntry.Description = MyCreditCard.CardNumber; //Todo: Sadece sagdan 4 dıgıt goster
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyCreditCard);
@@ -325,9 +322,7 @@ namespace SmartPM.AddForms
                         MyEmailModel.EmailAccount = textEMAILAccountAdress.Text;
                         MyEmailModel.Password = textEMAILPassword.Text;
                         MyEmailModel.RecoveryEmail = textEMAILRecoveryAccountAdress.Text;
-
                         _credentialEntry.Description = MyEmailModel.EmailAccount;
-
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyEmailModel);
 
@@ -406,23 +401,16 @@ namespace SmartPM.AddForms
                 comboBoxDBType.Properties.Items.AddRange(Enum.GetValues(typeof(DBTypeEnum)));
             }
 
+            // Form Load veya uygun bir yerde DateEdit kontrolüne format ayarlama
+            dateCREDITCARDExpirationDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            dateCREDITCARDExpirationDate.Properties.Mask.EditMask = "MM/yy"; // Sadece Ay ve Yıl gösterimi
+            dateCREDITCARDExpirationDate.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView; // Yıl bazlı görünüm
+            dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatString = "MM/yy"; // Ekranda görünecek format
+            dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            dateCREDITCARDExpirationDate.Properties.EditFormat.FormatString = "MM/yy"; // Düzenleme formatı
+            dateCREDITCARDExpirationDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
         }
-
-     
-
-        private void checkShowPasswordWeb_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-       
-
-        private void checkShowPasswordEmail_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-      
-
 
         private void copyButton_Click(object sender, EventArgs e)
         {
@@ -499,9 +487,6 @@ namespace SmartPM.AddForms
         private void xcbShowPassAPI_CheckedChanged(object sender, EventArgs e)
         {
             textAPIPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
-
-
         }
     }
-
 }

@@ -96,16 +96,14 @@
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.textBANKName = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPageCreditCard = new DevExpress.XtraTab.XtraTabPage();
-            this.dateCREDITCARDExpirationYear = new DevExpress.XtraEditors.DateEdit();
+            this.textCREDITCARDcvv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
-            this.dateCREDITCARDExpirationMonth = new DevExpress.XtraEditors.DateEdit();
+            this.dateCREDITCARDExpirationDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.textCREDITCARDOwnerName = new DevExpress.XtraEditors.TextEdit();
             this.textCREDITCARDNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
-            this.textCREDITCARDCvv = new DevExpress.XtraEditors.SpinEdit();
             this.xtraTabPageWifi = new DevExpress.XtraTab.XtraTabPage();
             this.xcbShowPassWIFI = new DevExpress.XtraEditors.CheckEdit();
             this.textWIFIName = new DevExpress.XtraEditors.TextEdit();
@@ -171,13 +169,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBANKUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).BeginInit();
             this.xtraTabPageCreditCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).BeginInit();
             this.xtraTabPageWifi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassWIFI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWIFIName.Properties)).BeginInit();
@@ -210,7 +206,7 @@
             // 
             this.memoNote.Location = new System.Drawing.Point(147, 70);
             this.memoNote.Name = "memoNote";
-            this.memoNote.Size = new System.Drawing.Size(966, 63);
+            this.memoNote.Size = new System.Drawing.Size(966, 89);
             this.memoNote.TabIndex = 6;
             // 
             // labelControl12
@@ -251,9 +247,9 @@
             // copyButton
             // 
             this.copyButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("copyButton.ImageOptions.SvgImage")));
-            this.copyButton.Location = new System.Drawing.Point(162, 14);
+            this.copyButton.Location = new System.Drawing.Point(118, 14);
             this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(38, 45);
+            this.copyButton.Size = new System.Drawing.Size(127, 45);
             this.copyButton.TabIndex = 4;
             this.copyButton.Text = "Copy Password";
             this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
@@ -261,9 +257,9 @@
             // generateButton
             // 
             this.generateButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("generateButton.ImageOptions.SvgImage")));
-            this.generateButton.Location = new System.Drawing.Point(118, 14);
+            this.generateButton.Location = new System.Drawing.Point(251, 14);
             this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(38, 45);
+            this.generateButton.Size = new System.Drawing.Size(150, 45);
             this.generateButton.TabIndex = 15;
             this.generateButton.Text = "Generate Password";
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
@@ -281,7 +277,7 @@
             // saveButton
             // 
             this.saveButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("saveButton.ImageOptions.SvgImage")));
-            this.saveButton.Location = new System.Drawing.Point(1038, 14);
+            this.saveButton.Location = new System.Drawing.Point(1049, 14);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 45);
             this.saveButton.TabIndex = 0;
@@ -303,7 +299,7 @@
             // 
             // xcbShowPassWEB
             // 
-            this.xcbShowPassWEB.Location = new System.Drawing.Point(586, 117);
+            this.xcbShowPassWEB.Location = new System.Drawing.Point(575, 117);
             this.xcbShowPassWEB.Name = "xcbShowPassWEB";
             this.xcbShowPassWEB.Properties.Caption = "Show Password";
             this.xcbShowPassWEB.Size = new System.Drawing.Size(203, 22);
@@ -390,7 +386,7 @@
             // 
             // xcbShowPassEMail
             // 
-            this.xcbShowPassEMail.Location = new System.Drawing.Point(601, 72);
+            this.xcbShowPassEMail.Location = new System.Drawing.Point(575, 69);
             this.xcbShowPassEMail.Name = "xcbShowPassEMail";
             this.xcbShowPassEMail.Properties.Caption = "Show Password";
             this.xcbShowPassEMail.Size = new System.Drawing.Size(203, 22);
@@ -460,7 +456,7 @@
             // 
             // xcbShowPassDatabase
             // 
-            this.xcbShowPassDatabase.Location = new System.Drawing.Point(601, 134);
+            this.xcbShowPassDatabase.Location = new System.Drawing.Point(574, 131);
             this.xcbShowPassDatabase.Name = "xcbShowPassDatabase";
             this.xcbShowPassDatabase.Properties.Caption = "Show Password";
             this.xcbShowPassDatabase.Size = new System.Drawing.Size(203, 22);
@@ -547,7 +543,7 @@
             // 
             // xcbShowPassComputer
             // 
-            this.xcbShowPassComputer.Location = new System.Drawing.Point(601, 92);
+            this.xcbShowPassComputer.Location = new System.Drawing.Point(575, 97);
             this.xcbShowPassComputer.Name = "xcbShowPassComputer";
             this.xcbShowPassComputer.Properties.Caption = "Show Password";
             this.xcbShowPassComputer.Size = new System.Drawing.Size(203, 22);
@@ -638,7 +634,7 @@
             // 
             // xcbShowPassAPP
             // 
-            this.xcbShowPassAPP.Location = new System.Drawing.Point(601, 106);
+            this.xcbShowPassAPP.Location = new System.Drawing.Point(575, 106);
             this.xcbShowPassAPP.Name = "xcbShowPassAPP";
             this.xcbShowPassAPP.Properties.Caption = "Show Password";
             this.xcbShowPassAPP.Size = new System.Drawing.Size(203, 22);
@@ -708,7 +704,7 @@
             // 
             // xcbShowPassBANK
             // 
-            this.xcbShowPassBANK.Location = new System.Drawing.Point(590, 97);
+            this.xcbShowPassBANK.Location = new System.Drawing.Point(575, 97);
             this.xcbShowPassBANK.Name = "xcbShowPassBANK";
             this.xcbShowPassBANK.Properties.Caption = "Show Password";
             this.xcbShowPassBANK.Size = new System.Drawing.Size(203, 22);
@@ -778,77 +774,57 @@
             // 
             // xtraTabPageCreditCard
             // 
-            this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationYear);
+            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDcvv);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl33);
-            this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationMonth);
+            this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationDate);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl32);
-            this.xtraTabPageCreditCard.Controls.Add(this.labelControl29);
             this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDOwnerName);
             this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDNumber);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl30);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl31);
-            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDCvv);
             this.xtraTabPageCreditCard.Name = "xtraTabPageCreditCard";
             this.xtraTabPageCreditCard.Size = new System.Drawing.Size(1159, 493);
             this.xtraTabPageCreditCard.Text = "xtraTabPageCreditCard";
             // 
-            // dateCREDITCARDExpirationYear
+            // textCREDITCARDcvv
             // 
-            this.dateCREDITCARDExpirationYear.EditValue = null;
-            this.dateCREDITCARDExpirationYear.Location = new System.Drawing.Point(146, 129);
-            this.dateCREDITCARDExpirationYear.Name = "dateCREDITCARDExpirationYear";
-            this.dateCREDITCARDExpirationYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateCREDITCARDExpirationYear.Properties.DisplayFormat.FormatString = "";
-            this.dateCREDITCARDExpirationYear.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateCREDITCARDExpirationYear.Properties.EditFormat.FormatString = "";
-            this.dateCREDITCARDExpirationYear.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateCREDITCARDExpirationYear.Properties.MaskSettings.Set("mask", "");
-            this.dateCREDITCARDExpirationYear.Size = new System.Drawing.Size(143, 28);
-            this.dateCREDITCARDExpirationYear.TabIndex = 3;
+            this.textCREDITCARDcvv.Location = new System.Drawing.Point(146, 129);
+            this.textCREDITCARDcvv.Name = "textCREDITCARDcvv";
+            this.textCREDITCARDcvv.Size = new System.Drawing.Size(143, 28);
+            this.textCREDITCARDcvv.TabIndex = 22;
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(15, 102);
+            this.labelControl33.Location = new System.Drawing.Point(22, 102);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(107, 13);
+            this.labelControl33.Size = new System.Drawing.Size(100, 13);
             this.labelControl33.TabIndex = 21;
-            this.labelControl33.Text = "Card Expiration Month";
+            this.labelControl33.Text = "Card Expiration Date";
             // 
-            // dateCREDITCARDExpirationMonth
+            // dateCREDITCARDExpirationDate
             // 
-            this.dateCREDITCARDExpirationMonth.EditValue = null;
-            this.dateCREDITCARDExpirationMonth.Location = new System.Drawing.Point(146, 95);
-            this.dateCREDITCARDExpirationMonth.Name = "dateCREDITCARDExpirationMonth";
-            this.dateCREDITCARDExpirationMonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateCREDITCARDExpirationDate.EditValue = null;
+            this.dateCREDITCARDExpirationDate.Location = new System.Drawing.Point(146, 95);
+            this.dateCREDITCARDExpirationDate.Name = "dateCREDITCARDExpirationDate";
+            this.dateCREDITCARDExpirationDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateCREDITCARDExpirationMonth.Properties.DisplayFormat.FormatString = "";
-            this.dateCREDITCARDExpirationMonth.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateCREDITCARDExpirationMonth.Properties.EditFormat.FormatString = "";
-            this.dateCREDITCARDExpirationMonth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateCREDITCARDExpirationMonth.Properties.MaskSettings.Set("mask", "");
-            this.dateCREDITCARDExpirationMonth.Size = new System.Drawing.Size(143, 28);
-            this.dateCREDITCARDExpirationMonth.TabIndex = 2;
+            this.dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatString = "";
+            this.dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateCREDITCARDExpirationDate.Properties.EditFormat.FormatString = "";
+            this.dateCREDITCARDExpirationDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateCREDITCARDExpirationDate.Properties.MaskSettings.Set("mask", "");
+            this.dateCREDITCARDExpirationDate.Size = new System.Drawing.Size(143, 28);
+            this.dateCREDITCARDExpirationDate.TabIndex = 2;
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(103, 170);
+            this.labelControl32.Location = new System.Drawing.Point(103, 136);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(19, 13);
             this.labelControl32.TabIndex = 19;
             this.labelControl32.Text = "CVV";
-            // 
-            // labelControl29
-            // 
-            this.labelControl29.Location = new System.Drawing.Point(23, 136);
-            this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(99, 13);
-            this.labelControl29.TabIndex = 17;
-            this.labelControl29.Text = "Card Expiration Year";
             // 
             // textCREDITCARDOwnerName
             // 
@@ -880,21 +856,6 @@
             this.labelControl31.TabIndex = 13;
             this.labelControl31.Text = "Card Number";
             // 
-            // textCREDITCARDCvv
-            // 
-            this.textCREDITCARDCvv.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.textCREDITCARDCvv.Location = new System.Drawing.Point(146, 163);
-            this.textCREDITCARDCvv.Name = "textCREDITCARDCvv";
-            this.textCREDITCARDCvv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textCREDITCARDCvv.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.textCREDITCARDCvv.Size = new System.Drawing.Size(143, 28);
-            this.textCREDITCARDCvv.TabIndex = 4;
-            // 
             // xtraTabPageWifi
             // 
             this.xtraTabPageWifi.Controls.Add(this.xcbShowPassWIFI);
@@ -908,7 +869,7 @@
             // 
             // xcbShowPassWIFI
             // 
-            this.xcbShowPassWIFI.Location = new System.Drawing.Point(601, 77);
+            this.xcbShowPassWIFI.Location = new System.Drawing.Point(575, 74);
             this.xcbShowPassWIFI.Name = "xcbShowPassWIFI";
             this.xcbShowPassWIFI.Properties.Caption = "Show Password";
             this.xcbShowPassWIFI.Size = new System.Drawing.Size(203, 22);
@@ -969,7 +930,7 @@
             // 
             // xcbShowPassAPI
             // 
-            this.xcbShowPassAPI.Location = new System.Drawing.Point(585, 89);
+            this.xcbShowPassAPI.Location = new System.Drawing.Point(575, 94);
             this.xcbShowPassAPI.Name = "xcbShowPassAPI";
             this.xcbShowPassAPI.Properties.Caption = "Show Password";
             this.xcbShowPassAPI.Size = new System.Drawing.Size(203, 22);
@@ -1145,13 +1106,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBANKName.Properties)).EndInit();
             this.xtraTabPageCreditCard.ResumeLayout(false);
             this.xtraTabPageCreditCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationYear.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationMonth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDCvv.Properties)).EndInit();
             this.xtraTabPageWifi.ResumeLayout(false);
             this.xtraTabPageWifi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassWIFI.Properties)).EndInit();
@@ -1233,20 +1192,17 @@
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.TextEdit textBANKName;
-        private DevExpress.XtraEditors.LabelControl labelControl29;
         private DevExpress.XtraEditors.TextEdit textCREDITCARDOwnerName;
         private DevExpress.XtraEditors.TextEdit textCREDITCARDNumber;
         private DevExpress.XtraEditors.LabelControl labelControl30;
         private DevExpress.XtraEditors.LabelControl labelControl31;
         private DevExpress.XtraEditors.LabelControl labelControl33;
-        private DevExpress.XtraEditors.DateEdit dateCREDITCARDExpirationMonth;
+        private DevExpress.XtraEditors.DateEdit dateCREDITCARDExpirationDate;
         private DevExpress.XtraEditors.LabelControl labelControl32;
-        private DevExpress.XtraEditors.SpinEdit textCREDITCARDCvv;
         private DevExpress.XtraEditors.TextEdit textWIFIName;
         private DevExpress.XtraEditors.LabelControl labelControl34;
         private DevExpress.XtraEditors.LabelControl labelControl35;
         private DevExpress.XtraEditors.TextEdit textWIFIPassword;
-        private DevExpress.XtraEditors.DateEdit dateCREDITCARDExpirationYear;
         private DevExpress.XtraEditors.TextEdit textAPIUrl;
         private DevExpress.XtraEditors.LabelControl labelControl43;
         private DevExpress.XtraEditors.TextEdit textAPIPassword;
@@ -1273,5 +1229,6 @@
         private DevExpress.XtraEditors.CheckEdit xcbShowPassBANK;
         private DevExpress.XtraEditors.CheckEdit xcbShowPassWIFI;
         private DevExpress.XtraEditors.CheckEdit xcbShowPassAPI;
+        private DevExpress.XtraEditors.TextEdit textCREDITCARDcvv;
     }
 }
