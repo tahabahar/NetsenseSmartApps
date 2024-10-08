@@ -506,5 +506,19 @@ namespace SmartPM.AddForms
         {
             textCREDITCARDcvv.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
         }
+
+        private void textCategory_TextChanged(object sender, EventArgs e)
+        {
+            string categoryText = textCategory.Text;
+
+            if (string.IsNullOrWhiteSpace(categoryText))
+            {
+                textWEBUrl.Text = string.Empty;
+            }
+            else
+            {
+                textWEBUrl.Text = $"www.{categoryText}.com";
+            }
+        }
     }
 }

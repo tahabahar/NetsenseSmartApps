@@ -235,6 +235,7 @@
             this.textCategory.Name = "textCategory";
             this.textCategory.Size = new System.Drawing.Size(423, 28);
             this.textCategory.TabIndex = 0;
+            this.textCategory.TextChanged += new System.EventHandler(this.textCategory_TextChanged);
             // 
             // panelControl2
             // 
