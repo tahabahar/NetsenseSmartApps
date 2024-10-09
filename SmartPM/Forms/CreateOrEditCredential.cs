@@ -40,8 +40,11 @@ namespace SmartPM.AddForms
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
 
             textCategory.Text = pCredential.Category;
+
+            textDescription.Text = pCredential.Description;
            
             memoNote.Text = pCredential.Note;
+
             this.Text = pCredential.CredentialType.ToString();
             
 
@@ -136,7 +139,7 @@ namespace SmartPM.AddForms
 
                         if (MyNote != null)
                         {
-                            textEMAILAccountAdress.Text = MyNote.Note;
+                            memoBigNote.Text = MyNote.Note;
                         }
                     }
                     break;
@@ -369,15 +372,15 @@ namespace SmartPM.AddForms
 
         private void textCategory_TextChanged(object sender, EventArgs e)
         {
-            string categoryText = textCategory.Text;
+            string descriptionText = textDescription.Text;
 
-            if (string.IsNullOrWhiteSpace(categoryText))
+            if (string.IsNullOrWhiteSpace(descriptionText))
             {
                 textWEBUrl.Text = string.Empty;
             }
             else
             {
-                textWEBUrl.Text = $"www.{categoryText}.com";
+                textWEBUrl.Text = $"www.{descriptionText}.com";
             }
         }
 
