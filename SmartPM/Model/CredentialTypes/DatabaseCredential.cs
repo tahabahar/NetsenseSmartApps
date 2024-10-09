@@ -13,6 +13,7 @@ namespace SmartPM.Model
         public string DBServerName { get; set; }
         public string DBUsername { get; set; }
         public string DBPassword { get; set; }
-      
+        public string Note { get; set; }
+
     }
 }

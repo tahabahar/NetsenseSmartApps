@@ -162,6 +162,7 @@ namespace SmartPM.AddForms
                         MyWebmodel.WebUrl = textWEBUrl.Text;
                         MyWebmodel.Username = textWEBUsername.Text;
                         MyWebmodel.Password = textWEBPasword.Text;
+                        MyWebmodel.Note = memoNoteWeb.Text;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWebmodel);
 
@@ -173,7 +174,7 @@ namespace SmartPM.AddForms
 
                     if (MyDbmodel != null)
                     {
-
+                        MyDbmodel.Note = memoNoteDB.Text;
                         MyDbmodel.DBUsername = textDBUserName.Text;
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
@@ -202,6 +203,7 @@ namespace SmartPM.AddForms
 
                     if (MyAppModel != null)
                     {
+                        MyAppModel.Note = memoNoteApp.Text;
                         MyAppModel.AppName = textAPPName.Text;
                         MyAppModel.Password = textAPPPassword.Text;
                         MyAppModel.Username = textAPPUsername.Text;
@@ -220,6 +222,7 @@ namespace SmartPM.AddForms
 
                     if (MyCreditCard != null)
                     {
+                        MyCreditCard.Note = memoNoteCreditCard.Text;
                         MyCreditCard.CVV = textCREDITCARDcvv.Text;
                         MyCreditCard.CardNumber = textCREDITCARDNumber.Text;
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
@@ -243,6 +246,7 @@ namespace SmartPM.AddForms
 
                     if (MyEmailModel != null)
                     {
+                        MyEmailModel.Note = memoNoteEmail.Text;
                         MyEmailModel.EmailAccount = textEMAILAccountAdress.Text;
                         MyEmailModel.Password = textEMAILPassword.Text;
                         MyEmailModel.RecoveryEmail = textEMAILRecoveryAccountAdress.Text;

@@ -11,5 +11,6 @@ namespace SmartPM.Model.CredentialTypes
         public string EmailAccount { get; set; }
         public string Password { get; set; }
         public string RecoveryEmail { get; set; }
+        public string Note { get; set; }
     }
 }
