@@ -42,7 +42,6 @@ namespace SmartPM.AddForms
             textCategory.Text = pCredential.Category;
 
             textDescription.Text = pCredential.Description;
-           
 
             this.Text = pCredential.CredentialType.ToString();
             
@@ -61,6 +60,7 @@ namespace SmartPM.AddForms
                             textWEBUrl.Text = MyWebmodel.WebUrl;
                             textWEBUsername.Text = MyWebmodel.Username;
                             textWEBPasword.Text = MyWebmodel.Password;
+                            memoNoteWeb.Text = MyWebmodel.Note;
                         }
                     }
                     break;
@@ -77,6 +77,7 @@ namespace SmartPM.AddForms
                             textDBServerName.Text = MyDbmodel.DBServerName;
                             textDBUserName.Text = MyDbmodel.DBUsername;
                             textDBPassword.Text = MyDbmodel.DBPassword;
+                            memoNoteDB.Text = MyDbmodel.Note;
                         }
                     }
                     break;
@@ -94,6 +95,7 @@ namespace SmartPM.AddForms
                             textAPPName.Text = MyAppModel.AppName;
                             textAPPPassword.Text = MyAppModel.Password;
                             textAPPUsername.Text = MyAppModel.Username;
+                            memoNoteApp.Text = MyAppModel.Note;
                         }
                     }
                     break;
@@ -111,6 +113,7 @@ namespace SmartPM.AddForms
                             textCREDITCARDNumber.Text = MyCreditCard.CardNumber;
                             textCREDITCARDOwnerName.Text = MyCreditCard.CardOwner;
                             dateCREDITCARDExpirationDate.Text = MyCreditCard.CardExpirationMonth;
+                            memoNoteCreditCard.Text = MyCreditCard.Note;
                         }
                     }
                     break;
@@ -126,6 +129,7 @@ namespace SmartPM.AddForms
                             textEMAILAccountAdress.Text = MyEmailModel.EmailAccount;
                             textEMAILPassword.Text = MyEmailModel.Password;
                             textEMAILRecoveryAccountAdress.Text = MyEmailModel.RecoveryEmail;
+                            memoNoteEmail.Text = MyEmailModel.Note;
                         }
                     }
                     break;
@@ -163,6 +167,7 @@ namespace SmartPM.AddForms
                         MyWebmodel.Username = textWEBUsername.Text;
                         MyWebmodel.Password = textWEBPasword.Text;
                         MyWebmodel.Note = memoNoteWeb.Text;
+                        _credentialEntry.Note = MyWebmodel.Note;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWebmodel);
 
@@ -179,6 +184,7 @@ namespace SmartPM.AddForms
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
                         MyDbmodel.DBType = (DBTypeEnum)comboBoxDBType.EditValue;
+                        _credentialEntry.Note = MyDbmodel.Note;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
 
@@ -190,6 +196,7 @@ namespace SmartPM.AddForms
                     if (MyNote != null)
                     {
                         MyNote.Note = memoBigNote.Text;
+                        _credentialEntry.Note = MyNote.Note;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyNote);
 
@@ -207,6 +214,7 @@ namespace SmartPM.AddForms
                         MyAppModel.AppName = textAPPName.Text;
                         MyAppModel.Password = textAPPPassword.Text;
                         MyAppModel.Username = textAPPUsername.Text;
+                        _credentialEntry.Note = MyAppModel.Note;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyAppModel);
 
@@ -227,6 +235,7 @@ namespace SmartPM.AddForms
                         MyCreditCard.CardNumber = textCREDITCARDNumber.Text;
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
                         MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationDate.Text;
+                        memoNoteCreditCard.Text = MyCreditCard.Note;
                         if (MyCreditCard.CardNumber.Length > 4)
                         {
                             _credentialEntry.Description = new string('*', MyCreditCard.CardNumber.Length - 4) + MyCreditCard.CardNumber.Substring(MyCreditCard.CardNumber.Length - 4);

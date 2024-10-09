@@ -13,8 +13,8 @@ namespace SmartPM
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Category { get; set; }
-        public string Description { get; set; }
         public string Note { get; set; }
+        public string Description { get; set; }
         public CredentialTypeEnum CredentialType { get; set; }
         public string CredentialJsonData { get; set; }
         public DateTime LastModifiedDate { get; set; } = DateTime.Now;

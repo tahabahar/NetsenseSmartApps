@@ -115,7 +115,7 @@ namespace SmartPM
             var Mychangemasterpassword = new ChangeMasterPassword();
             Mychangemasterpassword.ShowDialog();
         }
-
+        
         private void gridControl_DoubleClick(object sender, EventArgs e)
         {
             CredentialEntry credentialEntry = (CredentialEntry)gridView1.GetFocusedRow();
