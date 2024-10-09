@@ -11,6 +11,5 @@ namespace SmartPM.Model.Enums
         SQLServer =1,
         Oracle =2,
         MySQL =3,
-
     }
 }

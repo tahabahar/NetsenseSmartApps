@@ -245,7 +245,14 @@ namespace SmartPM.AddForms
                         MyEmailModel.EmailAccount = textEMAILAccountAdress.Text;
                         MyEmailModel.Password = textEMAILPassword.Text;
                         MyEmailModel.RecoveryEmail = textEMAILRecoveryAccountAdress.Text;
-                        _credentialEntry.Description = MyEmailModel.EmailAccount;
+                        if (string.IsNullOrEmpty(textEMAILAccountAdress.Text)) 
+                        {
+                            _credentialEntry.Description = MyEmailModel.EmailAccount; 
+                        }
+                        else
+                        {
+                            _credentialEntry.Description = textDescription.Text;
+                        }
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyEmailModel);
 
@@ -265,21 +272,9 @@ namespace SmartPM.AddForms
         {
             var MyGeneratePassword = new GeneratePassword();
             MyGeneratePassword.ShowDialog();
-            if (xtraTabControl1.SelectedTabPage == xtraTabPageApi)
-            {
-                textAPIPassword.Text = MyGeneratePassword.Password;
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageApp)
+            if (xtraTabControl1.SelectedTabPage == xtraTabPageApp)
             {
                 textAPPPassword.Text = MyGeneratePassword.Password;
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageBank)
-            {
-                textBANKPassword.Text = MyGeneratePassword.Password;
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageComputer)
-            {
-                textCOMPUTERPassword.Text = MyGeneratePassword.Password;
             }
             else if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
             {
@@ -292,10 +287,6 @@ namespace SmartPM.AddForms
             else if (xtraTabControl1.SelectedTabPage == xtraTabPageWeb)
             {
                 textWEBPasword.Text = MyGeneratePassword.Password;
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageWifi)
-            {
-                textWIFIPassword.Text = MyGeneratePassword.Password;
             }
         }
         private void CreateOrEditCredential_KeyDown(object sender, KeyEventArgs e)
@@ -325,21 +316,9 @@ namespace SmartPM.AddForms
 
         private void copyButton_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPage == xtraTabPageApi)
-            {
-                Clipboard.SetText(textAPIPassword.Text);
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageApp)
+            if (xtraTabControl1.SelectedTabPage == xtraTabPageApp)
             {
                 Clipboard.SetText(textAPPPassword.Text);
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageBank)
-            {
-                Clipboard.SetText(textBANKPassword.Text);
-            }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageComputer)
-            {
-                Clipboard.SetText(textCOMPUTERPassword.Text);
             }
             else if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
             {
@@ -353,9 +332,9 @@ namespace SmartPM.AddForms
             {
                 Clipboard.SetText(textWEBPasword.Text);
             }
-            else if (xtraTabControl1.SelectedTabPage == xtraTabPageWifi)
+            else if (xtraTabControl1.SelectedTabPage == xtraTabPageNote)
             {
-                Clipboard.SetText(textWEBPasword.Text);
+                Clipboard.SetText(memoBigNote.Text);
             }
         }
 
@@ -374,30 +353,11 @@ namespace SmartPM.AddForms
             textDBPassword.Properties.UseSystemPasswordChar = !xcbShowPassDatabase.Checked;
         }
 
-        private void xcbShowPassComputer_CheckedChanged(object sender, EventArgs e)
-        {
-            textCOMPUTERPassword.Properties.UseSystemPasswordChar = !xcbShowPassComputer.Checked;
-        }
-
         private void xcbShowPassAPP_CheckedChanged(object sender, EventArgs e)
         {
             textAPPPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPP.Checked;
         }
 
-        private void xcbShowPassBANK_CheckedChanged(object sender, EventArgs e)
-        {
-            textBANKPassword.Properties.UseSystemPasswordChar = !xcbShowPassBANK.Checked;
-        }
-
-        private void xcbShowPassWIFI_CheckedChanged(object sender, EventArgs e)
-        {
-            textWIFIPassword.Properties.UseSystemPasswordChar = !xcbShowPassWIFI.Checked;
-        }
-
-        private void xcbShowPassAPI_CheckedChanged(object sender, EventArgs e)
-        {
-            textAPIPassword.Properties.UseSystemPasswordChar = !xcbShowPassAPI.Checked;
-        }
         private void checkCvvCreditCard_CheckedChanged(object sender, EventArgs e)
         {
             textCREDITCARDcvv.Properties.UseSystemPasswordChar = !checkCvvCreditCard.Checked;
