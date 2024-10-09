@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartPM.Model.CredentialTypes
 {
-    public class WifiNetworkCredential
+    public class NoteCredential
     {
-        public string WifiName { get; set; }
-        public string Password { get; set; }
+        public string Note { get; set; }
     }
 }

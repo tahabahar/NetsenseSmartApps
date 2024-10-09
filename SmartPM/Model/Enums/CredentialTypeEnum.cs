@@ -10,13 +10,10 @@ namespace SmartPM
     {
         Web = 1,      
         Email = 2, 
-        Computer = 3,
-        Database = 4, 
-        App = 5,  
-        Bank = 6, 
-        CreditCard =7, 
-        WifiNetwork =8,        
-        API = 9
+        Database = 3, 
+        App = 4,  
+        CreditCard =5, 
+        Note = 6,
     }
 
 }

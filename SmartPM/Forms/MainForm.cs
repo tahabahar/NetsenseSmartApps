@@ -85,30 +85,15 @@ namespace SmartPM
             CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
             myfrm.ShowDialog();
         }
-        private void bbApiCrendential_ItemClick(object sender, ItemClickEventArgs e)
+        private void bbNoteCredential_ItemClick(object sender, ItemClickEventArgs e)
         {
             CredentialEntry myCredentialEntry = new CredentialEntry();
-            myCredentialEntry.CredentialType = CredentialTypeEnum.API;
+            myCredentialEntry.CredentialType = CredentialTypeEnum.Note;
 
             CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
             myfrm.ShowDialog();
         }
-        private void bbBankCredential_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            CredentialEntry myCredentialEntry = new CredentialEntry();
-            myCredentialEntry.CredentialType = CredentialTypeEnum.Bank;
 
-            CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
-            myfrm.ShowDialog();
-        }
-        private void bbComputerCredential_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            CredentialEntry myCredentialEntry = new CredentialEntry();
-            myCredentialEntry.CredentialType = CredentialTypeEnum.Computer;
-
-            CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
-            myfrm.ShowDialog();
-        }
         private void bbCreditCardCredential_ItemClick(object sender, ItemClickEventArgs e)
         {
             CredentialEntry myCredentialEntry = new CredentialEntry();
@@ -125,14 +110,12 @@ namespace SmartPM
             CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
             myfrm.ShowDialog();
         }
-        private void bbWifiNetworkCredential_ItemClick(object sender, ItemClickEventArgs e)
+        private void bbiChangeMasterPassword_ItemClick(object sender, ItemClickEventArgs e)
         {
-            CredentialEntry myCredentialEntry = new CredentialEntry();
-            myCredentialEntry.CredentialType = CredentialTypeEnum.WifiNetwork;
-
-            CreateOrEditCredential myfrm = new CreateOrEditCredential(myCredentialEntry);
-            myfrm.ShowDialog();
+            var Mychangemasterpassword = new ChangeMasterPassword();
+            Mychangemasterpassword.ShowDialog();
         }
+
         private void gridControl_DoubleClick(object sender, EventArgs e)
         {
             CredentialEntry credentialEntry = (CredentialEntry)gridView1.GetFocusedRow();
@@ -238,10 +221,8 @@ namespace SmartPM
                 XtraMessageBox.Show("Data file doesn't exists", "Warning!", MessageBoxButtons.OK);
             }
         }
-        private void bbiChangeMasterPassword_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var Mychangemasterpassword = new ChangeMasterPassword();
-            Mychangemasterpassword.ShowDialog();
-        }
+        
+
+        
     }
 }

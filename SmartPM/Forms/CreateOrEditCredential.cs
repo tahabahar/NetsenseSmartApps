@@ -79,24 +79,7 @@ namespace SmartPM.AddForms
                     }
                     break;
 
-                case CredentialTypeEnum.API:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageApi;
-                    if (pCredential.CredentialJsonData != null)
-                    {
-                        ApiCredential MyApiModel = JsonConvert.DeserializeObject<ApiCredential>(pCredential.CredentialJsonData);
-
-                        if (MyApiModel != null)
-                        {
-                            textAPIAccessToken.Text = MyApiModel.AccessToken;
-                            textAPIKey.Text = MyApiModel.ApiKey;
-                            textAPINName.Text = MyApiModel.ApiName;
-                            textAPIPassword.Text = MyApiModel.ApiPassword;
-                            textAPISecretKey.Text = MyApiModel.SecretKey;
-                            textAPIUrl.Text = MyApiModel.ApiUrl;
-                            textAPIUsername.Text = MyApiModel.ApiUsername;
-                        }
-                    }
-                    break;
+               
 
                 case CredentialTypeEnum.App:
                     xtraTabControl1.SelectedTabPage = xtraTabPageApp;
@@ -113,37 +96,6 @@ namespace SmartPM.AddForms
                     }
                     break;
 
-                case CredentialTypeEnum.Bank:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageBank;
-                    if (pCredential.CredentialJsonData != null)
-                    {
-                        BankCredential MyBankModel = JsonConvert.DeserializeObject<BankCredential>(pCredential.CredentialJsonData);
-
-                        if (MyBankModel != null)
-                        {
-                            textBANKName.Text = MyBankModel.BankName;
-                            textBANKPasscode.Text = MyBankModel.Passcode;
-                            textBANKPassword.Text = MyBankModel.Password;
-                            textBANKUsername.Text = MyBankModel.Username;
-                        }
-                    }
-                    break;
-
-                case CredentialTypeEnum.Computer:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageComputer;
-                    if (pCredential.CredentialJsonData != null)
-                    {
-                        ComputerCredential MyComputerModel = JsonConvert.DeserializeObject<ComputerCredential>(pCredential.CredentialJsonData);
-
-                        if (MyComputerModel != null)
-                        {
-                            textCOMPUTERDomainName.Text = MyComputerModel.Domain;
-                            textCOMPUTERPassword.Text = MyComputerModel.Password;
-                            textCOMPUTERPin.Text = MyComputerModel.Pin.ToString();
-                            textCOMPUTERUsername.Text = MyComputerModel.Username;
-                        }
-                    }
-                    break;
 
                 case CredentialTypeEnum.CreditCard:
                     xtraTabControl1.SelectedTabPage = xtraTabPageCreditCard;
@@ -176,16 +128,15 @@ namespace SmartPM.AddForms
                     }
                     break;
 
-                case CredentialTypeEnum.WifiNetwork:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageWifi;
+                case CredentialTypeEnum.Note:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageNote;
                     if (pCredential.CredentialJsonData != null)
                     {
-                        WifiNetworkCredential MyWifiNetworkModel = JsonConvert.DeserializeObject<WifiNetworkCredential>(pCredential.CredentialJsonData);
+                        NoteCredential MyNote = JsonConvert.DeserializeObject<NoteCredential>(pCredential.CredentialJsonData);
 
-                        if (MyWifiNetworkModel != null)
+                        if (MyNote != null)
                         {
-                            textWIFIName.Text = MyWifiNetworkModel.WifiName;
-                            textWIFIPassword.Text = MyWifiNetworkModel.Password;
+                            textEMAILAccountAdress.Text = MyNote.Note;
                         }
                     }
                     break;
@@ -195,6 +146,7 @@ namespace SmartPM.AddForms
         {
             _credentialEntry.Category = textCategory.Text;
             _credentialEntry.Note = memoNote.Text;
+            _credentialEntry.Description = textDescription.Text;
             _credentialEntry.LastModifiedDate = DateTime.Now;
 
 
@@ -209,7 +161,6 @@ namespace SmartPM.AddForms
                         MyWebmodel.WebUrl = textWEBUrl.Text;
                         MyWebmodel.Username = textWEBUsername.Text;
                         MyWebmodel.Password = textWEBPasword.Text;
-                        _credentialEntry.Description = MyWebmodel.WebUrl;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWebmodel);
 
@@ -226,30 +177,23 @@ namespace SmartPM.AddForms
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
                         MyDbmodel.DBType = (DBTypeEnum)comboBoxDBType.EditValue;
-                        _credentialEntry.Description = MyDbmodel.DBServerName;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
 
                     break;
+                case CredentialTypeEnum.Note:
+                    xtraTabControl1.SelectedTabPage = xtraTabPageDB;
+                    NoteCredential MyNote = new NoteCredential();
 
-                case CredentialTypeEnum.API:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageApi;
-                    ApiCredential MyApiModel = new ApiCredential();
-
-                    if (MyApiModel != null)
+                    if (MyNote != null)
                     {
-                        MyApiModel.AccessToken = textAPIAccessToken.Text;
-                        MyApiModel.ApiKey = textAPIKey.Text;
-                        MyApiModel.ApiName = textAPINName.Text;
-                        MyApiModel.ApiPassword = textAPIPassword.Text;
-                        MyApiModel.SecretKey = textAPISecretKey.Text;
-                        MyApiModel.ApiUrl = textAPIUrl.Text;
-                        MyApiModel.ApiUsername = textAPIUsername.Text;
-                        _credentialEntry.Description = MyApiModel.ApiName;
+                        MyNote.Note = memoBigNote.Text;
                     }
-                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyApiModel);
+                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyNote);
 
                     break;
+
+
 
                 case CredentialTypeEnum.App:
                     xtraTabControl1.SelectedTabPage = xtraTabPageApp;
@@ -260,43 +204,14 @@ namespace SmartPM.AddForms
                         MyAppModel.AppName = textAPPName.Text;
                         MyAppModel.Password = textAPPPassword.Text;
                         MyAppModel.Username = textAPPUsername.Text;
-                        _credentialEntry.Description = MyAppModel.AppName;
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyAppModel);
 
                     break;
 
-                case CredentialTypeEnum.Bank:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageBank;
-                    BankCredential MyBankModel = new BankCredential();
+                
 
-                    if (MyBankModel != null)
-                    {
-                        MyBankModel.BankName = textBANKName.Text;
-                        MyBankModel.Passcode = textBANKPasscode.Text;
-                        MyBankModel.Password = textBANKPassword.Text;
-                        MyBankModel.Username = textBANKUsername.Text;
-                        _credentialEntry.Description = MyBankModel.BankName;
-                    }
-                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyBankModel);
-
-                    break;
-
-                case CredentialTypeEnum.Computer:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageComputer;
-                    ComputerCredential MyComputerModel = new ComputerCredential();
-
-                    if (MyComputerModel != null)
-                    {
-                        MyComputerModel.Domain = textCOMPUTERDomainName.Text;
-                        MyComputerModel.Password = textCOMPUTERPassword.Text;
-                        MyComputerModel.Pin = int.Parse(textCOMPUTERPin.Text);
-                        MyComputerModel.Username = textCOMPUTERUsername.Text;
-                        _credentialEntry.Description = MyComputerModel.Domain;
-                    }
-                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyComputerModel);
-
-                    break;
+               
 
                 case CredentialTypeEnum.CreditCard:
                     xtraTabControl1.SelectedTabPage = xtraTabPageCreditCard;
@@ -336,19 +251,7 @@ namespace SmartPM.AddForms
 
                     break;
 
-                case CredentialTypeEnum.WifiNetwork:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageWifi;
-                    WifiNetworkCredential MyWifiNetworkModel = new WifiNetworkCredential();
-
-                    if (MyWifiNetworkModel != null)
-                    {
-                        MyWifiNetworkModel.WifiName = textWIFIName.Text;
-                        MyWifiNetworkModel.Password = textWIFIPassword.Text;
-                        _credentialEntry.Description = MyWifiNetworkModel.WifiName;
-                    }
-                    _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyWifiNetworkModel);
-
-                    break;
+                
             }
 
             DataHelper.AddOrUpdate(_credentialEntry);
@@ -518,6 +421,6 @@ namespace SmartPM.AddForms
             }
         }
 
-       
+
     }
 }

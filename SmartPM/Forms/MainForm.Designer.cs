@@ -72,6 +72,8 @@
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbNoteCredential = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -117,7 +119,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 241;
+            this.gridColumn1.Width = 149;
             // 
             // gridColumn3
             // 
@@ -126,7 +128,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 552;
+            this.gridColumn3.Width = 229;
             // 
             // gridColumn7
             // 
@@ -135,7 +137,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 2;
-            this.gridColumn7.Width = 166;
+            this.gridColumn7.Width = 67;
             // 
             // gridColumn8
             // 
@@ -146,7 +148,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 190;
+            this.gridColumn8.Width = 86;
             // 
             // Description
             // 
@@ -155,7 +157,7 @@
             this.Description.Name = "Description";
             this.Description.Visible = true;
             this.Description.VisibleIndex = 1;
-            this.Description.Width = 364;
+            this.Description.Width = 151;
             // 
             // ribbonControl
             // 
@@ -187,9 +189,11 @@
             this.bbiSave,
             this.bbiChangeMasterPassword,
             this.barStaticItemFileName,
-            this.barStaticVersion});
+            this.barStaticVersion,
+            this.barButtonItem3,
+            this.bbNoteCredential});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 57;
+            this.ribbonControl.MaxItemId = 59;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -222,13 +226,10 @@
             // 
             this.popupMenu1.ItemLinks.Add(this.bbWebCredential);
             this.popupMenu1.ItemLinks.Add(this.bbDatabaseCredential);
-            this.popupMenu1.ItemLinks.Add(this.bbApiCrendential);
             this.popupMenu1.ItemLinks.Add(this.bbAppCredential);
-            this.popupMenu1.ItemLinks.Add(this.bbBankCredential);
-            this.popupMenu1.ItemLinks.Add(this.bbComputerCredential);
             this.popupMenu1.ItemLinks.Add(this.bbCreditCardCredential);
             this.popupMenu1.ItemLinks.Add(this.bbEmailCredential);
-            this.popupMenu1.ItemLinks.Add(this.bbWifiNetworkCredential);
+            this.popupMenu1.ItemLinks.Add(this.bbNoteCredential);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbonControl;
             // 
@@ -251,7 +252,6 @@
             this.bbApiCrendential.Caption = "Api Crendential";
             this.bbApiCrendential.Id = 40;
             this.bbApiCrendential.Name = "bbApiCrendential";
-            this.bbApiCrendential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbApiCrendential_ItemClick);
             // 
             // bbAppCredential
             // 
@@ -265,14 +265,12 @@
             this.bbBankCredential.Caption = "Bank Credential";
             this.bbBankCredential.Id = 42;
             this.bbBankCredential.Name = "bbBankCredential";
-            this.bbBankCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbBankCredential_ItemClick);
             // 
             // bbComputerCredential
             // 
             this.bbComputerCredential.Caption = "Computer Credential";
             this.bbComputerCredential.Id = 43;
             this.bbComputerCredential.Name = "bbComputerCredential";
-            this.bbComputerCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbComputerCredential_ItemClick);
             // 
             // bbCreditCardCredential
             // 
@@ -293,7 +291,6 @@
             this.bbWifiNetworkCredential.Caption = "Wifi Network Credential";
             this.bbWifiNetworkCredential.Id = 46;
             this.bbWifiNetworkCredential.Name = "bbWifiNetworkCredential";
-            this.bbWifiNetworkCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbWifiNetworkCredential_ItemClick);
             // 
             // bbiEdit
             // 
@@ -456,6 +453,19 @@
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 57;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // bbNoteCredential
+            // 
+            this.bbNoteCredential.Caption = "Note Credential";
+            this.bbNoteCredential.Id = 58;
+            this.bbNoteCredential.Name = "bbNoteCredential";
+            this.bbNoteCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbNoteCredential_ItemClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,5 +537,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItemFileName;
         private DevExpress.XtraBars.BarStaticItem barStaticVersion;
         private DevExpress.XtraGrid.Columns.GridColumn Description;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem bbNoteCredential;
     }
 }
