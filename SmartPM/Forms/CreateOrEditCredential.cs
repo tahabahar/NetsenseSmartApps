@@ -43,7 +43,6 @@ namespace SmartPM.AddForms
 
             textDescription.Text = pCredential.Description;
            
-            memoNote.Text = pCredential.Note;
 
             this.Text = pCredential.CredentialType.ToString();
             
@@ -148,7 +147,6 @@ namespace SmartPM.AddForms
         private void saveButton_Click(object sender, EventArgs e)
         {
             _credentialEntry.Category = textCategory.Text;
-            _credentialEntry.Note = memoNote.Text;
             _credentialEntry.Description = textDescription.Text;
             _credentialEntry.LastModifiedDate = DateTime.Now;
 

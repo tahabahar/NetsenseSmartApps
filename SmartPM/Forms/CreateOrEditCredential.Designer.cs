@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateOrEditCredential));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.memoNote = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.textDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textCategory = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -79,6 +79,8 @@
             this.textDBUserName = new DevExpress.XtraEditors.TextEdit();
             this.textDBPassword = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPageWeb = new DevExpress.XtraTab.XtraTabPage();
+            this.memoNoteWeb = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.xcbShowPassWEB = new DevExpress.XtraEditors.CheckEdit();
             this.textWEBPasword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -89,11 +91,18 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageNote = new DevExpress.XtraTab.XtraTabPage();
             this.memoBigNote = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textDescription = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.memoNoteDB = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.memoNoteEmail = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.memoNoteApp = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.memoNoteCreditCard = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -123,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).BeginInit();
             this.xtraTabPageWeb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteWeb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassWEB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBPasword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUsername.Properties)).BeginInit();
@@ -131,41 +141,42 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPageNote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteApp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.textDescription);
-            this.panelControl1.Controls.Add(this.memoNote);
-            this.panelControl1.Controls.Add(this.labelControl12);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.textCategory);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1161, 176);
+            this.panelControl1.Size = new System.Drawing.Size(776, 176);
             this.panelControl1.TabIndex = 1;
             // 
-            // memoNote
+            // labelControl2
             // 
-            this.memoNote.Location = new System.Drawing.Point(609, 26);
-            this.memoNote.Name = "memoNote";
-            this.memoNote.Size = new System.Drawing.Size(525, 126);
-            this.memoNote.TabIndex = 6;
+            this.labelControl2.Location = new System.Drawing.Point(88, 101);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(53, 13);
+            this.labelControl2.TabIndex = 10;
+            this.labelControl2.Text = "Description";
             // 
-            // labelControl12
+            // textDescription
             // 
-            this.labelControl12.Location = new System.Drawing.Point(580, 34);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(23, 13);
-            this.labelControl12.TabIndex = 8;
-            this.labelControl12.Text = "Note";
+            this.textDescription.Location = new System.Drawing.Point(147, 94);
+            this.textDescription.Name = "textDescription";
+            this.textDescription.Size = new System.Drawing.Size(489, 28);
+            this.textDescription.TabIndex = 9;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(96, 36);
+            this.labelControl1.Location = new System.Drawing.Point(96, 60);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(45, 13);
             this.labelControl1.TabIndex = 2;
@@ -173,9 +184,9 @@
             // 
             // textCategory
             // 
-            this.textCategory.Location = new System.Drawing.Point(147, 27);
+            this.textCategory.Location = new System.Drawing.Point(147, 51);
             this.textCategory.Name = "textCategory";
-            this.textCategory.Size = new System.Drawing.Size(423, 28);
+            this.textCategory.Size = new System.Drawing.Size(489, 28);
             this.textCategory.TabIndex = 0;
             this.textCategory.TextChanged += new System.EventHandler(this.textCategory_TextChanged);
             // 
@@ -186,9 +197,9 @@
             this.panelControl2.Controls.Add(this.backButton);
             this.panelControl2.Controls.Add(this.saveButton);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 700);
+            this.panelControl2.Location = new System.Drawing.Point(0, 729);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1161, 71);
+            this.panelControl2.Size = new System.Drawing.Size(776, 71);
             this.panelControl2.TabIndex = 1;
             // 
             // copyButton
@@ -224,7 +235,7 @@
             // saveButton
             // 
             this.saveButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("saveButton.ImageOptions.SvgImage")));
-            this.saveButton.Location = new System.Drawing.Point(1049, 14);
+            this.saveButton.Location = new System.Drawing.Point(664, 14);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 45);
             this.saveButton.TabIndex = 0;
@@ -233,6 +244,8 @@
             // 
             // xtraTabPageCreditCard
             // 
+            this.xtraTabPageCreditCard.Controls.Add(this.memoNoteCreditCard);
+            this.xtraTabPageCreditCard.Controls.Add(this.labelControl17);
             this.xtraTabPageCreditCard.Controls.Add(this.checkCvvCreditCard);
             this.xtraTabPageCreditCard.Controls.Add(this.checkCardNumberCreditCard);
             this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDcvv);
@@ -244,7 +257,7 @@
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl30);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl31);
             this.xtraTabPageCreditCard.Name = "xtraTabPageCreditCard";
-            this.xtraTabPageCreditCard.Size = new System.Drawing.Size(1159, 493);
+            this.xtraTabPageCreditCard.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageCreditCard.Text = "xtraTabPageCreditCard";
             // 
             // checkCvvCreditCard
@@ -258,7 +271,7 @@
             // 
             // checkCardNumberCreditCard
             // 
-            this.checkCardNumberCreditCard.Location = new System.Drawing.Point(575, 64);
+            this.checkCardNumberCreditCard.Location = new System.Drawing.Point(637, 67);
             this.checkCardNumberCreditCard.Name = "checkCardNumberCreditCard";
             this.checkCardNumberCreditCard.Properties.Caption = "Show Card Number";
             this.checkCardNumberCreditCard.Size = new System.Drawing.Size(126, 22);
@@ -310,7 +323,7 @@
             // 
             this.textCREDITCARDOwnerName.Location = new System.Drawing.Point(146, 27);
             this.textCREDITCARDOwnerName.Name = "textCREDITCARDOwnerName";
-            this.textCREDITCARDOwnerName.Size = new System.Drawing.Size(423, 28);
+            this.textCREDITCARDOwnerName.Size = new System.Drawing.Size(484, 28);
             this.textCREDITCARDOwnerName.TabIndex = 0;
             // 
             // textCREDITCARDNumber
@@ -320,7 +333,7 @@
             this.textCREDITCARDNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.textCREDITCARDNumber.Properties.MaskSettings.Set("mask", "0000-0000-0000-0000");
             this.textCREDITCARDNumber.Properties.UseSystemPasswordChar = true;
-            this.textCREDITCARDNumber.Size = new System.Drawing.Size(423, 28);
+            this.textCREDITCARDNumber.Size = new System.Drawing.Size(484, 28);
             this.textCREDITCARDNumber.TabIndex = 1;
             // 
             // labelControl30
@@ -341,6 +354,8 @@
             // 
             // xtraTabPageApp
             // 
+            this.xtraTabPageApp.Controls.Add(this.memoNoteApp);
+            this.xtraTabPageApp.Controls.Add(this.labelControl14);
             this.xtraTabPageApp.Controls.Add(this.xcbShowPassAPP);
             this.xtraTabPageApp.Controls.Add(this.textAPPPassword);
             this.xtraTabPageApp.Controls.Add(this.labelControl22);
@@ -349,15 +364,15 @@
             this.xtraTabPageApp.Controls.Add(this.labelControl23);
             this.xtraTabPageApp.Controls.Add(this.labelControl24);
             this.xtraTabPageApp.Name = "xtraTabPageApp";
-            this.xtraTabPageApp.Size = new System.Drawing.Size(1159, 493);
+            this.xtraTabPageApp.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageApp.Text = "xtraTabPageApp";
             // 
             // xcbShowPassAPP
             // 
-            this.xcbShowPassAPP.Location = new System.Drawing.Point(575, 106);
+            this.xcbShowPassAPP.Location = new System.Drawing.Point(646, 109);
             this.xcbShowPassAPP.Name = "xcbShowPassAPP";
             this.xcbShowPassAPP.Properties.Caption = "Show Password";
-            this.xcbShowPassAPP.Size = new System.Drawing.Size(203, 22);
+            this.xcbShowPassAPP.Size = new System.Drawing.Size(117, 22);
             this.xcbShowPassAPP.TabIndex = 18;
             this.xcbShowPassAPP.CheckedChanged += new System.EventHandler(this.xcbShowPassAPP_CheckedChanged);
             // 
@@ -366,7 +381,7 @@
             this.textAPPPassword.Location = new System.Drawing.Point(146, 103);
             this.textAPPPassword.Name = "textAPPPassword";
             this.textAPPPassword.Properties.UseSystemPasswordChar = true;
-            this.textAPPPassword.Size = new System.Drawing.Size(423, 28);
+            this.textAPPPassword.Size = new System.Drawing.Size(489, 28);
             this.textAPPPassword.TabIndex = 2;
             // 
             // labelControl22
@@ -381,14 +396,14 @@
             // 
             this.textAPPName.Location = new System.Drawing.Point(146, 35);
             this.textAPPName.Name = "textAPPName";
-            this.textAPPName.Size = new System.Drawing.Size(423, 28);
+            this.textAPPName.Size = new System.Drawing.Size(489, 28);
             this.textAPPName.TabIndex = 0;
             // 
             // textAPPUsername
             // 
             this.textAPPUsername.Location = new System.Drawing.Point(146, 69);
             this.textAPPUsername.Name = "textAPPUsername";
-            this.textAPPUsername.Size = new System.Drawing.Size(423, 28);
+            this.textAPPUsername.Size = new System.Drawing.Size(489, 28);
             this.textAPPUsername.TabIndex = 1;
             // 
             // labelControl23
@@ -409,6 +424,8 @@
             // 
             // xtraTabPageEmail
             // 
+            this.xtraTabPageEmail.Controls.Add(this.memoNoteEmail);
+            this.xtraTabPageEmail.Controls.Add(this.labelControl13);
             this.xtraTabPageEmail.Controls.Add(this.xcbShowPassEMail);
             this.xtraTabPageEmail.Controls.Add(this.textEMAILRecoveryAccountAdress);
             this.xtraTabPageEmail.Controls.Add(this.labelControl16);
@@ -417,15 +434,15 @@
             this.xtraTabPageEmail.Controls.Add(this.labelControl15);
             this.xtraTabPageEmail.Controls.Add(this.labelControl18);
             this.xtraTabPageEmail.Name = "xtraTabPageEmail";
-            this.xtraTabPageEmail.Size = new System.Drawing.Size(1159, 493);
+            this.xtraTabPageEmail.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageEmail.Text = "xtraTabPageEmail";
             // 
             // xcbShowPassEMail
             // 
-            this.xcbShowPassEMail.Location = new System.Drawing.Point(575, 69);
+            this.xcbShowPassEMail.Location = new System.Drawing.Point(646, 69);
             this.xcbShowPassEMail.Name = "xcbShowPassEMail";
             this.xcbShowPassEMail.Properties.Caption = "Show Password";
-            this.xcbShowPassEMail.Size = new System.Drawing.Size(203, 22);
+            this.xcbShowPassEMail.Size = new System.Drawing.Size(117, 22);
             this.xcbShowPassEMail.TabIndex = 13;
             this.xcbShowPassEMail.CheckedChanged += new System.EventHandler(this.xcbHidePass_CheckedChanged);
             // 
@@ -433,7 +450,7 @@
             // 
             this.textEMAILRecoveryAccountAdress.Location = new System.Drawing.Point(146, 100);
             this.textEMAILRecoveryAccountAdress.Name = "textEMAILRecoveryAccountAdress";
-            this.textEMAILRecoveryAccountAdress.Size = new System.Drawing.Size(423, 28);
+            this.textEMAILRecoveryAccountAdress.Size = new System.Drawing.Size(490, 28);
             this.textEMAILRecoveryAccountAdress.TabIndex = 2;
             // 
             // labelControl16
@@ -448,7 +465,7 @@
             // 
             this.textEMAILAccountAdress.Location = new System.Drawing.Point(146, 32);
             this.textEMAILAccountAdress.Name = "textEMAILAccountAdress";
-            this.textEMAILAccountAdress.Size = new System.Drawing.Size(423, 28);
+            this.textEMAILAccountAdress.Size = new System.Drawing.Size(490, 28);
             this.textEMAILAccountAdress.TabIndex = 0;
             // 
             // textEMAILPassword
@@ -456,7 +473,7 @@
             this.textEMAILPassword.Location = new System.Drawing.Point(146, 66);
             this.textEMAILPassword.Name = "textEMAILPassword";
             this.textEMAILPassword.Properties.UseSystemPasswordChar = true;
-            this.textEMAILPassword.Size = new System.Drawing.Size(423, 28);
+            this.textEMAILPassword.Size = new System.Drawing.Size(490, 28);
             this.textEMAILPassword.TabIndex = 1;
             // 
             // labelControl15
@@ -477,6 +494,8 @@
             // 
             // xtraTabPageDB
             // 
+            this.xtraTabPageDB.Controls.Add(this.memoNoteDB);
+            this.xtraTabPageDB.Controls.Add(this.labelControl12);
             this.xtraTabPageDB.Controls.Add(this.xcbShowPassDatabase);
             this.xtraTabPageDB.Controls.Add(this.comboBoxDBType);
             this.xtraTabPageDB.Controls.Add(this.labelControl9);
@@ -487,15 +506,15 @@
             this.xtraTabPageDB.Controls.Add(this.textDBUserName);
             this.xtraTabPageDB.Controls.Add(this.textDBPassword);
             this.xtraTabPageDB.Name = "xtraTabPageDB";
-            this.xtraTabPageDB.Size = new System.Drawing.Size(1159, 493);
+            this.xtraTabPageDB.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageDB.Text = "xtraTabPageDatabase";
             // 
             // xcbShowPassDatabase
             // 
-            this.xcbShowPassDatabase.Location = new System.Drawing.Point(574, 131);
+            this.xcbShowPassDatabase.Location = new System.Drawing.Point(646, 134);
             this.xcbShowPassDatabase.Name = "xcbShowPassDatabase";
             this.xcbShowPassDatabase.Properties.Caption = "Show Password";
-            this.xcbShowPassDatabase.Size = new System.Drawing.Size(203, 22);
+            this.xcbShowPassDatabase.Size = new System.Drawing.Size(117, 22);
             this.xcbShowPassDatabase.TabIndex = 15;
             this.xcbShowPassDatabase.CheckedChanged += new System.EventHandler(this.xcbShowPassDatabase_CheckedChanged);
             // 
@@ -505,7 +524,7 @@
             this.comboBoxDBType.Name = "comboBoxDBType";
             this.comboBoxDBType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxDBType.Size = new System.Drawing.Size(423, 28);
+            this.comboBoxDBType.Size = new System.Drawing.Size(492, 28);
             this.comboBoxDBType.TabIndex = 0;
             // 
             // labelControl9
@@ -520,7 +539,7 @@
             // 
             this.textDBServerName.Location = new System.Drawing.Point(145, 60);
             this.textDBServerName.Name = "textDBServerName";
-            this.textDBServerName.Size = new System.Drawing.Size(423, 28);
+            this.textDBServerName.Size = new System.Drawing.Size(492, 28);
             this.textDBServerName.TabIndex = 1;
             // 
             // labelControl8
@@ -551,7 +570,7 @@
             // 
             this.textDBUserName.Location = new System.Drawing.Point(145, 94);
             this.textDBUserName.Name = "textDBUserName";
-            this.textDBUserName.Size = new System.Drawing.Size(423, 28);
+            this.textDBUserName.Size = new System.Drawing.Size(492, 28);
             this.textDBUserName.TabIndex = 2;
             // 
             // textDBPassword
@@ -559,11 +578,13 @@
             this.textDBPassword.Location = new System.Drawing.Point(145, 128);
             this.textDBPassword.Name = "textDBPassword";
             this.textDBPassword.Properties.UseSystemPasswordChar = true;
-            this.textDBPassword.Size = new System.Drawing.Size(423, 28);
+            this.textDBPassword.Size = new System.Drawing.Size(492, 28);
             this.textDBPassword.TabIndex = 3;
             // 
             // xtraTabPageWeb
             // 
+            this.xtraTabPageWeb.Controls.Add(this.memoNoteWeb);
+            this.xtraTabPageWeb.Controls.Add(this.labelControl10);
             this.xtraTabPageWeb.Controls.Add(this.xcbShowPassWEB);
             this.xtraTabPageWeb.Controls.Add(this.textWEBPasword);
             this.xtraTabPageWeb.Controls.Add(this.labelControl5);
@@ -572,15 +593,30 @@
             this.xtraTabPageWeb.Controls.Add(this.labelControl3);
             this.xtraTabPageWeb.Controls.Add(this.textWEBUrl);
             this.xtraTabPageWeb.Name = "xtraTabPageWeb";
-            this.xtraTabPageWeb.Size = new System.Drawing.Size(1159, 493);
+            this.xtraTabPageWeb.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageWeb.Text = "xtraTabPageWEB";
+            // 
+            // memoNoteWeb
+            // 
+            this.memoNoteWeb.Location = new System.Drawing.Point(146, 148);
+            this.memoNoteWeb.Name = "memoNoteWeb";
+            this.memoNoteWeb.Size = new System.Drawing.Size(489, 355);
+            this.memoNoteWeb.TabIndex = 16;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(99, 155);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(23, 13);
+            this.labelControl10.TabIndex = 15;
+            this.labelControl10.Text = "Note";
             // 
             // xcbShowPassWEB
             // 
-            this.xcbShowPassWEB.Location = new System.Drawing.Point(575, 117);
+            this.xcbShowPassWEB.Location = new System.Drawing.Point(646, 117);
             this.xcbShowPassWEB.Name = "xcbShowPassWEB";
             this.xcbShowPassWEB.Properties.Caption = "Show Password";
-            this.xcbShowPassWEB.Size = new System.Drawing.Size(203, 22);
+            this.xcbShowPassWEB.Size = new System.Drawing.Size(117, 22);
             this.xcbShowPassWEB.TabIndex = 14;
             this.xcbShowPassWEB.CheckedChanged += new System.EventHandler(this.xcbShowPassWEB_CheckedChanged);
             // 
@@ -589,7 +625,7 @@
             this.textWEBPasword.Location = new System.Drawing.Point(146, 114);
             this.textWEBPasword.Name = "textWEBPasword";
             this.textWEBPasword.Properties.UseSystemPasswordChar = true;
-            this.textWEBPasword.Size = new System.Drawing.Size(423, 28);
+            this.textWEBPasword.Size = new System.Drawing.Size(489, 28);
             this.textWEBPasword.TabIndex = 2;
             // 
             // labelControl5
@@ -604,7 +640,7 @@
             // 
             this.textWEBUsername.Location = new System.Drawing.Point(146, 80);
             this.textWEBUsername.Name = "textWEBUsername";
-            this.textWEBUsername.Size = new System.Drawing.Size(423, 28);
+            this.textWEBUsername.Size = new System.Drawing.Size(489, 28);
             this.textWEBUsername.TabIndex = 1;
             // 
             // labelControl4
@@ -627,7 +663,7 @@
             // 
             this.textWEBUrl.Location = new System.Drawing.Point(146, 46);
             this.textWEBUrl.Name = "textWEBUrl";
-            this.textWEBUrl.Size = new System.Drawing.Size(423, 28);
+            this.textWEBUrl.Size = new System.Drawing.Size(489, 28);
             this.textWEBUrl.TabIndex = 0;
             // 
             // xtraTabControl1
@@ -636,7 +672,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 176);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPageEmail;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1161, 524);
+            this.xtraTabControl1.Size = new System.Drawing.Size(776, 553);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageWeb,
@@ -648,39 +684,93 @@
             // 
             // xtraTabPageNote
             // 
+            this.xtraTabPageNote.Controls.Add(this.labelControl11);
             this.xtraTabPageNote.Controls.Add(this.memoBigNote);
             this.xtraTabPageNote.Name = "xtraTabPageNote";
-            this.xtraTabPageNote.Size = new System.Drawing.Size(1159, 493);
+            this.xtraTabPageNote.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageNote.Text = "xtraTabPageNote";
             // 
             // memoBigNote
             // 
             this.memoBigNote.EditValue = "";
-            this.memoBigNote.Location = new System.Drawing.Point(11, 12);
+            this.memoBigNote.Location = new System.Drawing.Point(11, 40);
             this.memoBigNote.Name = "memoBigNote";
-            this.memoBigNote.Size = new System.Drawing.Size(1137, 465);
+            this.memoBigNote.Size = new System.Drawing.Size(760, 463);
             this.memoBigNote.TabIndex = 7;
             // 
-            // labelControl2
+            // labelControl11
             // 
-            this.labelControl2.Location = new System.Drawing.Point(88, 77);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(53, 13);
-            this.labelControl2.TabIndex = 10;
-            this.labelControl2.Text = "Description";
+            this.labelControl11.Location = new System.Drawing.Point(11, 21);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(23, 13);
+            this.labelControl11.TabIndex = 11;
+            this.labelControl11.Text = "Note";
             // 
-            // textDescription
+            // memoNoteDB
             // 
-            this.textDescription.Location = new System.Drawing.Point(147, 70);
-            this.textDescription.Name = "textDescription";
-            this.textDescription.Size = new System.Drawing.Size(423, 28);
-            this.textDescription.TabIndex = 9;
+            this.memoNoteDB.Location = new System.Drawing.Point(145, 162);
+            this.memoNoteDB.Name = "memoNoteDB";
+            this.memoNoteDB.Size = new System.Drawing.Size(492, 342);
+            this.memoNoteDB.TabIndex = 18;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(98, 169);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(23, 13);
+            this.labelControl12.TabIndex = 17;
+            this.labelControl12.Text = "Note";
+            // 
+            // memoNoteEmail
+            // 
+            this.memoNoteEmail.Location = new System.Drawing.Point(146, 134);
+            this.memoNoteEmail.Name = "memoNoteEmail";
+            this.memoNoteEmail.Size = new System.Drawing.Size(490, 369);
+            this.memoNoteEmail.TabIndex = 18;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(99, 141);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(23, 13);
+            this.labelControl13.TabIndex = 17;
+            this.labelControl13.Text = "Note";
+            // 
+            // memoNoteApp
+            // 
+            this.memoNoteApp.Location = new System.Drawing.Point(146, 137);
+            this.memoNoteApp.Name = "memoNoteApp";
+            this.memoNoteApp.Size = new System.Drawing.Size(489, 366);
+            this.memoNoteApp.TabIndex = 20;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(99, 144);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(23, 13);
+            this.labelControl14.TabIndex = 19;
+            this.labelControl14.Text = "Note";
+            // 
+            // memoNoteCreditCard
+            // 
+            this.memoNoteCreditCard.Location = new System.Drawing.Point(146, 163);
+            this.memoNoteCreditCard.Name = "memoNoteCreditCard";
+            this.memoNoteCreditCard.Size = new System.Drawing.Size(484, 342);
+            this.memoNoteCreditCard.TabIndex = 26;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(99, 170);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(23, 13);
+            this.labelControl17.TabIndex = 25;
+            this.labelControl17.Text = "Note";
             // 
             // CreateOrEditCredential
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 771);
+            this.ClientSize = new System.Drawing.Size(776, 800);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -692,7 +782,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNote.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -727,6 +817,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).EndInit();
             this.xtraTabPageWeb.ResumeLayout(false);
             this.xtraTabPageWeb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteWeb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassWEB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBPasword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textWEBUsername.Properties)).EndInit();
@@ -734,8 +825,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPageNote.ResumeLayout(false);
+            this.xtraTabPageNote.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteApp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -747,8 +842,6 @@
         private DevExpress.XtraEditors.TextEdit textCategory;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton saveButton;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.MemoEdit memoNote;
         private DevExpress.XtraEditors.SimpleButton backButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
@@ -803,5 +896,16 @@
         private DevExpress.XtraEditors.MemoEdit memoBigNote;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit textDescription;
+        private DevExpress.XtraEditors.MemoEdit memoNoteWeb;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.MemoEdit memoNoteCreditCard;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.MemoEdit memoNoteApp;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.MemoEdit memoNoteEmail;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.MemoEdit memoNoteDB;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
     }
 }
