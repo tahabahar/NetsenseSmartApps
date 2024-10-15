@@ -35,6 +35,7 @@ namespace SmartPM
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            
 
             string savedTheme = Properties.Settings.Default.Theme;
             string savedPalette = Properties.Settings.Default.Template;

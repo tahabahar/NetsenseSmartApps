@@ -25,8 +25,8 @@ namespace SmartPM.Forms
         {
             DataHelper.aesCipher = new AESCipher(textMasterKey.Text);
 
-           
-            if (textMasterKey.Text.Length<6)
+
+            if (textMasterKey.Text.Length < 6)
             {
                 XtraMessageBox.Show("Please enter master password", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -34,6 +34,9 @@ namespace SmartPM.Forms
 
             if (File.Exists(DataHelper.FileName))
             {
+                string backupfilename = Path.GetFileNameWithoutExtension(DataHelper.FileName) + "_" + DateTime.Now.ToString("s") + "." + Path.GetExtension(DataHelper.FileName);
+                File.Copy(DataHelper.FileName, backupfilename);
+
                 if (DataHelper.TryLoadData())
                 {
                     this.DialogResult = DialogResult.OK;
@@ -45,8 +48,8 @@ namespace SmartPM.Forms
                 }
             }
             else
-            {                
-                this.DialogResult= DialogResult.OK;
+            {
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }
