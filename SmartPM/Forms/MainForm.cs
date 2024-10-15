@@ -141,6 +141,19 @@ namespace SmartPM
             {
                 DataHelper.FolderName = Properties.Settings.Default.DataFolder;
                 DataHelper.FileName = Path.Combine(DataHelper.FolderName, "credentialdata.json");
+
+                try
+                {
+                    string backupfilename =
+                       Path.Combine(Path.GetDirectoryName(DataHelper.FileName),
+                       Path.GetFileNameWithoutExtension(DataHelper.FileName) + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + "." + Path.GetExtension(DataHelper.FileName));
+
+                    File.Copy(DataHelper.FileName, backupfilename);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 barStaticItemFileName.Caption = DataHelper.FileName;
             }
 

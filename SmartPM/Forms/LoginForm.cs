@@ -33,12 +33,7 @@ namespace SmartPM.Forms
             }
 
             if (File.Exists(DataHelper.FileName))
-            {
-                string backupfilename =
-                    Path.Combine(Path.GetDirectoryName(DataHelper.FileName),
-                    Path.GetFileNameWithoutExtension(DataHelper.FileName) + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + "." + Path.GetExtension(DataHelper.FileName));
-
-                File.Copy(DataHelper.FileName, backupfilename);
+            {         
 
                 if (DataHelper.TryLoadData())
                 {
