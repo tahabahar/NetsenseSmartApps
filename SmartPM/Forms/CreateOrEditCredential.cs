@@ -1,4 +1,5 @@
 ﻿using DevExpress.Utils;
+using DevExpress.Utils.MVVM;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using DevExpress.XtraExport.Helpers;
@@ -38,8 +39,7 @@ namespace SmartPM.AddForms
             this.KeyDown += CreateOrEditCredential_KeyDown;
 
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
-
-            textCategory.Text = pCredential.Category;
+            
 
             textDescription.Text = pCredential.Description;
 
@@ -150,9 +150,20 @@ namespace SmartPM.AddForms
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
-            _credentialEntry.Category = textCategory.Text;
+            _credentialEntry.Category = comboCategory.Text;
             _credentialEntry.Description = textDescription.Text;
             _credentialEntry.LastModifiedDate = DateTime.Now;
+            ComboboxHelper MycomboboxHelper = new ComboboxHelper();
+
+            string newCategory = comboCategory.Text.Trim(); // Boşlukları da temizleyelim
+
+            // Eğer yeni kategori boş değilse ve henüz eklenmemişse listeye ekleyelim
+            if (!string.IsNullOrEmpty(newCategory))
+            {
+                MycomboboxHelper.AddCategory(newCategory);  // Listeye ekle
+
+                
+            }
 
 
             switch (_credentialEntry.CredentialType)
@@ -395,6 +406,13 @@ namespace SmartPM.AddForms
             }
         }
 
-
+        private void CreateOrEditCredential_Shown(object sender, EventArgs e)
+        {
+            foreach (var item in DataHelper.MyData)
+            {
+                if (!comboCategory.Properties.Items.Contains(item.Category))
+                    comboCategory.Properties.Items.Add(item.Category);
+            }
+        }
     }
 }

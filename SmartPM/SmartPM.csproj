@@ -146,6 +146,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\AESCipher.cs" />
+    <Compile Include="Helper\ComboboxHelper.cs" />
     <Compile Include="Helper\DataHelper.cs" />
     <Compile Include="Helper\FormCleaner.cs" />
     <Compile Include="Helper\ShowPassword.cs" />

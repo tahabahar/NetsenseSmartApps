@@ -34,7 +34,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.textDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textCategory = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.copyButton = new DevExpress.XtraEditors.SimpleButton();
             this.generateButton = new DevExpress.XtraEditors.SimpleButton();
@@ -42,6 +41,8 @@
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.xtraTabPageCreditCard = new DevExpress.XtraTab.XtraTabPage();
+            this.memoNoteCreditCard = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.checkCvvCreditCard = new DevExpress.XtraEditors.CheckEdit();
             this.checkCardNumberCreditCard = new DevExpress.XtraEditors.CheckEdit();
             this.textCREDITCARDcvv = new DevExpress.XtraEditors.TextEdit();
@@ -53,6 +54,8 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageApp = new DevExpress.XtraTab.XtraTabPage();
+            this.memoNoteApp = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.xcbShowPassAPP = new DevExpress.XtraEditors.CheckEdit();
             this.textAPPPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
@@ -61,6 +64,8 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageEmail = new DevExpress.XtraTab.XtraTabPage();
+            this.memoNoteEmail = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.xcbShowPassEMail = new DevExpress.XtraEditors.CheckEdit();
             this.textEMAILRecoveryAccountAdress = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
@@ -69,6 +74,8 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageDB = new DevExpress.XtraTab.XtraTabPage();
+            this.memoNoteDB = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.xcbShowPassDatabase = new DevExpress.XtraEditors.CheckEdit();
             this.comboBoxDBType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -90,24 +97,17 @@
             this.textWEBUrl = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageNote = new DevExpress.XtraTab.XtraTabPage();
-            this.memoBigNote = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.memoNoteDB = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.memoNoteEmail = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.memoNoteApp = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.memoNoteCreditCard = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.memoBigNote = new DevExpress.XtraEditors.MemoEdit();
+            this.comboCategory = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.xtraTabPageCreditCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCardNumberCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).BeginInit();
@@ -116,16 +116,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).BeginInit();
             this.xtraTabPageApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteApp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassAPP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPUsername.Properties)).BeginInit();
             this.xtraTabPageEmail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassEMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILRecoveryAccountAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).BeginInit();
             this.xtraTabPageDB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassDatabase.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).BeginInit();
@@ -141,10 +144,7 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPageNote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteApp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboCategory.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -152,7 +152,7 @@
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.textDescription);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Controls.Add(this.textCategory);
+            this.panelControl1.Controls.Add(this.comboCategory);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
@@ -181,14 +181,6 @@
             this.labelControl1.Size = new System.Drawing.Size(45, 13);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Category";
-            // 
-            // textCategory
-            // 
-            this.textCategory.Location = new System.Drawing.Point(147, 51);
-            this.textCategory.Name = "textCategory";
-            this.textCategory.Size = new System.Drawing.Size(489, 28);
-            this.textCategory.TabIndex = 0;
-            this.textCategory.TextChanged += new System.EventHandler(this.textCategory_TextChanged);
             // 
             // panelControl2
             // 
@@ -259,6 +251,21 @@
             this.xtraTabPageCreditCard.Name = "xtraTabPageCreditCard";
             this.xtraTabPageCreditCard.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageCreditCard.Text = "xtraTabPageCreditCard";
+            // 
+            // memoNoteCreditCard
+            // 
+            this.memoNoteCreditCard.Location = new System.Drawing.Point(146, 163);
+            this.memoNoteCreditCard.Name = "memoNoteCreditCard";
+            this.memoNoteCreditCard.Size = new System.Drawing.Size(484, 342);
+            this.memoNoteCreditCard.TabIndex = 26;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(99, 170);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(23, 13);
+            this.labelControl17.TabIndex = 25;
+            this.labelControl17.Text = "Note";
             // 
             // checkCvvCreditCard
             // 
@@ -367,6 +374,21 @@
             this.xtraTabPageApp.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageApp.Text = "xtraTabPageApp";
             // 
+            // memoNoteApp
+            // 
+            this.memoNoteApp.Location = new System.Drawing.Point(146, 137);
+            this.memoNoteApp.Name = "memoNoteApp";
+            this.memoNoteApp.Size = new System.Drawing.Size(489, 366);
+            this.memoNoteApp.TabIndex = 20;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(99, 144);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(23, 13);
+            this.labelControl14.TabIndex = 19;
+            this.labelControl14.Text = "Note";
+            // 
             // xcbShowPassAPP
             // 
             this.xcbShowPassAPP.Location = new System.Drawing.Point(646, 109);
@@ -436,6 +458,21 @@
             this.xtraTabPageEmail.Name = "xtraTabPageEmail";
             this.xtraTabPageEmail.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageEmail.Text = "xtraTabPageEmail";
+            // 
+            // memoNoteEmail
+            // 
+            this.memoNoteEmail.Location = new System.Drawing.Point(146, 134);
+            this.memoNoteEmail.Name = "memoNoteEmail";
+            this.memoNoteEmail.Size = new System.Drawing.Size(490, 369);
+            this.memoNoteEmail.TabIndex = 18;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(99, 141);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(23, 13);
+            this.labelControl13.TabIndex = 17;
+            this.labelControl13.Text = "Note";
             // 
             // xcbShowPassEMail
             // 
@@ -508,6 +545,21 @@
             this.xtraTabPageDB.Name = "xtraTabPageDB";
             this.xtraTabPageDB.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageDB.Text = "xtraTabPageDatabase";
+            // 
+            // memoNoteDB
+            // 
+            this.memoNoteDB.Location = new System.Drawing.Point(145, 162);
+            this.memoNoteDB.Name = "memoNoteDB";
+            this.memoNoteDB.Size = new System.Drawing.Size(492, 342);
+            this.memoNoteDB.TabIndex = 18;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(98, 169);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(23, 13);
+            this.labelControl12.TabIndex = 17;
+            this.labelControl12.Text = "Note";
             // 
             // xcbShowPassDatabase
             // 
@@ -690,14 +742,6 @@
             this.xtraTabPageNote.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageNote.Text = "xtraTabPageNote";
             // 
-            // memoBigNote
-            // 
-            this.memoBigNote.EditValue = "";
-            this.memoBigNote.Location = new System.Drawing.Point(11, 40);
-            this.memoBigNote.Name = "memoBigNote";
-            this.memoBigNote.Size = new System.Drawing.Size(760, 463);
-            this.memoBigNote.TabIndex = 7;
-            // 
             // labelControl11
             // 
             this.labelControl11.Location = new System.Drawing.Point(11, 21);
@@ -706,65 +750,23 @@
             this.labelControl11.TabIndex = 11;
             this.labelControl11.Text = "Note";
             // 
-            // memoNoteDB
+            // memoBigNote
             // 
-            this.memoNoteDB.Location = new System.Drawing.Point(145, 162);
-            this.memoNoteDB.Name = "memoNoteDB";
-            this.memoNoteDB.Size = new System.Drawing.Size(492, 342);
-            this.memoNoteDB.TabIndex = 18;
+            this.memoBigNote.EditValue = "";
+            this.memoBigNote.Location = new System.Drawing.Point(11, 40);
+            this.memoBigNote.Name = "memoBigNote";
+            this.memoBigNote.Size = new System.Drawing.Size(760, 463);
+            this.memoBigNote.TabIndex = 7;
             // 
-            // labelControl12
+            // comboCategory
             // 
-            this.labelControl12.Location = new System.Drawing.Point(98, 169);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(23, 13);
-            this.labelControl12.TabIndex = 17;
-            this.labelControl12.Text = "Note";
-            // 
-            // memoNoteEmail
-            // 
-            this.memoNoteEmail.Location = new System.Drawing.Point(146, 134);
-            this.memoNoteEmail.Name = "memoNoteEmail";
-            this.memoNoteEmail.Size = new System.Drawing.Size(490, 369);
-            this.memoNoteEmail.TabIndex = 18;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(99, 141);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(23, 13);
-            this.labelControl13.TabIndex = 17;
-            this.labelControl13.Text = "Note";
-            // 
-            // memoNoteApp
-            // 
-            this.memoNoteApp.Location = new System.Drawing.Point(146, 137);
-            this.memoNoteApp.Name = "memoNoteApp";
-            this.memoNoteApp.Size = new System.Drawing.Size(489, 366);
-            this.memoNoteApp.TabIndex = 20;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(99, 144);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(23, 13);
-            this.labelControl14.TabIndex = 19;
-            this.labelControl14.Text = "Note";
-            // 
-            // memoNoteCreditCard
-            // 
-            this.memoNoteCreditCard.Location = new System.Drawing.Point(146, 163);
-            this.memoNoteCreditCard.Name = "memoNoteCreditCard";
-            this.memoNoteCreditCard.Size = new System.Drawing.Size(484, 342);
-            this.memoNoteCreditCard.TabIndex = 26;
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Location = new System.Drawing.Point(99, 170);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(23, 13);
-            this.labelControl17.TabIndex = 25;
-            this.labelControl17.Text = "Note";
+            this.comboCategory.Location = new System.Drawing.Point(147, 53);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboCategory.Size = new System.Drawing.Size(489, 28);
+            this.comboCategory.TabIndex = 0;
+            this.comboCategory.TextChanged += new System.EventHandler(this.textCategory_TextChanged);
             // 
             // CreateOrEditCredential
             // 
@@ -777,18 +779,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CreateOrEditCredential";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.CreateOrEditCredential_Load);
+            this.Shown += new System.EventHandler(this.CreateOrEditCredential_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CreateOrEditCredential_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.xtraTabPageCreditCard.ResumeLayout(false);
             this.xtraTabPageCreditCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCardNumberCreditCard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).EndInit();
@@ -798,18 +800,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDNumber.Properties)).EndInit();
             this.xtraTabPageApp.ResumeLayout(false);
             this.xtraTabPageApp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteApp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassAPP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textAPPUsername.Properties)).EndInit();
             this.xtraTabPageEmail.ResumeLayout(false);
             this.xtraTabPageEmail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassEMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILRecoveryAccountAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).EndInit();
             this.xtraTabPageDB.ResumeLayout(false);
             this.xtraTabPageDB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassDatabase.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).EndInit();
@@ -827,10 +832,7 @@
             this.xtraTabPageNote.ResumeLayout(false);
             this.xtraTabPageNote.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteApp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboCategory.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -839,7 +841,6 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.TextEdit textCategory;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton saveButton;
         private DevExpress.XtraEditors.SimpleButton backButton;
@@ -907,5 +908,6 @@
         private DevExpress.XtraEditors.MemoEdit memoNoteDB;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.ComboBoxEdit comboCategory;
     }
 }
