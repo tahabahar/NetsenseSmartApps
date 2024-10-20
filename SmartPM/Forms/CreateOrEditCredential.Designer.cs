@@ -34,12 +34,12 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.textDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.comboCategory = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.copyButton = new DevExpress.XtraEditors.SimpleButton();
             this.generateButton = new DevExpress.XtraEditors.SimpleButton();
             this.backButton = new DevExpress.XtraEditors.SimpleButton();
             this.saveButton = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.xtraTabPageCreditCard = new DevExpress.XtraTab.XtraTabPage();
             this.memoNoteCreditCard = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -74,10 +74,10 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPageDB = new DevExpress.XtraTab.XtraTabPage();
+            this.comboBoxDBType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.memoNoteDB = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.xcbShowPassDatabase = new DevExpress.XtraEditors.CheckEdit();
-            this.comboBoxDBType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.textDBServerName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -99,13 +99,13 @@
             this.xtraTabPageNote = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.memoBigNote = new DevExpress.XtraEditors.MemoEdit();
-            this.comboCategory = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.jsonDataSource1 = new DevExpress.DataAccess.Json.JsonDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.xtraTabPageCreditCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).BeginInit();
@@ -128,9 +128,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILAccountAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).BeginInit();
             this.xtraTabPageDB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassDatabase.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).BeginInit();
@@ -144,7 +144,6 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPageNote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboCategory.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -173,6 +172,7 @@
             this.textDescription.Name = "textDescription";
             this.textDescription.Size = new System.Drawing.Size(489, 28);
             this.textDescription.TabIndex = 9;
+            this.textDescription.TextChanged += new System.EventHandler(this.textDescription_TextChanged);
             // 
             // labelControl1
             // 
@@ -181,6 +181,15 @@
             this.labelControl1.Size = new System.Drawing.Size(45, 13);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Category";
+            // 
+            // comboCategory
+            // 
+            this.comboCategory.Location = new System.Drawing.Point(147, 53);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboCategory.Size = new System.Drawing.Size(489, 28);
+            this.comboCategory.TabIndex = 0;
             // 
             // panelControl2
             // 
@@ -310,11 +319,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateCREDITCARDExpirationDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
             this.dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatString = "";
             this.dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateCREDITCARDExpirationDate.Properties.EditFormat.FormatString = "";
             this.dateCREDITCARDExpirationDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateCREDITCARDExpirationDate.Properties.MaskSettings.Set("mask", "");
+            this.dateCREDITCARDExpirationDate.Properties.MaskSettings.Set("mask", "MM/ yy");
+            this.dateCREDITCARDExpirationDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateCREDITCARDExpirationDate.Size = new System.Drawing.Size(143, 28);
             this.dateCREDITCARDExpirationDate.TabIndex = 2;
             // 
@@ -531,10 +542,10 @@
             // 
             // xtraTabPageDB
             // 
+            this.xtraTabPageDB.Controls.Add(this.comboBoxDBType);
             this.xtraTabPageDB.Controls.Add(this.memoNoteDB);
             this.xtraTabPageDB.Controls.Add(this.labelControl12);
             this.xtraTabPageDB.Controls.Add(this.xcbShowPassDatabase);
-            this.xtraTabPageDB.Controls.Add(this.comboBoxDBType);
             this.xtraTabPageDB.Controls.Add(this.labelControl9);
             this.xtraTabPageDB.Controls.Add(this.textDBServerName);
             this.xtraTabPageDB.Controls.Add(this.labelControl8);
@@ -545,6 +556,16 @@
             this.xtraTabPageDB.Name = "xtraTabPageDB";
             this.xtraTabPageDB.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageDB.Text = "xtraTabPageDatabase";
+            // 
+            // comboBoxDBType
+            // 
+            this.comboBoxDBType.Location = new System.Drawing.Point(146, 26);
+            this.comboBoxDBType.Name = "comboBoxDBType";
+            this.comboBoxDBType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxDBType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxDBType.Size = new System.Drawing.Size(492, 28);
+            this.comboBoxDBType.TabIndex = 19;
             // 
             // memoNoteDB
             // 
@@ -570,15 +591,6 @@
             this.xcbShowPassDatabase.TabIndex = 15;
             this.xcbShowPassDatabase.CheckedChanged += new System.EventHandler(this.xcbShowPassDatabase_CheckedChanged);
             // 
-            // comboBoxDBType
-            // 
-            this.comboBoxDBType.Location = new System.Drawing.Point(146, 26);
-            this.comboBoxDBType.Name = "comboBoxDBType";
-            this.comboBoxDBType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxDBType.Size = new System.Drawing.Size(492, 28);
-            this.comboBoxDBType.TabIndex = 0;
-            // 
             // labelControl9
             // 
             this.labelControl9.Location = new System.Drawing.Point(49, 33);
@@ -589,7 +601,7 @@
             // 
             // textDBServerName
             // 
-            this.textDBServerName.Location = new System.Drawing.Point(145, 60);
+            this.textDBServerName.Location = new System.Drawing.Point(146, 60);
             this.textDBServerName.Name = "textDBServerName";
             this.textDBServerName.Size = new System.Drawing.Size(492, 28);
             this.textDBServerName.TabIndex = 1;
@@ -758,15 +770,9 @@
             this.memoBigNote.Size = new System.Drawing.Size(760, 463);
             this.memoBigNote.TabIndex = 7;
             // 
-            // comboCategory
+            // jsonDataSource1
             // 
-            this.comboCategory.Location = new System.Drawing.Point(147, 53);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboCategory.Size = new System.Drawing.Size(489, 28);
-            this.comboCategory.TabIndex = 0;
-            this.comboCategory.TextChanged += new System.EventHandler(this.textCategory_TextChanged);
+            this.jsonDataSource1.Name = "jsonDataSource1";
             // 
             // CreateOrEditCredential
             // 
@@ -785,9 +791,9 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.xtraTabPageCreditCard.ResumeLayout(false);
             this.xtraTabPageCreditCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).EndInit();
@@ -814,9 +820,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEMAILPassword.Properties)).EndInit();
             this.xtraTabPageDB.ResumeLayout(false);
             this.xtraTabPageDB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoNoteDB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xcbShowPassDatabase.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxDBType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBServerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textDBPassword.Properties)).EndInit();
@@ -832,7 +838,6 @@
             this.xtraTabPageNote.ResumeLayout(false);
             this.xtraTabPageNote.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboCategory.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -845,7 +850,6 @@
         private DevExpress.XtraEditors.SimpleButton saveButton;
         private DevExpress.XtraEditors.SimpleButton backButton;
         private DevExpress.XtraEditors.SimpleButton generateButton;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.SimpleButton copyButton;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageCreditCard;
         private DevExpress.XtraEditors.CheckEdit checkCvvCreditCard;
@@ -876,7 +880,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageDB;
         private DevExpress.XtraEditors.CheckEdit xcbShowPassDatabase;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxDBType;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.TextEdit textDBServerName;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -909,5 +912,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.ComboBoxEdit comboCategory;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxDBType;
+        private DevExpress.DataAccess.Json.JsonDataSource jsonDataSource1;
     }
 }

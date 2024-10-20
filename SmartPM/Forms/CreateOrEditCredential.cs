@@ -40,6 +40,7 @@ namespace SmartPM.AddForms
 
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
             
+            comboCategory.EditValue= pCredential.Category;
 
             textDescription.Text = pCredential.Description;
 
@@ -73,11 +74,12 @@ namespace SmartPM.AddForms
 
                         if (MyDbmodel != null)
                         {
-                            comboBoxDBType.EditValue = MyDbmodel.DBType;
                             textDBServerName.Text = MyDbmodel.DBServerName;
                             textDBUserName.Text = MyDbmodel.DBUsername;
                             textDBPassword.Text = MyDbmodel.DBPassword;
                             memoNoteDB.Text = MyDbmodel.Note;
+                            comboBoxDBType.EditValue = MyDbmodel.DBType;
+
                         }
                     }
                     break;
@@ -114,6 +116,8 @@ namespace SmartPM.AddForms
                             textCREDITCARDOwnerName.Text = MyCreditCard.CardOwner;
                             dateCREDITCARDExpirationDate.Text = MyCreditCard.CardExpirationMonth;
                             memoNoteCreditCard.Text = MyCreditCard.Note;
+                            dateCREDITCARDExpirationDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+
                         }
                     }
                     break;
@@ -161,8 +165,6 @@ namespace SmartPM.AddForms
             if (!string.IsNullOrEmpty(newCategory))
             {
                 MycomboboxHelper.AddCategory(newCategory);  // Listeye ekle
-
-                
             }
 
 
@@ -194,8 +196,15 @@ namespace SmartPM.AddForms
                         MyDbmodel.DBUsername = textDBUserName.Text;
                         MyDbmodel.DBServerName = textDBServerName.Text;
                         MyDbmodel.DBPassword = textDBPassword.Text;
-                        MyDbmodel.DBType = (DBTypeEnum)comboBoxDBType.EditValue;
                         _credentialEntry.Note = MyDbmodel.Note;
+                        if (comboBoxDBType.SelectedItem != null || comboBoxDBType.SelectedIndex != -1 )
+                        {
+                            MyDbmodel.DBType = (DBTypeEnum)comboBoxDBType.SelectedItem;
+                        }
+                        else
+                        {
+                            MyDbmodel.DBType = DBTypeEnum.None;
+                        }
                     }
                     _credentialEntry.CredentialJsonData = JsonConvert.SerializeObject(MyDbmodel);
 
@@ -247,6 +256,7 @@ namespace SmartPM.AddForms
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
                         MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationDate.Text;
                         memoNoteCreditCard.Text = MyCreditCard.Note;
+                        _credentialEntry.Note = MyCreditCard.Note;
                         if (MyCreditCard.CardNumber.Length > 4)
                         {
                             _credentialEntry.Description = new string('*', MyCreditCard.CardNumber.Length - 4) + MyCreditCard.CardNumber.Substring(MyCreditCard.CardNumber.Length - 4);
@@ -270,6 +280,7 @@ namespace SmartPM.AddForms
                         MyEmailModel.EmailAccount = textEMAILAccountAdress.Text;
                         MyEmailModel.Password = textEMAILPassword.Text;
                         MyEmailModel.RecoveryEmail = textEMAILRecoveryAccountAdress.Text;
+                        _credentialEntry.Note = MyEmailModel.Note;
                         if (string.IsNullOrEmpty(textEMAILAccountAdress.Text)) 
                         {
                             _credentialEntry.Description = MyEmailModel.EmailAccount; 
@@ -321,23 +332,7 @@ namespace SmartPM.AddForms
                 saveButton.PerformClick();
             }
         }
-        private void CreateOrEditCredential_Load(object sender, EventArgs e)
-        {
-            if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
-            {
-                comboBoxDBType.Properties.Items.AddRange(Enum.GetValues(typeof(DBTypeEnum)));
-            }
-
-            // Form Load veya uygun bir yerde DateEdit kontrolüne format ayarlama
-            dateCREDITCARDExpirationDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            dateCREDITCARDExpirationDate.Properties.Mask.EditMask = "MM/yy"; // Sadece Ay ve Yıl gösterimi
-            dateCREDITCARDExpirationDate.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView; // Yıl bazlı görünüm
-            dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatString = "MM/yy"; // Ekranda görünecek format
-            dateCREDITCARDExpirationDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            dateCREDITCARDExpirationDate.Properties.EditFormat.FormatString = "MM/yy"; // Düzenleme formatı
-            dateCREDITCARDExpirationDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-
-        }
+        
 
         private void copyButton_Click(object sender, EventArgs e)
         {
@@ -392,7 +387,27 @@ namespace SmartPM.AddForms
             textCREDITCARDNumber.Properties.UseSystemPasswordChar= !checkCardNumberCreditCard.Checked;
         }
 
-        private void textCategory_TextChanged(object sender, EventArgs e)
+        
+
+        private void CreateOrEditCredential_Shown(object sender, EventArgs e)
+        {
+            foreach (var item in DataHelper.MyData)
+            {
+                if (!comboCategory.Properties.Items.Contains(item.Category))
+                    comboCategory.Properties.Items.Add(item.Category);
+            }
+            if (xtraTabControl1.SelectedTabPage == xtraTabPageDB)
+            {
+                comboBoxDBType.Properties.Items.AddRange(Enum.GetValues(typeof(DBTypeEnum)));
+            }
+            dateCREDITCARDExpirationDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            comboBoxDBType.Properties.Items.Clear();
+            comboBoxDBType.Properties.Items.Add(DBTypeEnum.SQLServer);
+            comboBoxDBType.Properties.Items.Add(DBTypeEnum.MySQL);
+            comboBoxDBType.Properties.Items.Add(DBTypeEnum.Oracle);
+        }
+
+        private void textDescription_TextChanged(object sender, EventArgs e)
         {
             string descriptionText = textDescription.Text;
 
@@ -403,15 +418,6 @@ namespace SmartPM.AddForms
             else
             {
                 textWEBUrl.Text = $"www.{descriptionText}.com";
-            }
-        }
-
-        private void CreateOrEditCredential_Shown(object sender, EventArgs e)
-        {
-            foreach (var item in DataHelper.MyData)
-            {
-                if (!comboCategory.Properties.Items.Contains(item.Category))
-                    comboCategory.Properties.Items.Add(item.Category);
             }
         }
     }
