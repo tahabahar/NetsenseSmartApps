@@ -43,18 +43,19 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbWebCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbDatabaseCredential = new DevExpress.XtraBars.BarButtonItem();
-            this.bbApiCrendential = new DevExpress.XtraBars.BarButtonItem();
             this.bbAppCredential = new DevExpress.XtraBars.BarButtonItem();
-            this.bbBankCredential = new DevExpress.XtraBars.BarButtonItem();
-            this.bbComputerCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbCreditCardCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbEmailCredential = new DevExpress.XtraBars.BarButtonItem();
-            this.bbWifiNetworkCredential = new DevExpress.XtraBars.BarButtonItem();
+            this.bbNoteCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.bbSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbApiCrendential = new DevExpress.XtraBars.BarButtonItem();
+            this.bbBankCredential = new DevExpress.XtraBars.BarButtonItem();
+            this.bbComputerCredential = new DevExpress.XtraBars.BarButtonItem();
+            this.bbWifiNetworkCredential = new DevExpress.XtraBars.BarButtonItem();
             this.bbiOpenDataFolder = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -64,6 +65,7 @@
             this.bbiChangeMasterPassword = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItemFileName = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticVersion = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -72,8 +74,6 @@
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.bbNoteCredential = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -85,6 +85,7 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridControl.Location = new System.Drawing.Point(0, 201);
             this.gridControl.MainView = this.gridView1;
             this.gridControl.MenuManager = this.ribbonControl;
@@ -247,30 +248,12 @@
             this.bbDatabaseCredential.Name = "bbDatabaseCredential";
             this.bbDatabaseCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbDatabaseCredential_ItemClick);
             // 
-            // bbApiCrendential
-            // 
-            this.bbApiCrendential.Caption = "Api Crendential";
-            this.bbApiCrendential.Id = 40;
-            this.bbApiCrendential.Name = "bbApiCrendential";
-            // 
             // bbAppCredential
             // 
             this.bbAppCredential.Caption = "App Credential";
             this.bbAppCredential.Id = 41;
             this.bbAppCredential.Name = "bbAppCredential";
             this.bbAppCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbAppCredential_ItemClick);
-            // 
-            // bbBankCredential
-            // 
-            this.bbBankCredential.Caption = "Bank Credential";
-            this.bbBankCredential.Id = 42;
-            this.bbBankCredential.Name = "bbBankCredential";
-            // 
-            // bbComputerCredential
-            // 
-            this.bbComputerCredential.Caption = "Computer Credential";
-            this.bbComputerCredential.Id = 43;
-            this.bbComputerCredential.Name = "bbComputerCredential";
             // 
             // bbCreditCardCredential
             // 
@@ -286,11 +269,12 @@
             this.bbEmailCredential.Name = "bbEmailCredential";
             this.bbEmailCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbEmailCredential_ItemClick);
             // 
-            // bbWifiNetworkCredential
+            // bbNoteCredential
             // 
-            this.bbWifiNetworkCredential.Caption = "Wifi Network Credential";
-            this.bbWifiNetworkCredential.Id = 46;
-            this.bbWifiNetworkCredential.Name = "bbWifiNetworkCredential";
+            this.bbNoteCredential.Caption = "Note Credential";
+            this.bbNoteCredential.Id = 58;
+            this.bbNoteCredential.Name = "bbNoteCredential";
+            this.bbNoteCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbNoteCredential_ItemClick);
             // 
             // bbiEdit
             // 
@@ -324,6 +308,30 @@
             this.bbSave.Id = 26;
             this.bbSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbSave.ImageOptions.LargeImage")));
             this.bbSave.Name = "bbSave";
+            // 
+            // bbApiCrendential
+            // 
+            this.bbApiCrendential.Caption = "Api Crendential";
+            this.bbApiCrendential.Id = 40;
+            this.bbApiCrendential.Name = "bbApiCrendential";
+            // 
+            // bbBankCredential
+            // 
+            this.bbBankCredential.Caption = "Bank Credential";
+            this.bbBankCredential.Id = 42;
+            this.bbBankCredential.Name = "bbBankCredential";
+            // 
+            // bbComputerCredential
+            // 
+            this.bbComputerCredential.Caption = "Computer Credential";
+            this.bbComputerCredential.Id = 43;
+            this.bbComputerCredential.Name = "bbComputerCredential";
+            // 
+            // bbWifiNetworkCredential
+            // 
+            this.bbWifiNetworkCredential.Caption = "Wifi Network Credential";
+            this.bbWifiNetworkCredential.Id = 46;
+            this.bbWifiNetworkCredential.Name = "bbWifiNetworkCredential";
             // 
             // bbiOpenDataFolder
             // 
@@ -387,6 +395,12 @@
             this.barStaticVersion.Caption = "barStaticVersion";
             this.barStaticVersion.Id = 56;
             this.barStaticVersion.Name = "barStaticVersion";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 57;
+            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // ribbonPage1
             // 
@@ -452,19 +466,6 @@
             this.popupControlContainer1.Size = new System.Drawing.Size(250, 130);
             this.popupControlContainer1.TabIndex = 4;
             this.popupControlContainer1.Visible = false;
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "barButtonItem3";
-            this.barButtonItem3.Id = 57;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // bbNoteCredential
-            // 
-            this.bbNoteCredential.Caption = "Note Credential";
-            this.bbNoteCredential.Id = 58;
-            this.bbNoteCredential.Name = "bbNoteCredential";
-            this.bbNoteCredential.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbNoteCredential_ItemClick);
             // 
             // MainForm
             // 

@@ -42,12 +42,16 @@
             // 
             this.textMasterKey.Location = new System.Drawing.Point(153, 79);
             this.textMasterKey.Name = "textMasterKey";
+            this.textMasterKey.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textMasterKey.Properties.Appearance.Options.UseFont = true;
             this.textMasterKey.Properties.UseSystemPasswordChar = true;
-            this.textMasterKey.Size = new System.Drawing.Size(276, 28);
+            this.textMasterKey.Size = new System.Drawing.Size(276, 34);
             this.textMasterKey.TabIndex = 0;
             // 
             // bbLogin
             // 
+            this.bbLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bbLogin.Appearance.Options.UseFont = true;
             this.bbLogin.Location = new System.Drawing.Point(212, 151);
             this.bbLogin.Name = "bbLogin";
             this.bbLogin.Size = new System.Drawing.Size(168, 45);
@@ -64,17 +68,17 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(203, 46);
+            this.labelControl1.Location = new System.Drawing.Point(192, 40);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(186, 18);
+            this.labelControl1.Size = new System.Drawing.Size(199, 19);
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Enter Your Master Password";
             // 
             // CheckShowPassword
             // 
-            this.CheckShowPassword.Location = new System.Drawing.Point(435, 82);
+            this.CheckShowPassword.Location = new System.Drawing.Point(435, 87);
             this.CheckShowPassword.Name = "CheckShowPassword";
             this.CheckShowPassword.Properties.Caption = "Show Password";
             this.CheckShowPassword.Size = new System.Drawing.Size(107, 22);

@@ -68,9 +68,11 @@
             // 
             // textGeneratedPassword
             // 
-            this.textGeneratedPassword.Location = new System.Drawing.Point(84, 120);
+            this.textGeneratedPassword.Location = new System.Drawing.Point(84, 117);
             this.textGeneratedPassword.Name = "textGeneratedPassword";
-            this.textGeneratedPassword.Size = new System.Drawing.Size(223, 28);
+            this.textGeneratedPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textGeneratedPassword.Properties.Appearance.Options.UseFont = true;
+            this.textGeneratedPassword.Size = new System.Drawing.Size(223, 34);
             this.textGeneratedPassword.TabIndex = 5;
             // 
             // textPasswordLenght
