@@ -126,6 +126,9 @@ namespace SmartPM
         }
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            int currentTopRowIndex = gridView1.TopRowIndex;
+            gridView1.TopRowIndex = currentTopRowIndex;
+
             if (ApplicationDeployment.IsNetworkDeployed)
                 barStaticVersion.Caption = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
             else

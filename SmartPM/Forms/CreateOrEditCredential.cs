@@ -1,4 +1,5 @@
 ﻿using DevExpress.Utils;
+using SmartPM.Forms;
 using DevExpress.Utils.MVVM;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
@@ -294,11 +295,15 @@ namespace SmartPM.AddForms
 
                     break;
 
-                
+                    
+
+
+
             }
 
             DataHelper.AddOrUpdate(_credentialEntry);
             this.Close();
+            
         }
         private void backButton_Click(object sender, EventArgs e)
         {
