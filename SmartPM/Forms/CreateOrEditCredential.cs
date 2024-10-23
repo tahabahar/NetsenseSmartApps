@@ -37,7 +37,7 @@ namespace SmartPM.AddForms
             this.KeyPreview = true;
 
 
-            this.KeyDown += CreateOrEditCredential_KeyDown;
+            this.KeyDown += CreateOrEditCredential_KeyUp;
 
             xtraTabControl1.ShowTabHeader = DefaultBoolean.False;
             
@@ -330,9 +330,9 @@ namespace SmartPM.AddForms
                 textWEBPasword.Text = MyGeneratePassword.Password;
             }
         }
-        private void CreateOrEditCredential_KeyDown(object sender, KeyEventArgs e)
+        private void CreateOrEditCredential_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && !(ActiveControl is System.Windows.Forms.TextBox))
+            if (e.KeyCode == Keys.Enter && !e.Shift && !(ActiveControl is System.Windows.Forms.TextBox))
             {
                 saveButton.PerformClick();
             }

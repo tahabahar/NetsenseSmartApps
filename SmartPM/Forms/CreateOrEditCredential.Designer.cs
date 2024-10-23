@@ -836,7 +836,7 @@
             this.Name = "CreateOrEditCredential";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Shown += new System.EventHandler(this.CreateOrEditCredential_Shown);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CreateOrEditCredential_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CreateOrEditCredential_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
