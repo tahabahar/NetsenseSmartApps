@@ -23,6 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using DevExpress.XtraLayout.Tab;
 
 
 namespace SmartPM.AddForms
@@ -332,9 +333,12 @@ namespace SmartPM.AddForms
         }
         private void CreateOrEditCredential_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && !e.Shift && !(ActiveControl is System.Windows.Forms.TextBox))
+            if (xtraTabControl1.SelectedTabPage != xtraTabPageNote)
             {
-                saveButton.PerformClick();
+                if (e.KeyCode == Keys.Enter && !e.Shift && !(ActiveControl is System.Windows.Forms.TextBox))
+                {
+                    saveButton.PerformClick();
+                }
             }
         }
         

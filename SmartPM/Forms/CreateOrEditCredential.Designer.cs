@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateOrEditCredential));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -45,7 +44,6 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.checkCvvCreditCard = new DevExpress.XtraEditors.CheckEdit();
             this.checkCardNumberCreditCard = new DevExpress.XtraEditors.CheckEdit();
-            this.textCREDITCARDcvv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
             this.dateCREDITCARDExpirationDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
@@ -99,7 +97,7 @@
             this.xtraTabPageNote = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.memoBigNote = new DevExpress.XtraEditors.MemoEdit();
-            this.jsonDataSource1 = new DevExpress.DataAccess.Json.JsonDataSource(this.components);
+            this.textCREDITCARDcvv = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textDescription.Properties)).BeginInit();
@@ -110,7 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCardNumberCreditCard.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).BeginInit();
@@ -144,6 +141,7 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPageNote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -173,7 +171,7 @@
             this.textDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDescription.Properties.Appearance.Options.UseFont = true;
             this.textDescription.Size = new System.Drawing.Size(489, 34);
-            this.textDescription.TabIndex = 9;
+            this.textDescription.TabIndex = 1;
             this.textDescription.TextChanged += new System.EventHandler(this.textDescription_TextChanged);
             // 
             // labelControl1
@@ -253,7 +251,6 @@
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl17);
             this.xtraTabPageCreditCard.Controls.Add(this.checkCvvCreditCard);
             this.xtraTabPageCreditCard.Controls.Add(this.checkCardNumberCreditCard);
-            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDcvv);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl33);
             this.xtraTabPageCreditCard.Controls.Add(this.dateCREDITCARDExpirationDate);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl32);
@@ -261,6 +258,7 @@
             this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDNumber);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl30);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl31);
+            this.xtraTabPageCreditCard.Controls.Add(this.textCREDITCARDcvv);
             this.xtraTabPageCreditCard.Name = "xtraTabPageCreditCard";
             this.xtraTabPageCreditCard.Size = new System.Drawing.Size(774, 522);
             this.xtraTabPageCreditCard.Text = "xtraTabPageCreditCard";
@@ -272,7 +270,7 @@
             this.memoNoteCreditCard.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoNoteCreditCard.Properties.Appearance.Options.UseFont = true;
             this.memoNoteCreditCard.Size = new System.Drawing.Size(484, 324);
-            this.memoNoteCreditCard.TabIndex = 26;
+            this.memoNoteCreditCard.TabIndex = 4;
             // 
             // labelControl17
             // 
@@ -299,16 +297,6 @@
             this.checkCardNumberCreditCard.Size = new System.Drawing.Size(126, 22);
             this.checkCardNumberCreditCard.TabIndex = 23;
             this.checkCardNumberCreditCard.CheckedChanged += new System.EventHandler(this.checkCardNumberCreditCard_CheckedChanged);
-            // 
-            // textCREDITCARDcvv
-            // 
-            this.textCREDITCARDcvv.Location = new System.Drawing.Point(146, 142);
-            this.textCREDITCARDcvv.Name = "textCREDITCARDcvv";
-            this.textCREDITCARDcvv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textCREDITCARDcvv.Properties.Appearance.Options.UseFont = true;
-            this.textCREDITCARDcvv.Properties.UseSystemPasswordChar = true;
-            this.textCREDITCARDcvv.Size = new System.Drawing.Size(143, 34);
-            this.textCREDITCARDcvv.TabIndex = 22;
             // 
             // labelControl33
             // 
@@ -406,7 +394,7 @@
             this.memoNoteApp.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoNoteApp.Properties.Appearance.Options.UseFont = true;
             this.memoNoteApp.Size = new System.Drawing.Size(489, 350);
-            this.memoNoteApp.TabIndex = 20;
+            this.memoNoteApp.TabIndex = 3;
             // 
             // labelControl14
             // 
@@ -499,7 +487,7 @@
             this.memoNoteEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoNoteEmail.Properties.Appearance.Options.UseFont = true;
             this.memoNoteEmail.Size = new System.Drawing.Size(489, 344);
-            this.memoNoteEmail.TabIndex = 18;
+            this.memoNoteEmail.TabIndex = 3;
             // 
             // labelControl13
             // 
@@ -597,7 +585,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxDBType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxDBType.Size = new System.Drawing.Size(492, 34);
-            this.comboBoxDBType.TabIndex = 19;
+            this.comboBoxDBType.TabIndex = 0;
             // 
             // memoNoteDB
             // 
@@ -606,7 +594,7 @@
             this.memoNoteDB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoNoteDB.Properties.Appearance.Options.UseFont = true;
             this.memoNoteDB.Size = new System.Drawing.Size(492, 326);
-            this.memoNoteDB.TabIndex = 18;
+            this.memoNoteDB.TabIndex = 4;
             // 
             // labelControl12
             // 
@@ -707,7 +695,7 @@
             this.memoNoteWeb.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoNoteWeb.Properties.Appearance.Options.UseFont = true;
             this.memoNoteWeb.Size = new System.Drawing.Size(489, 355);
-            this.memoNoteWeb.TabIndex = 16;
+            this.memoNoteWeb.TabIndex = 3;
             // 
             // labelControl10
             // 
@@ -818,11 +806,21 @@
             this.memoBigNote.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoBigNote.Properties.Appearance.Options.UseFont = true;
             this.memoBigNote.Size = new System.Drawing.Size(760, 463);
-            this.memoBigNote.TabIndex = 7;
+            this.memoBigNote.TabIndex = 0;
             // 
-            // jsonDataSource1
+            // textCREDITCARDcvv
             // 
-            this.jsonDataSource1.Name = "jsonDataSource1";
+            this.textCREDITCARDcvv.Location = new System.Drawing.Point(146, 142);
+            this.textCREDITCARDcvv.Name = "textCREDITCARDcvv";
+            this.textCREDITCARDcvv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCREDITCARDcvv.Properties.Appearance.Options.UseFont = true;
+            this.textCREDITCARDcvv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textCREDITCARDcvv.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.textCREDITCARDcvv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.textCREDITCARDcvv.Properties.UseSystemPasswordChar = true;
+            this.textCREDITCARDcvv.Size = new System.Drawing.Size(143, 34);
+            this.textCREDITCARDcvv.TabIndex = 3;
             // 
             // CreateOrEditCredential
             // 
@@ -849,7 +847,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoNoteCreditCard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCvvCreditCard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkCardNumberCreditCard.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateCREDITCARDExpirationDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDOwnerName.Properties)).EndInit();
@@ -888,6 +885,7 @@
             this.xtraTabPageNote.ResumeLayout(false);
             this.xtraTabPageNote.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoBigNote.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textCREDITCARDcvv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -904,7 +902,6 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPageCreditCard;
         private DevExpress.XtraEditors.CheckEdit checkCvvCreditCard;
         private DevExpress.XtraEditors.CheckEdit checkCardNumberCreditCard;
-        private DevExpress.XtraEditors.TextEdit textCREDITCARDcvv;
         private DevExpress.XtraEditors.LabelControl labelControl33;
         private DevExpress.XtraEditors.DateEdit dateCREDITCARDExpirationDate;
         private DevExpress.XtraEditors.LabelControl labelControl32;
@@ -963,6 +960,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.ComboBoxEdit comboCategory;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxDBType;
-        private DevExpress.DataAccess.Json.JsonDataSource jsonDataSource1;
+        private DevExpress.XtraEditors.SpinEdit textCREDITCARDcvv;
     }
 }

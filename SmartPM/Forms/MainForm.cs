@@ -35,7 +35,7 @@ namespace SmartPM
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+
 
             string savedTheme = Properties.Settings.Default.Theme;
             string savedPalette = Properties.Settings.Default.Template;
@@ -116,7 +116,7 @@ namespace SmartPM
             var Mychangemasterpassword = new ChangeMasterPassword();
             Mychangemasterpassword.ShowDialog();
         }
-        
+
         private void gridControl_DoubleClick(object sender, EventArgs e)
         {
             CredentialEntry credentialEntry = (CredentialEntry)gridView1.GetFocusedRow();
@@ -238,8 +238,20 @@ namespace SmartPM
                 XtraMessageBox.Show("Data file doesn't exists", "Warning!", MessageBoxButtons.OK);
             }
         }
-        
 
-        
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (gridView1.SelectedRowsCount > 0)
+                {
+                    bbiDelete.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
