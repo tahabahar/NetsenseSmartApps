@@ -212,7 +212,7 @@ namespace SmartPM.AddForms
 
                     break;
                 case CredentialTypeEnum.Note:
-                    xtraTabControl1.SelectedTabPage = xtraTabPageDB;
+                    xtraTabControl1.SelectedTabPage = xtraTabPageNote;
                     NoteCredential MyNote = new NoteCredential();
 
                     if (MyNote != null)
@@ -256,7 +256,8 @@ namespace SmartPM.AddForms
                         MyCreditCard.CVV = textCREDITCARDcvv.Text;
                         MyCreditCard.CardNumber = textCREDITCARDNumber.Text;
                         MyCreditCard.CardOwner = textCREDITCARDOwnerName.Text;
-                        MyCreditCard.CardExpirationMonth = dateCREDITCARDExpirationDate.Text;
+                        var expirationDate = dateCREDITCARDExpirationDate.DateTime;
+                        MyCreditCard.CardExpirationMonth = expirationDate.ToString("MM/yy");
                         memoNoteCreditCard.Text = MyCreditCard.Note;
                         _credentialEntry.Note = MyCreditCard.Note;
                         if (MyCreditCard.CardNumber.Length > 4)
